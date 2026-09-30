@@ -1,0 +1,41 @@
+@use 'colors';
+
+.notification-container {
+  display: grid;
+  gap: 10px;
+}
+.snackbar-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 8px 14px 16px;
+
+  span {
+    flex: 1;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .mat-icon:last-child {
+    cursor: pointer;
+  }
+}
+
+.success {
+  background-color: colors.$color-success;
+  color: colors.$white;
+}
+
+.warning {
+  background-color: colors.$color-warning;
+  color: colors.$black;
+}
+
+.error {
+  background-color: colors.$color-error;
+  color: colors.$white;
+}

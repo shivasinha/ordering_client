@@ -1,0 +1,42 @@
+@use 'colors';
+
+// Table container wrapper - styles are properly scoped to this component
+.table-container {
+  // Material table styling overrides with proper specificity
+  ::ng-deep {
+    // Only target rows within this component's table
+    table.mat-mdc-table {
+      .mat-mdc-row.clickable-row {
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: colors.$color-navigable-row;
+        }
+
+        &:active {
+          background-color: colors.$color-selected-table-row;
+        }
+      }
+
+      .mat-mdc-row.selected {
+        background-color: colors.$color-selected-table-row;
+      }
+    }
+  }
+}
+
+.no-data-row {
+  text-align: center;
+  padding: 24px;
+  color: colors.$gray-light;
+  font-style: italic;
+}
+
+// Default styling for action columns
+// Prevents action buttons from wrapping to multiple rows on small screens
+.mat-column-actions {
+  white-space: nowrap;
+  width: auto;
+  min-width: fit-content;
+}

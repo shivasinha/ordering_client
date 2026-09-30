@@ -1,0 +1,12 @@
+<h1 mat-dialog-title data-testid="shared.confirm-dialog.title.text">{{ title }}</h1>
+<mat-dialog-content>
+  <p data-testid="shared.confirm-dialog.message.text">{{ data.message }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  @if (showCancelButton) {
+    <button data-testid="shared.confirm-dialog.cancel.button" mat-button (click)="onCancel()">{{ cancelButtonText }}</button>
+  }
+  <button data-testid="shared.confirm-dialog.confirm.button" mat-raised-button color="primary" (click)="onConfirm()">
+    {{ confirmButtonText }}
+  </button>
+</mat-dialog-actions>

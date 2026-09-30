@@ -1,0 +1,97 @@
+<div>
+  <form [formGroup]="orderForm" (blur)="markAsTouched()">
+    @if (formConfig().showSubject) {
+      <mat-form-field class="full-width">
+        <mat-label data-testid="shared.order-form.subject.label">{{ 'lblSubject' | translate }}</mat-label>
+        <input
+          data-testid="shared.order-form.subject.input"
+          matInput
+          formControlName="subject"
+          [placeholder]="'lblSubject' | translate"
+          [required]="formConfig().subjectRequired || true"
+          (blur)="markAsTouched()"
+        />
+        @if (orderForm.get('subject')?.hasError('required')) {
+          <mat-error data-testid="shared.order-form.subject.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblSubject'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+    }
+
+    @if (formConfig().showOrderType) {
+      <mat-form-field class="full-width">
+        <mat-label data-testid="shared.order-form.order-type.label">{{ 'lblOrderType' | translate }}</mat-label>
+        <mat-select
+          data-testid="shared.order-form.order-type.select"
+          formControlName="orderType"
+          [placeholder]="'lblOrderType' | translate"
+          [required]="formConfig().orderTypeRequired ?? true"
+          (blur)="markAsTouched()"
+        >
+          @for (orderType of filterService.filteredOrderTypes(); track orderType) {
+            <mat-option [attr.data-testid]="'shared.order-form.order-type-option-' + orderType.key + '.option'" [value]="orderType.key">{{
+              orderType.value
+            }}</mat-option>
+          }
+        </mat-select>
+        @if (orderForm.get('orderType')?.hasError('required')) {
+          <mat-error data-testid="shared.order-form.order-type.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblOrderType'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+    }
+
+    @if (formConfig().showTrainNo) {
+      <mat-form-field class="full-width">
+        <mat-label data-testid="shared.order-form.train-number.label">{{ 'lblTrainNumber' | translate }}</mat-label>
+        <input
+          data-testid="shared.order-form.train-number.input"
+          matInput
+          formControlName="trainNo"
+          [placeholder]="'lblNumericValue' | translate"
+          pattern="[0-9]*"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57;"
+          [required]="formConfig().trainNoRequired || false"
+          [maxlength]="formConfig().trainNoMaxLength || ''"
+          (blur)="markAsTouched()"
+        />
+        @if (orderForm.get('trainNo')?.hasError('required')) {
+          <mat-error data-testid="shared.order-form.train-number.error">
+            {{ tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblTrainNumber')) }}
+          </mat-error>
+        }
+        @if (orderForm.get('trainNo')?.hasError('maxlength')) {
+          <mat-error data-testid="shared.order-form.train-number.error-maxlength">
+            {{ tr.translate('msgErrorMaxCharacterLimit').replace('{0}', formConfig().trainNoMaxLength?.toString() || '') }}
+          </mat-error>
+        }
+      </mat-form-field>
+    }
+
+    @if (formConfig().showDescription) {
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label data-testid="shared.order-form.description.label">{{ 'lblDescription' | translate }}</mat-label>
+        <textarea
+          data-testid="shared.order-form.description.input"
+          matInput
+          formControlName="description"
+          [maxlength]="formConfig().descriptionMaxLength ?? ''"
+          rows="4"
+          [placeholder]="'lblDescription' | translate"
+          (blur)="markAsTouched()"
+        >
+        </textarea>
+        <mat-hint align="start" data-testid="shared.order-form.description.hint">
+          {{ orderForm.get('description')?.value?.length || 0 }}/{{ formConfig().descriptionMaxLength }}
+        </mat-hint>
+        @if (orderForm.get('description')?.hasError('maxlength')) {
+          <mat-error data-testid="shared.order-form.description.error">
+            {{ tr.translate('msgErrorMaxCharacterLimit').replace('{0}', formConfig().descriptionMaxLength?.toString() || '') }}
+          </mat-error>
+        }
+      </mat-form-field>
+    }
+  </form>
+</div>

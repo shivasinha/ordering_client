@@ -1,0 +1,190 @@
+<p class="divider" data-testid="restriction.header-form.title.text">{{ 'hlRestrictionHeader' | translate }}</p>
+
+<form [formGroup]="form" class="restriction-header-form">
+  <!-- Row 1: Name | Reference IDs + Request Change + Description -->
+  <div class="fb-row">
+    <div class="fb-col left-col">
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.name.label">{{ 'lblName' | translate }}</mat-label>
+          <input matInput data-testid="restriction.header-form.name.input" formControlName="name" [readonly]="isReadonly()" />
+          @if (form.get('name')?.hasError('required')) {
+            <mat-error data-testid="restriction.header-form.name.error">{{ 'msgErrorMissingRestrictionName' | translate }}</mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="fb-col right-col">
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.reference-id.label">{{ 'lblReferenceId' | translate }}</mat-label>
+          <input
+            matInput
+            data-testid="restriction.header-form.reference-id.input"
+            formControlName="referenceId"
+            [readonly]="isReadonly()"
+          />
+        </mat-form-field>
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.business-reference-id.label">{{
+            'lblBusinessReferenceId' | translate
+          }}</mat-label>
+          <input
+            matInput
+            type="number"
+            data-testid="restriction.header-form.business-reference-id.input"
+            formControlName="busRefId"
+            [readonly]="isReadonly()"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.description.label">{{ 'lblDescription' | translate }}</mat-label>
+          <textarea
+            matInput
+            data-testid="restriction.header-form.description.input"
+            formControlName="description"
+            [readonly]="isReadonly()"
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="3"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Maintenance Org | Projects + Work + Fleet + Notes + Checkboxes -->
+  <div class="fb-row cb-section">
+    <div class="fb-col left-col">
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.maintenance-organization.label">{{
+            'lblMaintenanceOrganization' | translate
+          }}</mat-label>
+          <mat-select data-testid="restriction.header-form.maintenance-organization.select" formControlName="operatingCompanyID">
+            @for (opt of operatingCompanyOptions(); track opt.value) {
+              <mat-option
+                [attr.data-testid]="'restriction.header-form.maintenance-organization-option-' + opt.value + '.option'"
+                [value]="opt.value"
+              >
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+          @if (form.get('operatingCompanyID')?.hasError('required')) {
+            <mat-error data-testid="restriction.header-form.maintenance-organization.error">{{
+              'msgErrorMissingOperatingCompany' | translate
+            }}</mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="fb-col right-col">
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.project.label">{{ 'lblProjectName' | translate }}</mat-label>
+          <mat-select data-testid="restriction.header-form.project.select" formControlName="projectId">
+            @for (opt of projectOptions(); track opt.value) {
+              <mat-option [attr.data-testid]="'restriction.header-form.project-option-' + opt.value + '.option'" [value]="opt.value">
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.sub-project.label">{{ 'lblSubProjectName' | translate }}</mat-label>
+          <mat-select data-testid="restriction.header-form.sub-project.select" formControlName="subProjectId">
+            @for (opt of subProjectOptions(); track opt.value) {
+              <mat-option [attr.data-testid]="'restriction.header-form.sub-project-option-' + opt.value + '.option'" [value]="opt.value">
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.work-type.label">{{ 'lblWorkType' | translate }}</mat-label>
+          <mat-select data-testid="restriction.header-form.work-type.select" formControlName="workTypeId">
+            @for (opt of workTypeOptions(); track opt.value) {
+              <mat-option [attr.data-testid]="'restriction.header-form.work-type-option-' + opt.value + '.option'" [value]="opt.value">
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+          @if (form.get('workTypeId')?.hasError('required')) {
+            <mat-error data-testid="restriction.header-form.work-type.error">{{ 'msgErrorMissingWorkType' | translate }}</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.line-of-work.label">{{ 'lblLineOfWork' | translate }}</mat-label>
+          <mat-select data-testid="restriction.header-form.line-of-work.select" formControlName="lineOfWorkId">
+            @for (opt of lineOfWorkOptions(); track opt.value) {
+              <mat-option [attr.data-testid]="'restriction.header-form.line-of-work-option-' + opt.value + '.option'" [value]="opt.value">
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+          @if (form.get('lineOfWorkId')?.hasError('required')) {
+            <mat-error data-testid="restriction.header-form.line-of-work.error">{{ 'msgErrorMissingLineOfWork' | translate }}</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.notes.label">{{ 'lblNotesForPlanner' | translate }}</mat-label>
+          <textarea
+            matInput
+            data-testid="restriction.header-form.notes.input"
+            formControlName="notesForPlanner"
+            [readonly]="isReadonly()"
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="3"
+          ></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="fb-row">
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.yellow-fleet.label">{{ 'lblYellowFleet' | translate }}</mat-label>
+          <mat-select data-testid="restriction.header-form.yellow-fleet.select" formControlName="yellowFleetId">
+            @for (opt of yellowFleetOptions(); track opt.value) {
+              <mat-option [attr.data-testid]="'restriction.header-form.yellow-fleet-option-' + opt.value + '.option'" [value]="opt.value">
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="fb-item full-width">
+          <mat-label data-testid="restriction.header-form.interruptible.label">{{ 'lblInterruptible' | translate }}</mat-label>
+          <mat-select data-testid="restriction.header-form.interruptible.select" formControlName="interruptible">
+            @for (opt of interruptibleOptions(); track opt.value) {
+              <mat-option [attr.data-testid]="'restriction.header-form.interruptible-option-' + opt.value + '.option'" [value]="opt.value">
+                {{ opt.label }}
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="fb-row checkbox-row">
+        <div class="fb-item full-width">
+          <mat-checkbox color="primary" data-testid="restriction.header-form.speed-restriction.checkbox" formControlName="speedRestriction">
+            {{ 'lblSpeedRestriction' | translate }}
+          </mat-checkbox>
+        </div>
+        <div class="fb-item full-width">
+          <mat-checkbox color="primary" data-testid="restriction.header-form.cat-shut-off.checkbox" formControlName="catShutOff">
+            {{ 'lblCatShutOff' | translate }}
+          </mat-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

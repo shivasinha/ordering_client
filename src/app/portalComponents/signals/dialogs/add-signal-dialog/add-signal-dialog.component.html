@@ -1,0 +1,39 @@
+<h2 mat-dialog-title data-testid="signals.add-dialog.title.text">{{ 'lblAddSignal' | translate }}</h2>
+
+<mat-dialog-content>
+  <mat-form-field appearance="fill" class="search-field">
+    <mat-label data-testid="signals.add-dialog.search.label">{{ 'lblSearch' | translate }}</mat-label>
+    <input matInput data-testid="signals.add-dialog.search.input" [formControl]="searchControl" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <div class="list-section">
+    @if (isLoading()) {
+      <div class="loading-section">
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+    } @else if (hasLoaded() && rows().length === 0) {
+      <div class="empty-results">
+        <mat-icon>search_off</mat-icon>
+        <p>{{ 'msgNoListData' | translate }}</p>
+        <span>{{ 'hintTryDifferentSearchCriteria' | translate }}</span>
+      </div>
+    } @else if (rows().length > 0) {
+      <app-base-list
+        [listConfig]="listConfig()"
+        (rowClick)="onRowClick($event)"
+        (pageChange)="onPageChange($event)"
+        (sortChange)="onSortChange($event)"
+      ></app-base-list>
+    }
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button data-testid="signals.add-dialog.cancel.button" mat-button (click)="onCancel()">
+    {{ 'lblCancel' | translate }}
+  </button>
+  <button data-testid="signals.add-dialog.add.button" mat-button color="primary" [disabled]="!canAdd()" (click)="onAdd()">
+    {{ 'lblAdd' | translate }}
+  </button>
+</mat-dialog-actions>

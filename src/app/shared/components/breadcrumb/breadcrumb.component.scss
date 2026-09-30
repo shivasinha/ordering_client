@@ -1,0 +1,48 @@
+@use 'colors';
+
+.breadcrumb-container {
+  padding: 8px 16px;
+  background-color: var(--mat-sys-surface);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-link {
+  color: colors.$main-title-text-color;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: colors.$main-title-text-color;
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb-separator {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: var(--mat-sys-on-surface-variant);
+  margin: 0 4px;
+}
+
+.breadcrumb-current {
+  color: var(--mat-sys-on-surface);
+  font-size: 14px;
+  font-weight: 500;
+}

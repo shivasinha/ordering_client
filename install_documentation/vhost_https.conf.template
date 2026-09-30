@@ -1,0 +1,44 @@
+# This config needs mod_rewrite, mod_proxy, mod_proxy_http, mod_proxy_wstunnel, mod_deflate, mod_headers and mod_ssl
+# This file is automatically used by ansible, DO NOT CHANGE VARIABLE-NAMES, this file is parsed upon install!
+<VirtualHost *:{{ tps_webserver_port }}>
+	ServerName {{ tps_frontend_name }}
+	DocumentRoot /opt/tps_live/frontend
+
+	ErrorLog /var/log/tps_live/frontend.log
+	LogLevel warn
+
+	Redirect permanent / https://{{ tps_frontend_name }}:{{ tps_webserver_ssl_port }}/
+</VirtualHost>
+<VirtualHost *:{{ tps_webserver_ssl_port }}>
+	ServerName {{ tps_frontend_name }}
+	DocumentRoot /opt/tps_live/frontend
+
+	SSLEngine on
+        SSLCertificateFile {{ tps_ssl_cert_file }}
+        SSLCertificateKeyFile {{ tps_ssl_key_file }}
+
+        ErrorLog /var/log/tps_live/frontend.log
+        LogLevel warn
+
+        <Directory /opt/tps_live/frontend>
+                Header set Cache-Control "no-store, max-age=0"
+                <FilesMatch "\.(ico|jpg|png|svg)$">
+                        Header set Cache-Control "private, max-age=60"
+                </FilesMatch>
+                Require all granted
+        </Directory>
+
+        SetOutputFilter DEFLATE
+
+	ProxyPass '/rest/' '{{ tps_app_server_rest_protocol }}://{{ tps_app_server_rest_address }}:{{ tps_app_server_rest_port }}/rest/'
+
+        RewriteEngine On
+
+        RewriteCond %{REQUEST_URI} ^/ws/ [NC]
+        RewriteRule ^/ws/(.*) "ws://{{ tps_app_server_rest_address }}:{{ tps_websocket_port }}/$1" [P,L]
+
+        # If the requested resource doesn't exist and is not forwarded by the proxy, use index.html
+        RewriteCond %{REQUEST_URI} !^/rest/ [NC]
+        RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+        RewriteRule ^ /index.html
+</VirtualHost>

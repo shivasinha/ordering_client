@@ -1,0 +1,75 @@
+<div class="slot-list-wrapper">
+  <table mat-table [dataSource]="dataSource" matSort>
+    @for (col of config().columns; track col.field) {
+      <ng-container [matColumnDef]="col.field.toString()">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          [mat-sort-header]="col.field.toString()"
+          [disabled]="!col.sortable"
+          [style.width]="col.width ?? null"
+          [attr.data-testid]="'shared.slot-list.header-' + col.field.toString()"
+        >
+          {{ col.colHeader }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let row; let i = index"
+          [style.width]="col.width ?? null"
+          [attr.data-testid]="'shared.slot-list.cell-' + col.field.toString() + '-' + i"
+        >
+          {{ row[col.field] }}
+        </td>
+      </ng-container>
+    }
+
+    @if ((config().rowActions?.length ?? 0) > 0) {
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef data-testid="shared.slot-list.header-actions"></th>
+        <td mat-cell *matCellDef="let row; let i = index" [attr.data-testid]="'shared.slot-list.cell-actions-' + i">
+          @for (action of config().rowActions; track action.icon) {
+            @if (!action.visible || action.visible(row)) {
+              <button
+                mat-icon-button
+                [attr.data-testid]="'shared.slot-list.row-' + i + '.action-' + action.icon + '.button'"
+                [matTooltip]="action.tooltipKey"
+                (click)="action.handler(row)"
+              >
+                <mat-icon>{{ action.icon }}</mat-icon>
+              </button>
+            }
+          }
+        </td>
+      </ng-container>
+    }
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; let i = index; columns: displayedColumns()" [attr.data-testid]="'shared.slot-list.row-' + i"></tr>
+
+    <tr class="mat-row no-data-row" *matNoDataRow>
+      <td class="mat-cell" [attr.colspan]="displayedColumns().length" data-testid="shared.slot-list.no-data.cell">
+        @if (config().noDataMessage) {
+          {{ config().noDataMessage }}
+        }
+      </td>
+    </tr>
+  </table>
+
+  <mat-paginator
+    data-testid="shared.slot-list.paginator.paginator"
+    [pageSize]="config().pageSize ?? 25"
+    [pageSizeOptions]="paginatorPageSizes"
+    showFirstLastButtons
+  >
+  </mat-paginator>
+</div>
+
+@if ((config().slotActions?.length ?? 0) > 0) {
+  <div class="slot-actions">
+    @for (action of config().slotActions; track action.labelKey; let idx = $index) {
+      <button mat-flat-button [attr.data-testid]="'shared.slot-list.action-' + idx + '.button'" color="primary" (click)="action.handler()">
+        {{ action.labelKey }}
+      </button>
+    }
+  </div>
+}

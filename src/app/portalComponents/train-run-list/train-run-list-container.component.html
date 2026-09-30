@@ -1,0 +1,9 @@
+<!-- Filter Section -->
+<app-train-run-filters [initialFilters]="containerService.currentFilters()" (filterChange)="onFilterChange($event)"></app-train-run-filters>
+
+<!-- List Section -->
+<app-base-list
+  [listConfig]="containerService.listConfig()"
+  (pageChange)="onPageChange($event)"
+  (sortChange)="onSortChange($event)"
+></app-base-list>

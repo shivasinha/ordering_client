@@ -1,0 +1,90 @@
+<h2 mat-dialog-title data-testid="operating-days.dialog.title.text">{{ dialogTitle }}</h2>
+<mat-dialog-content [formGroup]="form" class="dialog-content">
+  <app-custom-date-range-picker
+    formControlName="dateRange"
+    [config]="dateRangePickerConfig"
+    data-testid="operating-days.dialog.date-range"
+  ></app-custom-date-range-picker>
+
+  <h3 data-testid="operating-days.dialog.select-days.title">{{ tr.translate('lblSelectDays') }}*</h3>
+  <div class="button-group">
+    @for (day of dayOptions; track day) {
+      <button
+        mat-stroked-button
+        [attr.data-testid]="'operating-days.dialog.select-day-' + day.index + '.button'"
+        [class.selected]="form.value.selectedDays?.includes(day.index)"
+        [disabled]="isSelectionDisabledSig()(day.index)"
+        (click)="toggleSelection(day.index)"
+      >
+        {{ day.index | translatableEnum: EnumNameList.DayOptionNames : true }}
+      </button>
+    }
+  </div>
+
+  <h3 data-testid="operating-days.dialog.deselect-days.title">{{ tr.translate('lblDeselectDays') }}</h3>
+  <div class="button-group">
+    @for (day of dayOptions; track day) {
+      <button
+        mat-stroked-button
+        [attr.data-testid]="'operating-days.dialog.deselect-day-' + day.index + '.button'"
+        [class.deselected]="form.value.deselectedDays?.includes(day.index)"
+        [disabled]="isDeselectionDisabledSig()(day.index)"
+        (click)="toggleSelection(day.index, true)"
+      >
+        {{ day.index | translatableEnum: EnumNameList.DayOptionNames : true }}
+      </button>
+    }
+  </div>
+
+  @if (isDateRangeSelectedSig() && isValidDateRangeSig() && !rangeOutOfBoundsSig()) {
+    <app-operating-days-calendar [calendarData]="calendarDisplayData()"> </app-operating-days-calendar>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div>
+    @if (isEditMode) {
+      <button data-testid="operating-days.dialog.load.button" mat-raised-button color="primary" (click)="loadPresavedOperatingDays()">
+        {{ 'lblLoadOperatingDays' | translate }}
+      </button>
+      <button
+        data-testid="operating-days.dialog.save-template.button"
+        mat-raised-button
+        color="primary"
+        (click)="saveOperatingDaysTemplate()"
+        [disabled]="!canSave()"
+      >
+        {{ 'lblSaveAsTemplate' | translate }}
+      </button>
+    }
+  </div>
+
+  <div>
+    @if (!isEditMode) {
+      <button data-testid="operating-days.dialog.exit.button" mat-raised-button color="primary" (click)="dialogRef.close()">
+        {{ tr.translate('lblExit') }}
+      </button>
+    } @else {
+      <button data-testid="operating-days.dialog.cancel.button" mat-button (click)="dialogRef.close()">
+        {{ 'lblCancel' | translate }}
+      </button>
+      <button
+        data-testid="operating-days.dialog.clear.button"
+        mat-button
+        (click)="clearOperatingDays()"
+        [hidden]="!operatingDaysCalculationService.isSubsetModeSig()"
+      >
+        {{ 'lblClear' | translate }}
+      </button>
+      <button
+        data-testid="operating-days.dialog.confirm.button"
+        mat-button
+        color="primary"
+        [disabled]="!canSave()"
+        (click)="saveAndClose()"
+      >
+        {{ actionName }}
+      </button>
+    }
+  </div>
+</mat-dialog-actions>

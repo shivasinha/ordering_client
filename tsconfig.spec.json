@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": ["node", "jest", "jest-marbles"],
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "strictTemplates": true
+  },
+  "files": ["src/polyfills.ts", "dayjs.spec.d.ts"],
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+}

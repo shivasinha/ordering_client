@@ -1,0 +1,46 @@
+@use 'colors';
+
+.search-field {
+  width: 100%;
+}
+
+.list-section {
+  min-height: 120px;
+
+  .loading-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .empty-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: colors.$gray-light;
+    text-align: center;
+
+    mat-icon {
+      font-size: 48px;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+      color: colors.$gray-light;
+    }
+
+    p {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: colors.$gray;
+    }
+
+    span {
+      font-size: 0.9rem;
+      color: colors.$gray-light;
+    }
+  }
+}

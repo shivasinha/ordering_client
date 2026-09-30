@@ -1,0 +1,26 @@
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .link-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+    direction: ltr;
+    text-align: left;
+    color: var(--mat-sys-primary);
+    text-decoration: none;
+    padding: 8px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}

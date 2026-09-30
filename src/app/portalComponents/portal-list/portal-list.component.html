@@ -1,0 +1,12 @@
+<div class="content">
+  <app-action-bar></app-action-bar>
+  @if (actionBarService.selectedTab && actionBarService.selectedTab.name === tabsTypesEnum.CURRENT_ORDERS) {
+    <app-current-orders-container></app-current-orders-container>
+  } @else if (actionBarService.selectedTab && actionBarService.selectedTab.name === tabsTypesEnum.ARCHIVE_ORDERS) {
+    <app-archived-orders-container></app-archived-orders-container>
+  } @else if (actionBarService.selectedTab && actionBarService.selectedTab.name === tabsTypesEnum.TRAIN_RUNS) {
+    <app-train-run-list-container></app-train-run-list-container>
+  } @else if (actionBarService.selectedTab && actionBarService.selectedTab.name === tabsTypesEnum.SPARE_CAPACITY) {
+    <app-spare-capacity-container></app-spare-capacity-container>
+  }
+</div>

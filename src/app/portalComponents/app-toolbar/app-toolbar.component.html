@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <button data-testid="navigation.toolbar.home.button" class="title-logo" mat-button (click)="onLogoClick()">
+    <mat-icon>home</mat-icon>
+    {{ 'lblOrderingPortal' | translate }}
+  </button>
+  <span class="spacer"></span>
+  <button data-testid="navigation.toolbar.user-menu.button" mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+    {{ userName }}
+  </button>
+  <mat-menu #menu="matMenu">
+    <button data-testid="navigation.toolbar.profile.button" mat-menu-item (click)="onProfileClick()" [disabled]="isProfileDisabled()">
+      {{ 'lblProfile' | translate }}
+    </button>
+    <button data-testid="navigation.toolbar.about.button" (click)="onAboutClick()" mat-menu-item>
+      {{ 'lblAbout' | translate }}
+    </button>
+    <button data-testid="navigation.toolbar.logout.button" (click)="clientAuthService.logout()" mat-menu-item>
+      {{ 'lblLogout' | translate }}
+    </button>
+  </mat-menu>
+</mat-toolbar>

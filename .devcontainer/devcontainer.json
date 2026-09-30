@@ -1,0 +1,27 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.0/containers/alpine
+{
+  "name": "ordering-portal-services Node 18 Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "node",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "Angular.ng-template",
+        "PKief.material-icon-theme",
+        "naumovs.color-highlight",
+        "pranaygp.vscode-css-peek",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "pflannery.vscode-versionlens",
+        "esbenp.prettier-vscode",
+        "rangav.vscode-thunder-client"
+      ]
+    }
+  },
+  "mounts": ["source=${localEnv:HOME}/.yarnrc.yml,target=/home/node/.yarnrc.yml,type=bind,readonly"]
+}

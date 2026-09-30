@@ -1,0 +1,5 @@
+@if (sectionLabel) {
+  <p class="divider">{{ sectionLabel }}</p>
+}
+
+<app-slot-list [config]="slotConfig()" [data]="rows()" [displayMode]="displayMode()"></app-slot-list>

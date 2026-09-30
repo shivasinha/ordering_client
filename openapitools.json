@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "6.2.1",
+    "generators": {
+      "ordering-portal-services": {
+        "generatorName": "typescript-angular",
+        "inputSpec": "./../../modules/ordering/rest_server_definitions/portal/ordering_server_definition_portal_structs/openapi_definition/openapi.yml",
+        "output": "src/app/api",
+        "additionalProperties": {
+          "fileNaming": "kebab-case",
+          "enumPropertyNaming": "UPPERCASE",
+          "modelPropertyNaming": "camelCase",
+          "modelFileSuffix": ".interface",
+          "stringEnums": true,
+          "apiModulePrefix": "OrderingPortal"
+        }
+      }
+    }
+  }
+}

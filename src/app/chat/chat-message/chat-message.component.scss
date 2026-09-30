@@ -1,0 +1,41 @@
+@use 'colors';
+
+.message-header,
+.message-footer {
+  font-size: 12px;
+}
+
+.message-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.message-footer button:last-child {
+  margin-left: auto; /* Push the last button (Reply) to the right */
+}
+
+.message-content {
+  font-size: 14px;
+  padding-bottom: 2em;
+  cursor: pointer;
+  overflow-wrap: break-word; /* Ensure words break if necessary */
+  white-space: pre-wrap; /* Preserve line breaks and wrap text */
+}
+
+.sender {
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 1em;
+}
+
+.sub-line {
+  display: flex;
+  gap: 10px;
+}
+
+.clickable-text {
+  cursor: pointer;
+  color: colors.$chat-color-link;
+  text-decoration: underline;
+}

@@ -1,0 +1,82 @@
+<p class="divider" data-testid="stations.list.title.text">{{ 'lblTrainRun' | translate }}</p>
+<p class="section">{{ 'lblStations' | translate }}</p>
+<table mat-table #trTable [dataSource]="stationsTableDataSource">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-reorder"></th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-reorder-' + i">
+      <mat-icon cdkDragHandle>reorder</mat-icon>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="station">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-station">{{ 'lblStation' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-station-' + i">
+      {{ stationNamesMap().get(element.trainStop.station) || '' }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="track">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-track">{{ 'lblStationTrack' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-track-' + i">
+      {{ element.trainStop?.stationTrack?.id }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="stopType">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-stop-type">{{ 'lblStopType' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-stop-type-' + i">
+      {{ stopTypeNamesMap().get(element.trainStop.stopType) || '' }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="arrival">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-arrival">{{ 'lblArrival' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-arrival-' + i">
+      {{ element.trainStop.arrivalTime.time }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="departure">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-departure">{{ 'lblDeparture' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-departure-' + i">
+      {{ element.trainStop.departureTime.time }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="trainType">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-train-type">{{ 'lblTrainType' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-train-type-' + i">
+      {{ trainTypeNamesMap().get(element.trainStop.trainType) || '' }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef data-testid="stations.list.header-action">{{ 'lblAction' | translate }}</th>
+    <td mat-cell *matCellDef="let element; index as i" [attr.data-testid]="'stations.list.cell-action-' + i">
+      @if (isEditMode()) {
+        <button mat-icon-button [attr.data-testid]="'stations.list.edit-' + i + '.button'" (click)="openStationDialog(element)">
+          <mat-icon matTooltip="{{ 'lblEditStation' | translate }}">edit</mat-icon>
+        </button>
+        <button mat-icon-button [attr.data-testid]="'stations.list.delete-' + i + '.button'" (click)="onDeleteStation(i)">
+          <mat-icon matTooltip="{{ 'lblRemoveStation' | translate }}">clear</mat-icon>
+        </button>
+      } @else {
+        <button mat-icon-button [attr.data-testid]="'stations.list.view-' + i + '.button'" (click)="openStationDialog(element)">
+          <mat-icon matTooltip="{{ 'lblViewStation' | translate }}">visibility</mat-icon>
+        </button>
+      }
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="statiionsTableColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; index as i; columns: statiionsTableColumns"
+    [attr.data-testid]="'stations.list.row-' + i"
+    (click)="selectStationRow(i)"
+    [class.highlight]="isStationRowSelected(i)"
+  ></tr>
+</table>
+
+@if (isEditMode()) {
+  <button data-testid="stations.list.add.button" mat-button mat-flat-button class="spacing-top" (click)="onAddStation()" color="primary">
+    {{ 'lblAddStation' | translate }}
+  </button>
+}

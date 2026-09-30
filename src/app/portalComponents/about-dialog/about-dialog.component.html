@@ -1,0 +1,40 @@
+<h2 mat-dialog-title data-testid="about.dialog.title.text">{{ 'lblAbout' | translate }}</h2>
+
+<mat-dialog-content>
+  <div>
+    <span>{{ 'lblBuildVersion' | translate }}: {{ tpsBuildVersion() }}</span>
+  </div>
+
+  <div class="legal-section">
+    <h3 data-testid="about.dialog.legal.text">{{ 'lblLegalInformation' | translate }}</h3>
+    <div>
+      @for (legalItem of legalInfoItems; track legalItem.name; let i = $index) {
+        <div>
+          <p>{{ legalItem.name }}</p>
+          <a [attr.data-testid]="'about.dialog.legal-link-' + i + '.link'" [href]="legalItem.url" target="_blank">{{ legalItem.url }}</a>
+          <p>Licensed under {{ legalItem.license }}</p>
+          @if (legalItem.licenseUrl) {
+            <p>{{ 'lblLicenseAvailableAt' | translate }}</p>
+            <a [href]="legalItem.licenseUrl" target="_blank">{{ legalItem.licenseUrl }}</a>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="copyright-section">
+    <h3 data-testid="about.dialog.copyright.text">{{ 'lblCopyright' | translate }}</h3>
+    <div>
+      <p>{{ tr.translate('lblCompanyName').replace('{0}', currentYear()) }}</p>
+      <p>{{ 'lblCompanyAddress' | translate }}</p>
+      <p>{{ 'lblAllRightsReserved' | translate }}</p>
+      <p>{{ 'lblUnauthorizedDisclaimer' | translate }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button data-testid="navigation.about.ok.button" mat-raised-button color="primary" (click)="closeDialog()">
+    {{ 'lblOk' | translate }}
+  </button>
+</mat-dialog-actions>

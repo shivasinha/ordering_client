@@ -1,0 +1,59 @@
+<h2 mat-dialog-title data-testid="operating-days.save-template.title.text">{{ 'lblSaveAsTemplate' | translate }}</h2>
+
+<mat-dialog-content class="dialog-form-container">
+  <form [formGroup]="templateForm">
+    <!-- Name Field (Required) -->
+    <mat-form-field class="full-width">
+      <mat-label data-testid="operating-days.save-template.name.label">{{ 'lblName' | translate }}</mat-label>
+      <input
+        matInput
+        data-testid="operating-days.save-template.name.input"
+        formControlName="name"
+        [maxlength]="NAME_MAX_LENGTH"
+        [placeholder]="'lblEnterTemplateName' | translate"
+        autocomplete="off"
+      />
+      <mat-hint data-testid="operating-days.save-template.name.counter" align="end"
+        >{{ nameControl.value?.length || 0 }}/{{ NAME_MAX_LENGTH }}</mat-hint
+      >
+      @if (nameControl.invalid && (nameControl.dirty || nameControl.touched)) {
+        <mat-error data-testid="operating-days.save-template.name.error">
+          @if (nameControl.errors?.['required']) {
+            {{ tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblName')) }}
+          }
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Description Field (Optional) -->
+    <mat-form-field class="full-width">
+      <mat-label data-testid="operating-days.save-template.description.label">{{ 'lblDescription' | translate }}</mat-label>
+      <textarea
+        matInput
+        data-testid="operating-days.save-template.description.input"
+        formControlName="description"
+        [maxlength]="DESCRIPTION_MAX_LENGTH"
+        rows="3"
+        [placeholder]="'lblEnterTemplateDescription' | translate"
+        autocomplete="off"
+      ></textarea>
+      <mat-hint data-testid="operating-days.save-template.description.counter" align="end"
+        >{{ descriptionControl.value?.length || 0 }}/{{ DESCRIPTION_MAX_LENGTH }}</mat-hint
+      >
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button data-testid="operating-days.save-template.cancel.button" mat-button (click)="onCancel()" [disabled]="isSaving()">
+    {{ 'lblCancel' | translate }}
+  </button>
+
+  <button data-testid="operating-days.save-template.save.button" mat-button color="primary" (click)="onSave()" [disabled]="!canSave">
+    @if (isSaving()) {
+      <mat-spinner diameter="18"></mat-spinner>
+    } @else {
+      {{ 'lblSave' | translate }}
+    }
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "resolveJsonModule": true,
+    "types": []
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": [
+    "src/app/**/*.ts",        
+    "src/environments/*.ts",  
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/app/**/*.spec.ts",  
+    "src/app/testing/**/*", 
+    "**/*.stories.*"
+  ]
+}

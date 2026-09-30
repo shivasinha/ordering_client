@@ -1,0 +1,5 @@
+<!-- Filter Section -->
+<app-spare-capacity-filter [initialFilters]="currentFilters()" (filterChange)="onFilterChange($event)"></app-spare-capacity-filter>
+
+<!-- Dynamic List Section - Now with single clean config input! ✨ -->
+<app-base-list [listConfig]="listConfig()" (pageChange)="onPageChange($event)" (sortChange)="onSortChange($event)"></app-base-list>

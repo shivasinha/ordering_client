@@ -1,0 +1,258 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ordering-portal-client": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/ordering-portal-client:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets",
+                "ignore": [
+                  "**/customers/**",
+                  "favicon.ico",
+                  "login_bg.png",
+                  "webportal_logo.png",
+                  "environment.js"
+                ]
+              }
+            ],
+            "inlineStyleLanguage": "scss",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules",
+                "src/scss",
+                "src/scss/colors"
+              ]
+            },
+            "allowedCommonJsDependencies": [
+              "hammerjs",
+              "bezier-easing",
+              "dayjs",
+              "dayjs/locale/fi",
+              "dayjs/plugin/advancedFormat",
+              "dayjs/plugin/customParseFormat",
+              "dayjs/plugin/duration",
+              "dayjs/plugin/isBetween",
+              "dayjs/plugin/isToday",
+              "dayjs/plugin/isoWeek",
+              "dayjs/plugin/localeData",
+              "dayjs/plugin/localizedFormat"
+            ],
+            "scripts": [],
+            "extractLicenses": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": true
+                },
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "3mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "15kb",
+                  "maximumError": "20kb"
+                }
+              ]
+            },
+            "dev": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets/favicon.ico",
+                "src/assets/login_bg.png",
+                "src/assets/webportal_logo.png",
+                "src/assets/environment.js",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "/assets",
+                  "ignore": ["**/customers/**"]
+                }
+              ]
+            },
+            "mock": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.mock.ts"
+                }
+              ]
+            },
+            "test": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": ""
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "ordering-portal-client:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "ordering-portal-clientbuild:production"
+            },
+            "dev": {
+              "buildTarget": "ordering-portal-client:build:dev"
+            },
+            "mock": {
+              "buildTarget": "ordering-portal-client:build:mock"
+            }
+          },
+          "defaultConfiguration": ""
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "ordering-portal-client:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "tsConfig": "tsconfig.spec.json",
+            "config": "jest.config.js",
+            "zoneless": false
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "ordering-portal-client:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ordering-portal-client:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "packageManager": "yarn",
+    "analytics": false,
+    "cache": {
+      "enabled": false
+    },
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  },
+  "schematics": {
+    "@schematics/ordering-portal-client:component": {
+      "changeDetection": "OnPush"
+    },
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use 'colors';
+
+mat-dialog-content {
+  text-align: center;
+}
+
+mat-dialog-content > div {
+  margin-bottom: 24px;
+}
+
+mat-dialog-content > div:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section > div {
+  max-height: 160px;
+  overflow-y: auto;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: colors.$color-section-bg;
+  border: 1px solid colors.$color-section-border;
+}
+
+.copyright-section > div {
+  font-size: 0.8em;
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: colors.$color-section-bg;
+  border: 1px solid colors.$color-section-border;
+}
+
+.legal-section div > div {
+  font-size: 0.8em;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid colors.$color-section-border;
+}
+
+.legal-section div > div:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+p {
+  margin: 4px 0;
+}
+
+a {
+  word-break: break-all;
+  display: block;
+}

@@ -1,0 +1,82 @@
+@use '@angular/material' as mat;
+
+/** font style for Hacon Sans Pro**/
+@font-face {
+  font-family: 'Hacon Sans Black';
+  src: url('../assets/fonts/PublicSans-Black.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hacon Sans Bold';
+  src: url('../assets/fonts/PublicSans-SemiBold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hacon Sans Roman';
+  src: url('../assets/fonts/PublicSans.ttf');
+  font-display: swap;
+}
+
+$typography-configuration: mat.m2-define-typography-config(
+  $font-family: '"Hacon Sans Roman", sans-serif',
+  $headline-1: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Roman", sans-serif',
+      $font-weight: 400,
+      $font-size: 16px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $headline-2: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Roman", sans-serif',
+      $font-weight: 400,
+      $font-size: 14px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $headline-3: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Roman", sans-serif',
+      $font-weight: 800,
+      $font-size: 12px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $headline-4: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Roman", sans-serif',
+      $font-weight: 400,
+      $font-size: 16px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $headline-5: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Roman", sans-serif',
+      $font-weight: 400,
+      $font-size: 18px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $headline-6: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Roman", sans-serif',
+      $font-weight: 400,
+      $font-size: 16px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $subtitle-1: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Bold", sans-serif',
+      $font-weight: 400,
+      $font-size: 16px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $subtitle-2: mat.m2-define-typography-level(
+      $font-family: '"Hacon Sans Bold", sans-serif',
+      $font-weight: 400,
+      $font-size: 16px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+);
+
+@include mat.typography-hierarchy($typography-configuration);

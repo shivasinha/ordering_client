@@ -1,0 +1,14 @@
+.presaved-template-dialog-content {
+  min-width: 800px;
+  max-width: 1200px;
+  max-height: 80vh;
+  padding: 0;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .presaved-template-dialog-content {
+    min-width: 90vw;
+    max-width: 95vw;
+  }
+}

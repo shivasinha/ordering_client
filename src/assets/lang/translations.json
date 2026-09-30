@@ -1,0 +1,4240 @@
+{
+    "day1": {
+        "da": "",
+        "e": "Monday ",
+        "remark": "",
+        "sl": "Ponedeljek",
+        "sr-Latn": "Ponedeljak",
+        "translatorComment": "jte new 5.11.0.7"
+    },
+    "day2": {
+        "da": "",
+        "e": "Tuesday ",
+        "remark": "",
+        "sl": "Torek",
+        "sr-Latn": "Torek",
+        "translatorComment": "mda new 5.10.0.7"
+    },
+    "day3": {
+        "da": "",
+        "e": "Wednesday ",
+        "remark": "",
+        "sl": "Sreda",
+        "sr-Latn": "Sreda",
+        "translatorComment": "mda new 5.10.0.7"
+    },
+    "day4": {
+        "da": "",
+        "e": "Thursday",
+        "remark": "",
+        "sl": "Četrtek",
+        "sr-Latn": "Četrtek",
+        "translatorComment": "mda new 5.10.0.7"
+    },
+    "day5": {
+        "da": "",
+        "e": "Friday ",
+        "remark": "",
+        "sl": "Petek",
+        "sr-Latn": "Petak",
+        "translatorComment": "jte new 5.11.0.7"
+    },
+    "day6": {
+        "da": "",
+        "e": "Saturday",
+        "remark": "",
+        "sl": "Sobota",
+        "sr-Latn": "Subota",
+        "translatorComment": "mda new 5.10.0.7-ok"
+    },
+    "day7": {
+        "da": "",
+        "e": "Sunday",
+        "remark": "",
+        "sl": "Nedelja",
+        "sr-Latn": "Nedelja",
+        "translatorComment": "mda new 5.10.0.7"
+    },
+    "errInvalidDataToPerformAction": {
+        "da": "",
+        "e": "Invalid data received to perform action",
+        "remark": "",
+        "sl": "",
+        "sr": "Примљени неважећи подаци за извршење радње",
+        "sr-Latn": "Primljeni nevažeći podaci za izvršenje radnje",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "errorInvalidDateRange": {
+        "da": "",
+        "e": "Date range is not valid",
+        "remark": "",
+        "sl": "Datumsko obdobje ni veljavno",
+        "sr": "Опсег датума није важећи",
+        "sr-Latn": "Opseg datuma nije važeći",
+        "translatorComment": "jte poedit translated, 2026-05-13\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "hintMaxSelectionsReached": {
+        "da": "Der er valgt det maksimale antal {0} valg",
+        "e": "Maximum {0} selections reached",
+        "remark": "",
+        "sl": "Doseženo maksimalno število {0} izbir",
+        "sr": "Постигнуто максимално {0} избора",
+        "sr-Latn": "Postignuto maksimalno {0} izbora",
+        "translatorComment": "jte poedit translated, 2026-05-13\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "hintTryDifferentSearchCriteria": {
+        "da": "Prøv andre søgekriterier",
+        "e": "Try different search criteria",
+        "remark": "",
+        "sl": "Poskusite z drugim iskalnim kriterijem",
+        "sr": "Пробајте различите критеријуме претраге",
+        "sr-Latn": "Probajte različite kriterijume pretrage",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "hlRestrictionHeader": {
+        "da": "Restriktionsoverskrift",
+        "e": "Restriction Header",
+        "remark": "",
+        "sl": "",
+        "sr": "Заглавље ограничења",
+        "sr-Latn": "Zaglavlje ograničenja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAbortCancellation": {
+        "da": "Afbryd annullering",
+        "e": "Abort Cancellation",
+        "remark": "",
+        "sl": "Prekliči preklic",
+        "sr": "Прекид отказа",
+        "sr-Latn": "Prekid otkaza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAbout": {
+        "da": "Om",
+        "e": "About",
+        "remark": "",
+        "sl": "O programu",
+        "sr": "Основни подаци",
+        "sr-Latn": "Osnovni podaci",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAction": {
+        "da": "Handling",
+        "e": "Action",
+        "remark": "",
+        "sl": "Dejanje",
+        "sr": "Радња",
+        "sr-Latn": "Radnja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblActions": {
+        "da": "Handlinger",
+        "e": "Actions",
+        "remark": "",
+        "sl": "Dejanja",
+        "sr": "Радње",
+        "sr-Latn": "Radnje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAdd": {
+        "da": "Tilføj",
+        "e": "Add",
+        "remark": "",
+        "sl": "Dodaj",
+        "sr": "Додај",
+        "sr-Latn": "Dodaj",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddAttachment": {
+        "da": "",
+        "e": "Add attachment link",
+        "remark": "",
+        "sl": "Dodaj povezavo do priloge",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblAddOperatingDays": {
+        "da": "Tilføj driftsdage",
+        "e": "Add Operating Days",
+        "remark": "",
+        "sl": "Dodaj dneve vožnje",
+        "sr": "Додајте дане рада",
+        "sr-Latn": "Dodajte dane rada",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddOrderItem": {
+        "da": "Tilføj ordrelinje",
+        "e": "Add Order Item",
+        "remark": "",
+        "sl": "Dodaj predmet naročila",
+        "sr": "Додај ставку налога",
+        "sr-Latn": "Dodaj stavku naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddSignal": {
+        "da": "Tilføj signal",
+        "e": "Add Signal",
+        "remark": "",
+        "sl": "Dodaj signal",
+        "sr": "Додај сигнал",
+        "sr-Latn": "Dodaj signal",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddStation": {
+        "da": "Tilføj station",
+        "e": "Add Station",
+        "remark": "",
+        "sl": "Dodaj službeno mesto",
+        "sr": "Додај станицу",
+        "sr-Latn": "Dodaj stanicu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddTimeslot": {
+        "da": "Tilføj tidsvindue",
+        "e": "Add Timeslot",
+        "remark": "",
+        "sl": "",
+        "sr": "Додај временски термин",
+        "sr-Latn": "Dodaj vremenski termin",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddTrainRun": {
+        "da": "Tilføj togforløb",
+        "e": "Add Train Run",
+        "remark": "",
+        "sl": "Dodaj vožnjo vlaka",
+        "sr": "Додај Траин Ран",
+        "sr-Latn": "Dodaj Train Ran",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAddUrl": {
+        "da": "Tilføj URL",
+        "e": "Add URL",
+        "remark": "",
+        "sl": "Dodaj URL",
+        "sr": "Додај URL",
+        "sr-Latn": "Dodaj URL",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAgreed": {
+        "da": "Aftalt",
+        "e": "Agreed",
+        "remark": "",
+        "sl": "Dogovorjeno",
+        "sr": "Сагласно",
+        "sr-Latn": "Saglasno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAllDays": {
+        "da": "",
+        "e": "All Days",
+        "remark": "",
+        "sl": "Vsi dnevi",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblAllOrderType": {
+        "da": "-Alle typer-",
+        "e": "-All Types-",
+        "remark": "",
+        "sl": "-Vse Vrste-",
+        "sr": "-Све врсте-",
+        "sr-Latn": "-Sve vrste-",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAllProjects": {
+        "da": "Alle projekter",
+        "e": "All Projects",
+        "remark": "",
+        "sl": "Vsi Projekti",
+        "sr": "Сви пројекти",
+        "sr-Latn": "Svi projekti",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAllRightsReserved": {
+        "da": "Alle rettigheder forbeholdes.",
+        "e": "All rights reserved.",
+        "remark": "",
+        "sl": "Vse pravice pridržane.",
+        "sr": "Сва права задржана.",
+        "sr-Latn": "Sva prava zadržana.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAllSources": {
+        "da": "- Alle kilder -",
+        "e": "- All Sources -",
+        "remark": "",
+        "sl": "- Vsi viri -",
+        "sr": "- Сви извори -",
+        "sr-Latn": "- Svi izvori -",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAllStates": {
+        "da": "- Alle tilstande -",
+        "e": "- All States -",
+        "remark": "",
+        "sl": "- Vsa Stanja -",
+        "sr": "- Сви држави -",
+        "sr-Latn": "- Svi državi -",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAppTitle": {
+        "da": "Togbestillingsportal",
+        "e": "Train Ordering Portal",
+        "remark": "",
+        "sl": "Portal za naročanje vlakov",
+        "sr": "Портал за наручивање возова",
+        "sr-Latn": "Portal za naručivanje vozova",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblApply": {
+        "da": "Udfør",
+        "e": "Apply",
+        "remark": "",
+        "sl": "Uporabi",
+        "sr": "Примени",
+        "sr-Latn": "Primeni",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblApplyFilter": {
+        "da": "",
+        "e": "Apply Filter",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "translatorComment": ""
+    },
+    "lblArchivedOrders": {
+        "da": "Liste over arkiverede ordrer",
+        "e": "Archived Orders List",
+        "remark": "",
+        "sl": "Seznam arhiviranih naročil",
+        "sr": "Списак архивираних поруџбина",
+        "sr-Latn": "Spisak arhiviranih porudžbina",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblArea": {
+        "da": "Område",
+        "e": "Area",
+        "remark": "",
+        "sl": "Območje",
+        "sr": "Област",
+        "sr-Latn": "Oblast",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblArrival": {
+        "da": "Ankomst",
+        "e": "Arrival",
+        "remark": "",
+        "sl": "Prihod",
+        "sr": "Долазак",
+        "sr-Latn": "Dolazak",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAttach": {
+        "da": "",
+        "e": "Attach",
+        "remark": "",
+        "sl": "Priloži",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblAttachUrl": {
+        "da": "Tilføj URL",
+        "e": "Add URL",
+        "remark": "",
+        "sl": "Dodaj URL",
+        "sr": "Додај URL",
+        "sr-Latn": "Dodaj URL",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblAttachment": {
+        "da": "",
+        "e": "Attachment",
+        "remark": "",
+        "sl": "Priloga",
+        "sr": "Прилог",
+        "sr-Latn": "Prilog",
+        "translatorComment": "jte new master\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblAttachmentLinks": {
+        "da": "",
+        "e": "Attachment Links",
+        "remark": "",
+        "sl": "Povezave do prilog",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblAttachments": {
+        "da": "",
+        "e": "Attachments",
+        "remark": "",
+        "sl": "Priloge",
+        "sr": "Прилози",
+        "sr-Latn": "Prilozi",
+        "translatorComment": "jte new master\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblAxleLoad": {
+        "da": "Akselbelastning",
+        "e": "Axle Load",
+        "remark": "",
+        "sl": "Obremenitev osi",
+        "sr": "Осовинско оптерећење",
+        "sr-Latn": "Osovinsko opterećenje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblBeginDate": {
+        "da": "Startdato",
+        "e": "Begin Date",
+        "remark": "",
+        "sl": "Začetni datum",
+        "sr": "Датум почетка",
+        "sr-Latn": "Datum početka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblBuildVersion": {
+        "da": "Build-version",
+        "e": "Build Version",
+        "remark": "",
+        "sl": "Različica",
+        "sr": "Верзија изградње",
+        "sr-Latn": "Verzija izgradnje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblBusinessReferenceId": {
+        "da": "Business Reference ID",
+        "e": "Business Reference ID",
+        "remark": "",
+        "sl": "",
+        "sr": "Деловодни број",
+        "sr-Latn": "Delovodni broj",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancel": {
+        "da": "Annuller",
+        "e": "Cancel",
+        "remark": "",
+        "sl": "Prekliči",
+        "sr": "Откажи",
+        "sr-Latn": "Otkaži",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancelOrder": {
+        "da": "Annuller denne ordre",
+        "e": "Cancel this Order",
+        "remark": "",
+        "sl": "Prekliči to naročilo",
+        "sr": "Откажи ову поруџбину",
+        "sr-Latn": "Otkaži ovu porudžbinu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancelTrainRun": {
+        "da": "Aflys togforløb",
+        "e": "Cancel Train Run",
+        "remark": "",
+        "sl": "Prekliči vožnjo vlaka",
+        "sr": "Откажи трку возова",
+        "sr-Latn": "Otkaži trku vozova",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancellationDate": {
+        "da": "Aflysningsdato",
+        "e": "Cancellation Date",
+        "remark": "",
+        "sl": "Datum preklica",
+        "sr": "Датум отказа",
+        "sr-Latn": "Datum otkaza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancellationReason": {
+        "da": "Årsag til aflysning",
+        "e": "Cancellation Reason",
+        "remark": "",
+        "sl": "Razlog odpovedi",
+        "sr": "Разлог отказивања",
+        "sr-Latn": "Razlog otkazivanja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancelled": {
+        "da": "Aflyst",
+        "e": "Cancelled",
+        "remark": "",
+        "sl": "Preklicano",
+        "sr": "Отказано",
+        "sr-Latn": "Otkazano",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCancelledTrainRun": {
+        "da": "",
+        "e": "Cancelled Train Run",
+        "remark": "",
+        "sl": "Preklicana vožnja vlaka",
+        "sr": "Отказивање воза",
+        "sr-Latn": "Otkazivanje voza",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "lblCatShutOff": {
+        "da": "Kørestrømsafbrydelse",
+        "e": "Catenary Shut-Off",
+        "remark": "",
+        "sl": "",
+        "sr": "Искључење контактне мреже",
+        "sr-Latn": "Isključenje kontaktne mreže",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCharacters": {
+        "da": "Characters",
+        "e": "Characters",
+        "remark": "",
+        "sl": "Znakov",
+        "sr": "Ликови",
+        "sr-Latn": "Likovi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblClear": {
+        "da": "Ryd",
+        "e": "Clear",
+        "remark": "",
+        "sl": "Počisti",
+        "sr": "Обриши",
+        "sr-Latn": "Obriši",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblClose": {
+        "da": "Luk",
+        "e": "Close",
+        "remark": "",
+        "sl": "Zapri",
+        "sr": "Затвори",
+        "sr-Latn": "Zatvori",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCompany": {
+        "da": "Company",
+        "e": "Company",
+        "remark": "",
+        "sl": "Podjetje",
+        "sr": "Предузеће",
+        "sr-Latn": "Preduzeće",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCompanyAddress": {
+        "da": "Lister Straße 15, 30163 Hannover, Tyskland",
+        "e": "Lister Straße 15, 30163 Hannover, Germany",
+        "remark": "",
+        "sl": "Lister Straße 15, 30163 Hannover, Nemčija",
+        "sr": "Листер штрасе 15, 30163 Хановер, Немачка",
+        "sr-Latn": "Lister štrase 15, 30163 Hanover, Nemačka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCompanyName": {
+        "da": "© {0} Hacon Ingenieurgesellschaft mbH – A Siemens Company",
+        "e": "© {0} Hacon Ingenieurgesellschaft mbH – A Siemens Company",
+        "remark": "",
+        "sl": "© {0} Hacon Ingenieurgesellschaft mbH – A Siemens Company",
+        "sr": "© {0} Хакон Инженерско ДОО – компанија Сименс",
+        "sr-Latn": "© {0} Hakon Inženersko DOO – kompanija Simens",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblConditionalTrainRun": {
+        "da": "Behovstog",
+        "e": "Conditional Train",
+        "remark": "",
+        "sl": "Fakultativni vlak",
+        "sr": "Воз по потреби",
+        "sr-Latn": "Voz po potrebi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblConfirm": {
+        "da": "Bekræft",
+        "e": "Confirm",
+        "remark": "",
+        "sl": "Potrdi",
+        "sr": "Потврди",
+        "sr-Latn": "Potvrdi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblConfirmOffer": {
+        "da": "Bekræft tilbud",
+        "e": "Confirm Offer",
+        "remark": "",
+        "sl": "Potrdi ponudbo",
+        "sr": "Потврди понуду",
+        "sr-Latn": "Potvrdi ponudu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblContract": {
+        "da": "",
+        "e": "Contract",
+        "remark": "",
+        "sl": "Pogodba",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblCopyOrder": {
+        "da": "Kopiér til ny ordre",
+        "e": "Copy to New Order",
+        "remark": "",
+        "sl": "Kopiraj v novo naročilo",
+        "sr": "Копирај у нову поруџбину",
+        "sr-Latn": "Kopiraj u novu porudžbinu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCopyTrainRun": {
+        "da": "Kopier togforløb",
+        "e": "Copy Train Run",
+        "remark": "",
+        "sl": "Kopiraj vožnjo vlaka",
+        "sr": "Копирај вожњу",
+        "sr-Latn": "Kopiraj vožnju",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCopyright": {
+        "da": "Copyright",
+        "e": "Copyright",
+        "remark": "",
+        "sl": "Avtorske pravice",
+        "sr": "Ауторска права",
+        "sr-Latn": "Autorska prava",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCreateNewMessage": {
+        "da": "Opret ny meddelelse",
+        "e": "Create new message",
+        "remark": "",
+        "sl": "Ustvari novo sporočilo",
+        "sr": "Креирајте нову поруку",
+        "sr-Latn": "Kreirajte novu poruku",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCreateTrainRun": {
+        "da": "",
+        "e": "Create Train Run",
+        "remark": "",
+        "sl": "Ustvari vožnjo vlaka",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblCreationDateTime": {
+        "da": "Oprettelsesdato",
+        "e": "Creation Date",
+        "remark": "",
+        "sl": "Datum ustvarjanja",
+        "sr": "Датум израде",
+        "sr-Latn": "Datum izrade",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblCurrentOrders": {
+        "da": "Liste over aktuelle ordrer",
+        "e": "Current Orders List",
+        "remark": "",
+        "sl": "Seznam trenutnih naročil",
+        "sr": "Листа тренутних налога",
+        "sr-Latn": "Lista trenutnih naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDaily": {
+        "da": "Daglig",
+        "e": "Daily",
+        "remark": "",
+        "sl": "Dnevno",
+        "sr": "Дневно",
+        "sr-Latn": "Dnevno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDate": {
+        "da": "Type af datointerval",
+        "e": "Date Range Type",
+        "remark": "",
+        "sl": "Vrsta časovnega obdobja",
+        "sr": "Опсег датума Тип",
+        "sr-Latn": "Opseg datuma Tip",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDateFormat": {
+        "da": "",
+        "e": "DD/MM/YYYY",
+        "remark": "",
+        "sl": "DD/MM/YYYY",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblDateRange": {
+        "da": "Datointerval",
+        "e": "Date Range",
+        "remark": "",
+        "sl": "Časovno obdobje",
+        "sr": "Опсег датума",
+        "sr-Latn": "Opseg datuma",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDateRangeRequired": {
+        "da": "Datointerval er påkrævet",
+        "e": "Date range is required",
+        "remark": "",
+        "sl": "Datumsko obdobje je obvezno",
+        "sr": "Опсег датума је обавезан",
+        "sr-Latn": "Opseg datuma je obavezan",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDelete": {
+        "da": "Slet",
+        "e": "Delete",
+        "remark": "",
+        "sl": "Izbriši",
+        "sr": "Избриши",
+        "sr-Latn": "Izbriši",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDeleteOperatingDays": {
+        "da": "",
+        "e": "Delete Operating Days",
+        "remark": "",
+        "sl": "Izbriši dneve vožnje",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblDeleteOrder": {
+        "da": "Slet denne ordre",
+        "e": "Delete this Order",
+        "remark": "",
+        "sl": "Izbriši to naročilo",
+        "sr": "Избриши ову поруџбину",
+        "sr-Latn": "Izbriši ovu porudžbinu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDeleteSignal": {
+        "da": "Slet signal",
+        "e": "Delete signal",
+        "remark": "",
+        "sl": "",
+        "sr": "Обриши сигнал",
+        "sr-Latn": "Obriši signal",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDeleteStation": {
+        "da": "Slet station",
+        "e": "Delete Station",
+        "remark": "",
+        "sl": "Izbriši službeno mesto",
+        "sr": "Избриши станицу",
+        "sr-Latn": "Izbriši stanicu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDeparture": {
+        "da": "Afgang",
+        "e": "Departure",
+        "remark": "",
+        "sl": "Odhod",
+        "sr": "Полазак",
+        "sr-Latn": "Polazak",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDescription": {
+        "da": "Beskrivelse",
+        "e": "Description",
+        "remark": "",
+        "sl": "Opis",
+        "sr": "Опис",
+        "sr-Latn": "Opis",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDeselectDays": {
+        "da": "Fravælg dage",
+        "e": "Deselect Days",
+        "remark": "",
+        "sl": "Odstrani izbiro dni",
+        "sr": "Уклонити дане",
+        "sr-Latn": "Ukloniti dane",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDeselectSignal": {
+        "da": "",
+        "e": "Deselect signal",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblDeselectedDays": {
+        "da": "",
+        "e": "Deselected days",
+        "remark": "",
+        "sl": "Ne izbrani dnevi",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblDestination": {
+        "da": "Destination",
+        "e": "Destination",
+        "remark": "",
+        "sl": "Cilj",
+        "sr": "Одредиште",
+        "sr-Latn": "Odredište",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDetailTrainRun": {
+        "da": "",
+        "e": "Train Run Details",
+        "remark": "",
+        "sl": "",
+        "sr": "Детаљи вожње воза",
+        "sr-Latn": "Detalji vožnje voza",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "lblDone": {
+        "da": "Done",
+        "e": "Done",
+        "remark": "",
+        "sl": "Končano",
+        "sr": "Готово",
+        "sr-Latn": "Gotovo",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblDraft": {
+        "da": "Kladde",
+        "e": "Draft",
+        "remark": "",
+        "sl": "Osnutek",
+        "sr": "Нацрт",
+        "sr-Latn": "Nacrt",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEdit": {
+        "da": "Redigér",
+        "e": "Edit",
+        "remark": "",
+        "sl": "Uredi",
+        "sr": "Уреди",
+        "sr-Latn": "Uredi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEditAttachments": {
+        "da": "",
+        "e": "Edit Attachments",
+        "remark": "",
+        "sl": "Uredi priloge",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblEditOperatingDays": {
+        "da": "Rediger driftsdage",
+        "e": "Edit Operating Days",
+        "remark": "",
+        "sl": "Uredi obratovalne dni",
+        "sr": "Уредити дане рада",
+        "sr-Latn": "Urediti dane rada",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEditSignal": {
+        "da": "Rediger signal",
+        "e": "Edit signal",
+        "remark": "",
+        "sl": "",
+        "sr": "Уреди сигнал",
+        "sr-Latn": "Uredi signal",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEditStation": {
+        "da": "Rediger station",
+        "e": "Edit Station",
+        "remark": "",
+        "sl": "Uredi službeno mesto",
+        "sr": "Уређивачка станица",
+        "sr-Latn": "Uređivačka stanica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEditUrls": {
+        "da": "Rediger URL'er",
+        "e": "Edit URLs",
+        "remark": "",
+        "sl": "Uredi URL-je",
+        "sr": "Уреди URL-ове",
+        "sr-Latn": "Uredi URL adrese",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEmailAddress": {
+        "da": "E-mailadresse",
+        "e": "Email Address",
+        "remark": "",
+        "sl": "",
+        "sr": "Адреса електронске поште",
+        "sr-Latn": "Adresa elektronske pošte",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEndDate": {
+        "da": "Slutdato",
+        "e": "End Date",
+        "remark": "",
+        "sl": "Končni datum",
+        "sr": "Датум завршетка",
+        "sr-Latn": "Datum završetka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEndTimeEarliest": {
+        "da": "Sluttidspunkt (tidligst)",
+        "e": "End Time (earliest)",
+        "remark": "",
+        "sl": "",
+        "sr": "Време завршетка (најраније)",
+        "sr-Latn": "Vreme završetka (najranije)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEnterCancellationReason": {
+        "da": "Indtast aflysningsårsag (valgfrit)",
+        "e": "Enter cancellation reason (optional)",
+        "remark": "",
+        "sl": "",
+        "sr": "Унесите разлог отказивања (опционо)",
+        "sr-Latn": "Unesite razlog otkazivanja (opciono)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEnterSearchTerm": {
+        "da": "Indtast søgeord",
+        "e": "Enter search term",
+        "remark": "",
+        "sl": "Vnesite iskalni izraz",
+        "sr": "Унесите појам за претрагу",
+        "sr-Latn": "Unesite pojam za pretragu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEnterTemplateDescription": {
+        "da": "Indtast skabelonbeskrivelse",
+        "e": "Enter Template Description",
+        "remark": "",
+        "sl": "Vnesite opis predloge",
+        "sr": "Унесите опис шаблона",
+        "sr-Latn": "Unesite opis šablona",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblEnterTemplateName": {
+        "da": "Indtast skabelonnavn",
+        "e": "Enter Template Name",
+        "remark": "",
+        "sl": "Vnesite ime predloge",
+        "sr": "Унесите назив шаблона",
+        "sr-Latn": "Unesite naziv šablona",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblExit": {
+        "da": "Afslut",
+        "e": "Exit",
+        "remark": "",
+        "sl": "Izhod",
+        "sr": "Изађи",
+        "sr-Latn": "Izađi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblExpirtionDateTime": {
+        "da": "Udløbsdato",
+        "e": "Expiration Date",
+        "remark": "",
+        "sl": "Datum poteka",
+        "sr": "Рок трајања",
+        "sr-Latn": "Rok trajanja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFilter": {
+        "da": "Filter",
+        "e": "Filter",
+        "remark": "",
+        "sl": "Filter",
+        "sr": "Филтер",
+        "sr-Latn": "Filter",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFilters": {
+        "da": "",
+        "e": "Filters",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "translatorComment": ""
+    },
+    "lblFirstPage": {
+        "da": "Første side",
+        "e": "First Page",
+        "remark": "",
+        "sl": "Prva stran",
+        "sr": "Прва страница",
+        "sr-Latn": "Prva stranica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFri": {
+        "da": "Fre",
+        "e": "Fri",
+        "remark": "'Fri' is short for 'Friday'",
+        "sl": "Pet",
+        "sr": "Пет.",
+        "sr-Latn": "Pet.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFrom": {
+        "da": "Fra",
+        "e": "From",
+        "remark": "",
+        "sl": "Od",
+        "sr": "Од",
+        "sr-Latn": "Od",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFromDate": {
+        "da": "From Date",
+        "e": "From Date",
+        "remark": "",
+        "sl": "Od datuma",
+        "sr": "Од датума",
+        "sr-Latn": "Od datuma",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFromStation": {
+        "da": "Fra station",
+        "e": "From Station",
+        "remark": "",
+        "sl": "Iz službenega mesta",
+        "sr": "Од станице",
+        "sr-Latn": "Od stanice",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblFromTime": {
+        "da": "Afgangstid",
+        "e": "Departure Time",
+        "remark": "",
+        "sl": "",
+        "sr": "Време поласка",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblHoliday": {
+        "da": "Helligdag",
+        "e": "Holiday",
+        "remark": "",
+        "sl": "Praznik",
+        "sr": "Празник",
+        "sr-Latn": "Praznik",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblImportSignal": {
+        "da": "Importér signaler",
+        "e": "Import Signals",
+        "remark": "",
+        "sl": "",
+        "sr": "Увези сигнале",
+        "sr-Latn": "Uvezi signale",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblInProgress": {
+        "da": "",
+        "e": "In Progress",
+        "remark": "",
+        "sl": "V teku",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblInfo": {
+        "da": "Info ",
+        "e": "Info ",
+        "remark": "",
+        "sl": "Informacije",
+        "sr": "Инфо ",
+        "sr-Latn": "Info ",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblInfrastructureManager": {
+        "da": "Infrastrukturforvalter",
+        "e": "Infrastructure Manager",
+        "remark": "",
+        "sl": "Upravljavec Infrastrukture",
+        "sr": "Менаџер инфраструктуре",
+        "sr-Latn": "Menadžer infrastrukture",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblInterruptible": {
+        "da": "Kan afbrydes",
+        "e": "Interruptible",
+        "remark": "",
+        "sl": "",
+        "sr": "Може се прекинути",
+        "sr-Latn": "Može se prekinuti",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblItems": {
+        "da": "Elementer",
+        "e": "Items",
+        "remark": "",
+        "sl": "Predmeti",
+        "sr": "Ставке",
+        "sr-Latn": "Stavke",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblItemsPerPage": {
+        "da": "Elementer pr. side",
+        "e": "Items per page",
+        "remark": "",
+        "sl": "Predmetov na stran",
+        "sr": "Ставова по страници",
+        "sr-Latn": "Stavova po stranici",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLangDanish": {
+        "da": "Dansk",
+        "e": "Danish",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblLangEnglish": {
+        "da": "Engelsk",
+        "e": "English",
+        "remark": "",
+        "sl": "Angleščina",
+        "sr": "енглески",
+        "sr-Latn": "engleski",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLangSerbian": {
+        "da": "",
+        "e": "Serbian",
+        "remark": "",
+        "sl": "Srbski",
+        "sr": "Српски",
+        "sr-Latn": "Srpski",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "lblLangSlovenian": {
+        "da": "",
+        "e": "Slovenian",
+        "remark": "",
+        "sl": "Slovenščina",
+        "sr": "словеначки",
+        "sr-Latn": "slovenački",
+        "translatorComment": "jte new master\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblLanguage": {
+        "da": "Sprog",
+        "e": "Language",
+        "remark": "",
+        "sl": "Jezik",
+        "sr": "Језик",
+        "sr-Latn": "Jezik",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLastChanged": {
+        "da": "Sidst ændret",
+        "e": "Last Changed",
+        "remark": "",
+        "sl": "Zadnja sprememba",
+        "sr": "Последња измена",
+        "sr-Latn": "Poslednja izmena",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLastPage": {
+        "da": "Sidste side",
+        "e": "Last Page",
+        "remark": "",
+        "sl": "Zadnja stran",
+        "sr": "Последња страница",
+        "sr-Latn": "Poslednja stranica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLegalInformation": {
+        "da": "Juridiske oplysninger",
+        "e": "Legal Information",
+        "remark": "",
+        "sl": "Pravne informacije",
+        "sr": "Правне информације",
+        "sr-Latn": "Pravne informacije",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLength": {
+        "da": "Længde (m)",
+        "e": "Length (m)",
+        "remark": "",
+        "sl": "",
+        "sr": "Дужина (m)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLicenseAvailableAt": {
+        "da": "Du kan få en kopi af licensen på",
+        "e": "You may obtain a copy of the license at",
+        "remark": "",
+        "sl": "Kopijo licence lahko dobite na naslovu",
+        "sr": "Можете добити копију лиценце на",
+        "sr-Latn": "Možete dobiti kopiju licence na",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLineOfWork": {
+        "da": "Arbejdsområde",
+        "e": "Line of Work",
+        "remark": "",
+        "sl": "",
+        "sr": "Деоница на којој се изводе радови",
+        "sr-Latn": "Deonica na kojoj se izvode radovi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLoadOperatingDays": {
+        "da": "Indlæs driftsdage",
+        "e": "Load Operating Days",
+        "remark": "",
+        "sl": "Naloži dneve vožnje",
+        "sr": "Учитавање радних дана",
+        "sr-Latn": "Učitavanje radnih dana",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLoadSavedOperatingDayTemplate": {
+        "da": "Indlæs gemt driftsdagsskabelon",
+        "e": "Load Saved Operating Day Template",
+        "remark": "",
+        "sl": "Naloži shranjen koledar vožnje vlaka ",
+        "sr": "Учитај сачувани шаблон радног дана",
+        "sr-Latn": "Učitaj sačuvani šablon radnog dana",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLocation": {
+        "da": "",
+        "e": "Location",
+        "remark": "",
+        "sl": "Lokacija",
+        "sr-Latn": "",
+        "translatorComment": "initial translation"
+    },
+    "lblLogin": {
+        "da": "Login",
+        "e": "Login",
+        "remark": "",
+        "sl": "Prijava",
+        "sr": "Пријава",
+        "sr-Latn": "Prijava",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLoginSso": {
+        "da": "Single Sign-On med {0}",
+        "e": "Single Sign On by {0}",
+        "remark": "",
+        "sl": "Enkratna prijava {0}",
+        "sr": "Једнократно пријављивање од {0}",
+        "sr-Latn": "Jednokratno prijavljivanje od {0}",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLogout": {
+        "da": "Log ud",
+        "e": "Logout",
+        "remark": "",
+        "sl": "Odjava",
+        "sr": "Одјављивање",
+        "sr-Latn": "Odjavljivanje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblLtp": {
+        "d": "Langfristplanung",
+        "da": "LTP",
+        "e": "LTP",
+        "remark": "",
+        "sl": "LTP",
+        "sr": "DRP",
+        "sr-Latn": "DRP",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMaintenanceOrganization": {
+        "da": "Vedligeholdelsesorganisation",
+        "e": "Maintenance Organisation",
+        "remark": "",
+        "sl": "",
+        "sr": "Организација одржавања",
+        "sr-Latn": "Organizacija za održavanje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblManageAttachments": {
+        "da": "",
+        "e": "Manage Attachments",
+        "remark": "",
+        "sl": "Upravljaj priloge",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblManageUrls": {
+        "da": "Administrer URL'er",
+        "e": "Manage URLs",
+        "remark": "",
+        "sl": "",
+        "sr": "Управљај URL-овима",
+        "sr-Latn": "Upravljanje URL adresama",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMatchAnyDate": {
+        "da": "Match alle datoer",
+        "e": "Match any dates",
+        "remark": "",
+        "sl": "Ujemanje s katerim koli datumom",
+        "sr": "Упарите било које датуме",
+        "sr-Latn": "Uparite bilo koje datume",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMaxSpeed": {
+        "da": "Maks. hastighed (km/t)",
+        "e": "Max Speed (km/h)",
+        "remark": "",
+        "sl": "",
+        "sr": "Макс. брзина (km/h)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMaximumVelocity": {
+        "da": "V-maks.",
+        "e": "V-Max",
+        "remark": "",
+        "sl": "V-Max",
+        "sr": "В-Макс",
+        "sr-Latn": "V-Maks",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMessage": {
+        "da": "Meddelelse",
+        "e": "Message",
+        "remark": "",
+        "sl": "Sporočilo",
+        "sr": "Порука",
+        "sr-Latn": "Poruka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMessageId": {
+        "da": "Meddelses-ID",
+        "e": "Message ID",
+        "remark": "",
+        "sl": "ID sporočila",
+        "sr": "ID поруке",
+        "sr-Latn": "ID poruke",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMissingFields": {
+        "da": "Manglende felter",
+        "e": "Missing Fields",
+        "remark": "",
+        "sl": "Manjkajoča polja",
+        "sr": "Недостајућа поља",
+        "sr-Latn": "Nedostajuća polja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblModifyTrainRun": {
+        "da": "Ændre togforløb",
+        "e": "Modify Train Run",
+        "remark": "",
+        "sl": "Spremeni vožnjo vlaka",
+        "sr": "Измени вожњу",
+        "sr-Latn": "Izmeni vožnju",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblMon": {
+        "da": "Man",
+        "e": "Mon",
+        "remark": "'Mon' is short for 'Monday'",
+        "sl": "Pon",
+        "sr": "Пон.",
+        "sr-Latn": "Pon.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblName": {
+        "da": "Navn",
+        "e": "Name",
+        "remark": "",
+        "sl": "Ime",
+        "sr": "Име",
+        "sr-Latn": "Ime",
+        "translatorComment": "jte new master\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblNewAttachment": {
+        "da": "",
+        "e": "New Attachment",
+        "remark": "",
+        "sl": "Nova priloga",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblNewOrder": {
+        "da": "Ny bestilling",
+        "e": "New Order",
+        "remark": "",
+        "sl": "Novo naročilo",
+        "sr": "Нови налог",
+        "sr-Latn": "Novi nalog",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNewOrderItem": {
+        "da": "Ny ordrepost",
+        "e": "New Order Item",
+        "remark": "",
+        "sl": "",
+        "sr": "Нова ставка налога",
+        "sr-Latn": "Nova stavka naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNewTrainNumber": {
+        "da": "Nyt tognummer",
+        "e": "New Train Number",
+        "remark": "",
+        "sl": "Nova številka vlaka",
+        "sr": "Нови број воза",
+        "sr-Latn": "Novi broj voza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNewTrainRun": {
+        "da": "",
+        "e": "New Train Run",
+        "remark": "",
+        "sl": "Nova vožnja vlaka",
+        "sr": "Нова вожња",
+        "sr-Latn": "Nova vožnja",
+        "translatorComment": "jte new master"
+    },
+    "lblNewUnreadMessage": {
+        "da": "Du har en ny besked",
+        "e": "You have new message",
+        "remark": "",
+        "sl": "Imate novo sporočilo",
+        "sr": "Имате нову поруку",
+        "sr-Latn": "Imate novu poruku",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNewUrl": {
+        "da": "Ny URL",
+        "e": "New URL",
+        "remark": "",
+        "sl": "Nov URL",
+        "sr": "Нови URL",
+        "sr-Latn": "Novi URL",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNextPage": {
+        "da": "Næste side",
+        "e": "Next Page",
+        "remark": "",
+        "sl": "Naslednja stran",
+        "sr": "Следећа страница",
+        "sr-Latn": "Sledeća stranica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNoData": {
+        "da": "Ingen data tilgængelige",
+        "e": "No Data Available",
+        "remark": "",
+        "sl": "Ni podatkov",
+        "sr": "Није доступно никаквих података",
+        "sr-Latn": "Nije dostupno nikakvih podataka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNoNewMessage": {
+        "da": "Ingen ny meddelelse",
+        "e": "No new message",
+        "remark": "",
+        "sl": "Ni novih sporočil",
+        "sr": "Нема нове поруке",
+        "sr-Latn": "Nema nove poruke",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNoSignals": {
+        "da": "Ingen signaler tilgængelige",
+        "e": "No signals available",
+        "remark": "",
+        "sl": "",
+        "sr": "Нема доступних сигнала",
+        "sr-Latn": "Nema dostupnih signala",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNoTimeSlots": {
+        "da": "Ingen tidsvinduer tilgængelige",
+        "e": "No time slots available",
+        "remark": "",
+        "sl": "",
+        "sr": "Нема доступних временских термина",
+        "sr-Latn": "Nema dostupnih vremenskih termina",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNotFound": {
+        "da": "",
+        "e": "Not found",
+        "remark": "",
+        "sl": "Ni najdeno",
+        "sr": "Није пронађено",
+        "sr-Latn": "Nije pronađeno",
+        "translatorComment": ""
+    },
+    "lblNotOn": {
+        "da": "ikke på",
+        "e": "not on",
+        "remark": "",
+        "sl": "ni na",
+        "sr": "није укључено",
+        "sr-Latn": "nije uključeno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNotes": {
+        "da": "",
+        "e": "Notes",
+        "remark": "",
+        "sl": "Opombe",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblNotesForPlanner": {
+        "da": "Bemærkninger til planlægning",
+        "e": "Notes for Planner",
+        "remark": "",
+        "sl": "",
+        "sr": "Напомене за конструктора",
+        "sr-Latn": "Napomene za konstruktora",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblNumericValue": {
+        "da": "Skal være en numerisk værdi",
+        "e": "Must Be a Numeric Value",
+        "remark": "",
+        "sl": "",
+        "sr": "Мора бити нумеричка вредност",
+        "sr-Latn": "Mora biti numerička vrednost",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOfLabel": {
+        "da": "of",
+        "e": "of",
+        "remark": "Label for pagination. E.g. 1 of 10",
+        "sl": "od",
+        "sr": "од",
+        "sr-Latn": "od",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOfferDeadline": {
+        "da": "Deadline for tilbud",
+        "e": "Offer Deadline",
+        "remark": "",
+        "sl": "",
+        "sr": "Рок понуде",
+        "sr-Latn": "Rok ponude",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOfferItem": {
+        "da": "Tilbudselement",
+        "e": "Offer Item",
+        "remark": "",
+        "sl": "Ponujena postavka",
+        "sr": "Ставка у понуди",
+        "sr-Latn": "Stavka u ponudi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOfferItemId": {
+        "da": "Tilbud element ID",
+        "e": "Offer Item ID",
+        "remark": "",
+        "sl": "ID predmeta ponudbe",
+        "sr": "ID ставке у понуди",
+        "sr-Latn": "ID stavke u ponudi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOffered": {
+        "da": "Tilbudt",
+        "e": "Offered",
+        "remark": "",
+        "sl": "Ponujeno",
+        "sr": "Понуђено",
+        "sr-Latn": "Ponuđeno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOfferedItems": {
+        "da": "Tilbudte poster",
+        "e": "Offered Items",
+        "remark": "",
+        "sl": "Ponujeni predmeti",
+        "sr": "Понуђене ставке",
+        "sr-Latn": "Ponuđene stavke",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOfferedRestriction": {
+        "da": "",
+        "e": "Offered Restriction Details",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblOfferedTrainRun": {
+        "da": "",
+        "e": "Offered Train Run Details",
+        "remark": "",
+        "sl": "Podrobnosti ponujene vožnje vlaka",
+        "sr": "Подаци о понуђеној вожњи возом",
+        "sr-Latn": "Podaci o ponuđenoj vožnji vozom",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "lblOk": {
+        "da": "OK",
+        "e": "OK",
+        "remark": "",
+        "sl": "V redu",
+        "sr": "У реду",
+        "sr-Latn": "U redu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOperatingCompany": {
+        "da": "Operatør",
+        "e": "Operating Company",
+        "remark": "",
+        "sl": "Operativno podjetje",
+        "sr": "Оперативна компанија",
+        "sr-Latn": "Operativna kompanija",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOperatingDays": {
+        "da": "Dagkode",
+        "e": "Operating Days",
+        "remark": "",
+        "sl": "Obratovalni dnevi",
+        "sr": "Дани саобраћања",
+        "sr-Latn": "Dani saobraćanja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrder": {
+        "da": "Order",
+        "e": "Order",
+        "remark": "",
+        "sl": "Naročilo",
+        "sr": "Налог",
+        "sr-Latn": "Nalog",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderId": {
+        "da": "Bestilling ID",
+        "e": "Order ID",
+        "remark": "",
+        "sl": "ID naročila",
+        "sr": "ID налога",
+        "sr-Latn": "ID naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderItem": {
+        "da": "Bestillingselement",
+        "e": "Order Item",
+        "remark": "",
+        "sl": "",
+        "sr": "Ставка налога",
+        "sr-Latn": "Stavka naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderItemId": {
+        "da": "Bestiller element ID",
+        "e": "Order Item ID",
+        "remark": "",
+        "sl": "ID predmeta naročila",
+        "sr": "ID ставке налога",
+        "sr-Latn": "ID stavke naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderItems": {
+        "da": "Bestilte elementer",
+        "e": "Ordered Items",
+        "remark": "",
+        "sl": "Naročeni predmeti",
+        "sr": "Наручени предмети",
+        "sr-Latn": "Naručeni predmeti",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderMessages": {
+        "da": "Bestillingsmeddelelser",
+        "e": "Order Messages",
+        "remark": "",
+        "sl": "Sporočila naročila",
+        "sr": "Поруке налога",
+        "sr-Latn": "Poruke naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderType": {
+        "da": "Bestillingstype",
+        "e": "Order Type",
+        "remark": "",
+        "sl": "Vrsta naročila",
+        "sr": "Тип налога",
+        "sr-Latn": "Tip naloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrderingPortal": {
+        "da": "Bestillingsportal",
+        "e": "Ordering Portal",
+        "remark": "",
+        "sl": "Portal za naročanje",
+        "sr": "Портал за наруџбине",
+        "sr-Latn": "Portal za narudžbine",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblOrigin": {
+        "da": "Oprindelse",
+        "e": "Origin",
+        "remark": "",
+        "sl": "Izvor",
+        "sr": "Почетна станица",
+        "sr-Latn": "Početna stanica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblPassword": {
+        "da": "Adgangskode",
+        "e": "Password",
+        "remark": "",
+        "sl": "Geslo",
+        "sr": "Лозинка",
+        "sr-Latn": "Lozinka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblPathCancellation": {
+        "da": "",
+        "e": "Do you want to cancel this train run?",
+        "remark": "",
+        "sl": "Želite odpovedati to vožnjo vlaka?",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblPathCancellationODTDialog": {
+        "da": "Valg af dage for aflysning",
+        "e": "Days Selection of Cancellation",
+        "remark": "",
+        "sl": "Izbor dni za odpoved",
+        "sr": "Дани селекције отказа",
+        "sr-Latn": "Dani selekcije otkaza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblPathCoordinationSystem": {
+        "da": "Sporkoordinationssystem",
+        "e": "Path Coordination System",
+        "remark": "",
+        "sl": "Path Coordination System",
+        "sr": "Систем за усаглашавање траса",
+        "sr-Latn": "Sistem za usaglašavanje trasa",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblPhoneNumber": {
+        "da": "Telefonnummer",
+        "e": "Phone Number",
+        "remark": "",
+        "sl": "",
+        "sr": "Број телефона",
+        "sr-Latn": "Broj telefona",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblPlanningPeriod": {
+        "da": "",
+        "e": "Planning Period",
+        "remark": "",
+        "sl": "Obdobje načrtovanja",
+        "sr": "Период планирања",
+        "sr-Latn": "Period planiranja",
+        "translatorComment": "jte poedit translated, 2026-05-13\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblPrevPage": {
+        "da": "Forrige side",
+        "e": "Previous Page",
+        "remark": "",
+        "sl": "Prejšnja stran",
+        "sr": "Претходна страница",
+        "sr-Latn": "Prethodna stranica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblProfile": {
+        "da": "Profil",
+        "e": "Profile",
+        "remark": "",
+        "sl": "Profil",
+        "sr": "Профил",
+        "sr-Latn": "Profil",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblProjectName": {
+        "da": "Projektnavn",
+        "e": "Project Name",
+        "remark": "",
+        "sl": "",
+        "sr": "Назив пројекта",
+        "sr-Latn": "Naziv projekta",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblProjects": {
+        "da": "Projekter",
+        "e": "Projects",
+        "remark": "",
+        "sl": "Projekti",
+        "sr": "Пројекти",
+        "sr-Latn": "Projekti",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblPublished": {
+        "da": "Udgivet",
+        "e": "Published",
+        "remark": "",
+        "sl": "Objavljeno",
+        "sr": "Објављено",
+        "sr-Latn": "Objavljeno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRailwayUndertakingTafTap": {
+        "da": "Jernbanevirksomhed - TAF/TAP",
+        "e": "Railway Undertaking - TAF/TAP",
+        "remark": "",
+        "sl": "Prevoznik v železniškem prometu - TAF/TAP",
+        "sr": "Железничко предузеће - TAF/TAP",
+        "sr-Latn": "Železničko preduzeće - TAF/TAP",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRailwayUndertakingWebPortal": {
+        "da": "Jernbanevirksomhed - webportal",
+        "e": "Railway Undertaking - Web Portal",
+        "remark": "",
+        "sl": "Prevoznik v železniškem prometu - Spletni portal",
+        "sr": "Железничко предузеће - Веб портал",
+        "sr-Latn": "Železničko preduzeće - Veb portal",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblReferenceId": {
+        "da": "Reference-ID",
+        "e": "Reference ID",
+        "remark": "",
+        "sl": "",
+        "sr": "ID референце",
+        "sr-Latn": "Referentni broj",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRefuseOffer": {
+        "da": "Afvis tilbud",
+        "e": "Refuse Offer",
+        "remark": "",
+        "sl": "Zavrni ponudbo",
+        "sr": "Одбијте понуду",
+        "sr-Latn": "Odbijte ponudu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRefused": {
+        "da": "Nægtet",
+        "e": "Refused",
+        "remark": "",
+        "sl": "Zavrnjeno",
+        "sr": "Одбијено",
+        "sr-Latn": "Odbijeno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRejected": {
+        "da": "Afvist",
+        "e": "Rejected",
+        "remark": "",
+        "sl": "Zavrnjeno",
+        "sr": "Одбачено",
+        "sr-Latn": "Odbačeno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRejectionReason": {
+        "da": "Grund for afslaget",
+        "e": "Rejection Reason",
+        "remark": "",
+        "sl": "",
+        "sr": "Разлог за одбијање",
+        "sr-Latn": "Razlog za odbijanje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRemark": {
+        "da": "Bemærkning",
+        "e": "Remark",
+        "remark": "",
+        "sl": "Opomba",
+        "sr": "Примедба",
+        "sr-Latn": "Primedba",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRemoveOperatingDays": {
+        "da": "Fjern driftsdage",
+        "e": "Remove Operating Days",
+        "remark": "",
+        "sl": "Odstrani obratovalne dni",
+        "sr": "Уклоните радне дане",
+        "sr-Latn": "Uklonite radne dane",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRemoveStation": {
+        "da": "Fjern station",
+        "e": "Remove Station",
+        "remark": "",
+        "sl": "Odstrani službeno mesto",
+        "sr": "Уклони станицу",
+        "sr-Latn": "Ukloni stanicu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRepliedTo": {
+        "da": "Besvaret til",
+        "e": "Replied To",
+        "remark": "",
+        "sl": "Odgovorjeno na",
+        "sr": "Одговорено",
+        "sr-Latn": "Odgovoreno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblReply": {
+        "da": "Svare",
+        "e": "Reply",
+        "remark": "",
+        "sl": "Odgovori",
+        "sr": "Одговори",
+        "sr-Latn": "Odgovori",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblReplyMessage": {
+        "da": "Svar på meddelelses-id:",
+        "e": "Reply to Message id:",
+        "remark": "",
+        "sl": "Odgovori na sporočilo ID:",
+        "sr": "Одговори на ИД поруке:",
+        "sr-Latn": "Odgovori na ID poruke:",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRequestRestriction": {
+        "da": "",
+        "e": "Request for Restriction",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblRequestTrainRun": {
+        "da": "",
+        "e": "Request for Train Run",
+        "remark": "",
+        "sl": "Zahteva za vožnjo vlaka",
+        "sr": "Захтев за покретање воза",
+        "sr-Latn": "Zahtev za pokretanje voza",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "lblRequests": {
+        "da": "Requests",
+        "e": "Requests",
+        "remark": "",
+        "sl": "Zahteve",
+        "sr": "Захтеви",
+        "sr-Latn": "Zahtevi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblResetToModelTrain": {
+        "e": "Reset to Model Train",
+        "remark": "Button that resets all propagatable train characteristics of a station to the Model Train baseline (SolCon TPRPLAN-13552).",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblResetToModelTrainTooltip": {
+        "e": "Reset all train characteristics to the values derived from the Model Train.",
+        "remark": "Tooltip for the Reset to Model Train button on the station dialog.",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblRestriction": {
+        "da": "",
+        "e": "Restriction",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblResult": {
+        "da": "Resultat",
+        "e": "Result",
+        "remark": "",
+        "sl": "Rezultat",
+        "sr": "Резултат:",
+        "sr-Latn": "Rezultat:",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRouteNumber": {
+        "da": "Rutenummer",
+        "e": "Route Number",
+        "remark": "",
+        "sl": "Številka poti",
+        "sr": "Број руте",
+        "sr-Latn": "Broj rute",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblRunningDate": {
+        "da": "Kørselsdato",
+        "e": "Running Date",
+        "remark": "",
+        "sl": "Datum vožnje",
+        "sr": "Датум саобраћања:",
+        "sr-Latn": "Datum saobraćanja:",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSat": {
+        "da": "Lør",
+        "e": "Sat",
+        "remark": "'Sat' is short for 'Saturday'",
+        "sl": "Sob",
+        "sr": "Суб.",
+        "sr-Latn": "Sub.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSave": {
+        "da": "Gem",
+        "e": "Save",
+        "remark": "",
+        "sl": "Shrani",
+        "sr": "Сачувај",
+        "sr-Latn": "Sačuvaj",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSaveAsTemplate": {
+        "da": "Gem som skabelon",
+        "e": "Save as Template",
+        "remark": "",
+        "sl": "Shrani kot predlogo",
+        "sr": "Сачувај као шаблон",
+        "sr-Latn": "Sačuvaj kao šablon",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSaving": {
+        "da": "",
+        "e": "Saving",
+        "remark": "",
+        "sl": "Shranjevanje",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSearch": {
+        "da": "Søg",
+        "e": "Search",
+        "remark": "",
+        "sl": "Iskanje",
+        "sr": "Претрага",
+        "sr-Latn": "Pretraga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSearchTemplates": {
+        "da": "Søg i skabeloner",
+        "e": "Search templates",
+        "remark": "",
+        "sl": "Poišči predlogo",
+        "sr": "Претрага шаблона",
+        "sr-Latn": "Pretraga šablona",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSecondaryTrainNumber": {
+        "da": "",
+        "e": "Secondary Train Number",
+        "remark": "",
+        "sl": "Sekundarna številka vlaka",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSelect": {
+        "da": "Vælg",
+        "e": "Select",
+        "remark": "",
+        "sl": "Izberi",
+        "sr": "Изабери",
+        "sr-Latn": "Izaberi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSelectDate": {
+        "da": "Vælg dato",
+        "e": "Select Date",
+        "remark": "",
+        "sl": "Izberi datum",
+        "sr": "Изабери датум",
+        "sr-Latn": "Izaberi datum",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSelectDays": {
+        "da": "Vælg dage",
+        "e": "Select Days",
+        "remark": "",
+        "sl": "Izberi dneve",
+        "sr": "Изаберите дане",
+        "sr-Latn": "Izaberite dane",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSelectProject": {
+        "da": "Vælg projekt",
+        "e": "Select Project",
+        "remark": "",
+        "sl": "Izberi projekt",
+        "sr": "Изабери пројекат",
+        "sr-Latn": "Izaberi projekat",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSelectSignal": {
+        "da": "",
+        "e": "Select signal",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSelectTemplate": {
+        "da": "",
+        "e": "Select Template",
+        "remark": "",
+        "sl": "Izberi predlogo",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSelectTractionUnits": {
+        "da": "Vælg trækkraftenheder",
+        "e": "Select traction units",
+        "remark": "",
+        "sl": "Izberi vlečno vozilo",
+        "sr": "Изаберите тракционе јединице",
+        "sr-Latn": "Izaberite trakcione jedinice",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSelectedDays": {
+        "da": "",
+        "e": "Selected days",
+        "remark": "",
+        "sl": "Izbrani dnevi",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSelectedTemplate": {
+        "da": "",
+        "e": "Selected Template",
+        "remark": "",
+        "sl": "Izbrana predloga",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSend": {
+        "da": "Send",
+        "e": "Send",
+        "remark": "",
+        "sl": "Pošlji",
+        "sr": "Пошаљи",
+        "sr-Latn": "Pošalji",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSendOrder": {
+        "da": "Send ordre",
+        "e": "Send Order",
+        "remark": "",
+        "sl": "Pošlji naročilo",
+        "sr": "Пошаљи поруџбину",
+        "sr-Latn": "Pošalji porudžbinu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSent": {
+        "da": "",
+        "e": "Sent",
+        "remark": "",
+        "sl": "Poslano",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblSeparated": {
+        "da": "Adskilt",
+        "e": "Separated",
+        "remark": "",
+        "sl": "",
+        "sr": "Одвојено",
+        "sr-Latn": "Odvojeno",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSeparatedNo": {
+        "da": "No",
+        "e": "No",
+        "remark": "",
+        "sl": "",
+        "sr": "Не",
+        "sr-Latn": "Ne",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSeparatedYes": {
+        "da": "Ja",
+        "e": "Yes",
+        "remark": "",
+        "sl": "",
+        "sr": "Да",
+        "sr-Latn": "Da",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSignals": {
+        "da": "Signaler",
+        "e": "Signals",
+        "remark": "",
+        "sl": "",
+        "sr": "Сигнали",
+        "sr-Latn": "Signali",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSource": {
+        "da": "Kilde",
+        "e": "Source",
+        "remark": "",
+        "sl": "Vir",
+        "sr": "Извор",
+        "sr-Latn": "Izvor",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSpareCapacity": {
+        "da": "Reservekapacitet",
+        "e": "Spare Capacity",
+        "remark": "",
+        "sl": "Proste kapacitete",
+        "sr": "Резервни капацитет",
+        "sr-Latn": "Rezervni kapacitet",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSpeedRestriction": {
+        "da": "Hastighedsbegrænsning",
+        "e": "Speed Restriction",
+        "remark": "",
+        "sl": "",
+        "sr": "Ограничење брзине",
+        "sr-Latn": "Ograničenje brzine",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStart": {
+        "da": "Start",
+        "e": "Start",
+        "remark": "",
+        "sl": "Začni",
+        "sr": "Покрени",
+        "sr-Latn": "Pokreni",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStartDate": {
+        "da": "",
+        "e": "Start Date",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblStartTimeEarliest": {
+        "da": "Starttidspunkt (tidligst)",
+        "e": "Start Time (earliest)",
+        "remark": "",
+        "sl": "",
+        "sr": "Време почетка (најраније)",
+        "sr-Latn": "Vreme početka (najranije)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblState": {
+        "da": "Tilstand",
+        "e": "State",
+        "remark": "",
+        "sl": "Stanje",
+        "sr": "Статус",
+        "sr-Latn": "Status",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStation": {
+        "da": "Station",
+        "e": "Station",
+        "remark": "",
+        "sl": "Službeno mesto",
+        "sr": "Станица",
+        "sr-Latn": "Stanica",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStationID": {
+        "da": "Station ID",
+        "e": "Station ID",
+        "remark": "",
+        "sl": "ID službenega mesta",
+        "sr": "ID станице/стајалишта",
+        "sr-Latn": "ID stanice/stajališta",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStationTrack": {
+        "da": "Enkelt Stationsspor",
+        "e": "Station Track",
+        "remark": "",
+        "sl": "Postajni tir",
+        "sr": "Станични колосек",
+        "sr-Latn": "Stanični kolosek",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStations": {
+        "da": "Stationer",
+        "e": "Stations",
+        "remark": "",
+        "sl": "Službena mesta",
+        "sr": "Станице/стајалишта",
+        "sr-Latn": "Stanice/stajališta",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStatus": {
+        "da": "Status",
+        "e": "Status",
+        "remark": "",
+        "sl": "Status",
+        "sr": "Статус",
+        "sr-Latn": "Status",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopType": {
+        "da": "Standsningstype",
+        "e": "Stop Type",
+        "remark": "",
+        "sl": "Vrsta postanka",
+        "sr": "Врста заустављања",
+        "sr-Latn": "Vrsta zaustavljanja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeCirculation": {
+        "da": "Cirkulationsstop",
+        "e": "Circulation stop",
+        "remark": "",
+        "sl": "Postanek iz prometnih ozirov",
+        "sr": "Заустављање из службених разлога - управљање трасом",
+        "sr-Latn": "Zaustavljanje iz službenih razloga - upravljanje trasom",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeDot": {
+        "da": "Punktstop",
+        "e": "Dot stop",
+        "remark": "",
+        "sl": "Postanek krajši od pol minute",
+        "sr": "Заустављање у трајању од нула секунди",
+        "sr-Latn": "Zaustavljanje u trajanju od nula sekundi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeEnteringNetwork": {
+        "da": "Kører ind på netværket",
+        "e": "Entering network",
+        "remark": "",
+        "sl": "Vstop v omrežje",
+        "sr": "Улазак у железничку мрежу",
+        "sr-Latn": "Ulazak u železničku mrežu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeEnteringNetworkWithoutStop": {
+        "da": "Kører ind på netværket uden stop",
+        "e": "Entering network without stop",
+        "remark": "",
+        "sl": "Vstop v omrežje brez postanka",
+        "sr": "Улазак у железничку мрежу без заустављања",
+        "sr-Latn": "Ulazak u železničku mrežu bez zaustavljanja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeGeneralStopStation": {
+        "da": "Generel standsning station",
+        "e": "General stop station",
+        "remark": "",
+        "sl": "Splošni postanek na postaji",
+        "sr": "Опште заустављање",
+        "sr-Latn": "Opšte zaustavljanje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeLeavingNetwork": {
+        "da": "Forlader netværket",
+        "e": "Leaving network",
+        "remark": "",
+        "sl": "Odhod iz omrežja",
+        "sr": "Напуштање железничке мреже",
+        "sr-Latn": "Napuštanje železničke mreže",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeLeavingNetworkWithoutStop": {
+        "da": "Forlader netværket uden stop",
+        "e": "Leaving network without stop",
+        "remark": "",
+        "sl": "Odhod iz omrežja brez postanka",
+        "sr": "Напуштање железничке мреже без заустављања",
+        "sr-Latn": "Napuštanje železničke mreže bez zaustavljanja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeOccupation": {
+        "da": "Belægningsstop",
+        "e": "Occupation stop",
+        "remark": "",
+        "sl": "Postanek zaradi zasedenosti kapacitet /tirov",
+        "sr": "Заустављање са заузећем",
+        "sr-Latn": "Zaustavljanje sa zauzećem",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeOptional": {
+        "da": "",
+        "e": "Optional stop",
+        "remark": "",
+        "sl": "Postanek po potrebi",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblStopTypeOptionalOnlyAlighting": {
+        "da": "Valgfrit stop kun for afstigning",
+        "e": "Optional stop for alighting only",
+        "remark": "",
+        "sl": "Postanek po potrebi samo za izstop potnikov",
+        "sr": "Опционална станица само за излазак",
+        "sr-Latn": "Opcionalna stanica samo za izlazak",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeOptionalOnlyBoarding": {
+        "da": "Valgfrit stop kun for påstigning",
+        "e": "Optional stop for boarding only",
+        "remark": "",
+        "sl": "Postanek po potrebi samo za vstop potnikov",
+        "sr": "Опционално заустављање само за укрцавање",
+        "sr-Latn": "Opcionalno zaustavljanje samo za ukrcavanje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeParking": {
+        "da": "Parkeringsstandsning",
+        "e": "Parking stop",
+        "remark": "",
+        "sl": "Postanek zaradi parkiranja",
+        "sr": "Заустављање са остављањем",
+        "sr-Latn": "Zaustavljanje sa ostavljanjem",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeRunThrough": {
+        "da": "Gennemkørsel",
+        "e": "Run through",
+        "remark": "",
+        "sl": "Prevoz vlaka brez postanka",
+        "sr": "Пролазак",
+        "sr-Latn": "Prolazak",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeScheduled": {
+        "da": "Planlagt standsning",
+        "e": "Scheduled stop",
+        "remark": "",
+        "sl": "Postanek na zahtevo prevoznika",
+        "sr": "Заустављање предвиђено по реду вожње",
+        "sr-Latn": "Zaustavljanje predviđeno po redu vožnje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeService": {
+        "da": "Driftsstandsning",
+        "e": "Service stop",
+        "remark": "",
+        "sl": "Servisni postanek (tankanje, oskrba vlaka z vodo, itd.)",
+        "sr": "Заустављање из службених разлога",
+        "sr-Latn": "Zaustavljanje iz službenih razloga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeSignal": {
+        "da": "Signalstop",
+        "e": "Signal stop",
+        "remark": "",
+        "sl": "Postanek na signalu",
+        "sr": "Заустављање на сигнал",
+        "sr-Latn": "Zaustavljanje na signal",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeStopAlighting": {
+        "da": "Stopper kun for afsætning af passagerer",
+        "e": "Stop for alighting only",
+        "remark": "",
+        "sl": "Postanek samo za izstop potnikov",
+        "sr": "Заустављање само за излазак путника",
+        "sr-Latn": "Zaustavljanje samo za izlazak putnika",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeStopBoarding": {
+        "da": "Stopper kun for optag af passagerer",
+        "e": "Stop for boarding only",
+        "remark": "",
+        "sl": "Postanek samo za vstop potnikov",
+        "sr": "Заустављање само за улазак путника",
+        "sr-Latn": "Zaustavljanje samo za ulazak putnika",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeTechnical": {
+        "da": "Teknisk stop",
+        "e": "Technical stop",
+        "remark": "",
+        "sl": "Tehnični postanek",
+        "sr": "Техничко заустављање",
+        "sr-Latn": "Tehničko zaustavljanje",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStopTypeUndefined": {
+        "da": "Ikke defineret",
+        "e": "Undefined",
+        "remark": "",
+        "sl": "Nedoločeno",
+        "sr": "Недефинисано",
+        "sr-Latn": "Nedefinisano",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblStp": {
+        "da": "KTP",
+        "e": "STP",
+        "remark": "",
+        "sl": "STP",
+        "sr": "KRP",
+        "sr-Latn": "KRP",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSubProjectName": {
+        "da": "Underprojektnavn",
+        "e": "Sub Project Name",
+        "remark": "",
+        "sl": "",
+        "sr": "Назив подпројекта",
+        "sr-Latn": "Naziv podprojekta",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSubject": {
+        "da": "Emne",
+        "e": "Subject",
+        "remark": "",
+        "sl": "Zadeva",
+        "sr": "Предмет",
+        "sr-Latn": "Predmet",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSubmitted": {
+        "da": "Sendt",
+        "e": "Submitted",
+        "remark": "",
+        "sl": "Oddano",
+        "sr": "Послато",
+        "sr-Latn": "Poslato",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblSun": {
+        "da": "Søn",
+        "e": "Sun",
+        "remark": "'Sun' is short for 'Sunday'",
+        "sl": "Ned",
+        "sr": "Нед.",
+        "sr-Latn": "Ned.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblThisElement": {
+        "da": "",
+        "e": "this element",
+        "remark": "",
+        "sl": "ta element",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "lblThu": {
+        "da": "Tor",
+        "e": "Thu",
+        "remark": "'Thu' is short for 'Thursday'",
+        "sl": "Čet",
+        "sr": "Чет.",
+        "sr-Latn": "Čet.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTimeFrame": {
+        "da": "Tidsramme",
+        "e": "Time Frame",
+        "remark": "",
+        "sl": "",
+        "sr": "Временски оквир",
+        "sr-Latn": "Vremenski okvir",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTimeSlots": {
+        "da": "Tidsvinduer",
+        "e": "Time Slots",
+        "remark": "",
+        "sl": "",
+        "sr": "Временски термини",
+        "sr-Latn": "Vremenski intervali",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTitle": {
+        "da": "",
+        "e": "Title",
+        "remark": "",
+        "sl": "Naslov",
+        "sr-Latn": "",
+        "translatorComment": "mda new 5.10.0.7"
+    },
+    "lblTo": {
+        "da": "Til",
+        "e": "To",
+        "remark": "",
+        "sl": "Do",
+        "sr": "Да",
+        "sr-Latn": "Da",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblToDate": {
+        "da": "To Date",
+        "e": "To Date",
+        "remark": "",
+        "sl": "Do datuma",
+        "sr": "Датум до:",
+        "sr-Latn": "Datum do:",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblToStation": {
+        "da": "Til station",
+        "e": "To Station",
+        "remark": "",
+        "sl": "Do službenega mesta",
+        "sr": "До станице",
+        "sr-Latn": "Do stanice",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblToTime": {
+        "da": "Ankomsttid",
+        "e": "Arrival Time",
+        "remark": "",
+        "sl": "",
+        "sr": "Време доласка",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTractionUnits": {
+        "da": "Trækkraftenheder",
+        "e": "Traction Units",
+        "remark": "",
+        "sl": "Vlečna vozila",
+        "sr": "Вучна возила",
+        "sr-Latn": "Vučna vozila",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainHeader": {
+        "da": "Togets stamdata",
+        "e": "Train Header",
+        "remark": "",
+        "sl": "Glava vlaka",
+        "sr": "Карактеристике воза",
+        "sr-Latn": "Karakteristike voza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainLength": {
+        "da": "Toglængde",
+        "e": "Train Length",
+        "remark": "",
+        "sl": "Dolžina vlaka",
+        "sr": "Дужина воза",
+        "sr-Latn": "Dužina voza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainNumber": {
+        "da": "Tognummer",
+        "e": "Train Number",
+        "remark": "",
+        "sl": "Številka vlaka",
+        "sr": "Број воза",
+        "sr-Latn": "Broj voza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainRun": {
+        "da": "Togforløb",
+        "e": "Train Run",
+        "remark": "",
+        "sl": "Vožnja vlaka",
+        "sr": "Вожња",
+        "sr-Latn": "Vožnja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainType": {
+        "da": "Togkategori",
+        "e": "Train Type",
+        "remark": "",
+        "sl": "Vrsta vlaka",
+        "sr": "Врста воза",
+        "sr-Latn": "Vrsta voza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainWeight": {
+        "da": "Togvægt",
+        "e": "Train Weight",
+        "remark": "",
+        "sl": "Teža vlaka",
+        "sr": "Маса воза",
+        "sr-Latn": "Masa voza",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTrainsList": {
+        "da": "Togliste",
+        "e": "Trains List",
+        "remark": "",
+        "sl": "Seznam vlakov",
+        "sr": "Листа возова",
+        "sr-Latn": "Lista vozova",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblTue": {
+        "da": "Tir",
+        "e": "Tue",
+        "remark": "'Tue' is short for 'Tuesday'",
+        "sl": "Tor",
+        "sr": "Утор.",
+        "sr-Latn": "Utor.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblType": {
+        "da": "",
+        "e": "Type",
+        "remark": "",
+        "sl": "Vrsta",
+        "sr-Latn": "",
+        "translatorComment": "mda new 5.10.0.7"
+    },
+    "lblTypeToAdd": {
+        "da": "Skriv for at tilføje ...",
+        "e": "Type to add...",
+        "remark": "",
+        "sl": "Vnesi za dodajanje...",
+        "sr": "Унесите текст за додавање...",
+        "sr-Latn": "Unesite tekst za dodavanje...",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUnauthorizedDisclaimer": {
+        "da": "Uautoriseret reproduktion eller distribution af denne software, eller dele heraf, kan medføre alvorlige civil- og strafferetlige sanktioner.",
+        "e": "Unauthorized reproduction or distribution of this software, or any portion of it, may result in severe civil and criminal penalties.",
+        "remark": "",
+        "sl": "Neodobreno razmnoževanje ali distribucija te programske opreme ali katerega koli njenega dela lahko povzroči hude civilne in kazenske sankcije.",
+        "sr": "Неовлашћено умножавање или дистрибуција овог софтвера, или било ког његовог дела, може довести до тешких грађанских и кривичних санкција.",
+        "sr-Latn": "Neovlašćeno umnožavanje ili distribucija ovog softvera, ili bilo kog njegovog dela, može dovesti do teških građanskih i krivičnih sankcija.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUnknown": {
+        "da": "Ukendt",
+        "e": "Unknown",
+        "remark": "",
+        "sl": "",
+        "sr": "Непознато",
+        "sr-Latn": "Nepoznato",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUpdate": {
+        "da": "Opdatér",
+        "e": "Update",
+        "remark": "",
+        "sl": "Posodobi",
+        "sr": "Ажурирај",
+        "sr-Latn": "Ažuriraj",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUpdateOperatingDays": {
+        "da": "Opdater driftsdage",
+        "e": "Update Operating Days",
+        "remark": "",
+        "sl": "Posodobi dneve vožnje",
+        "sr": "Ажурирајте радне дане",
+        "sr-Latn": "Ažurirajte radne dane",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUpdateStation": {
+        "da": "Opdater station",
+        "e": "Update Station",
+        "remark": "",
+        "sl": "Posodobi službeno mesto",
+        "sr": "Ажурирај станицу",
+        "sr-Latn": "Ažuriraj stanicu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUrlLinks": {
+        "da": "URL'er",
+        "e": "URLs",
+        "remark": "",
+        "sl": "URL-ji",
+        "sr": "Прилози",
+        "sr-Latn": "Prilozi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUrls": {
+        "da": "URL'er",
+        "e": "URLs",
+        "remark": "",
+        "sl": "URL-ji",
+        "sr": "Прилози",
+        "sr-Latn": "Prilozi",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUserGroups": {
+        "da": "Brugergrupper",
+        "e": "User Groups",
+        "remark": "",
+        "sl": "",
+        "sr": "Групе корисника",
+        "sr-Latn": "Grupe korisnika",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblUsername": {
+        "da": "Brugernavn",
+        "e": "Username",
+        "remark": "",
+        "sl": "Uporabniško ime",
+        "sr": "Корисничко име",
+        "sr-Latn": "Korisničko ime",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblView": {
+        "da": "Generel visning",
+        "e": "View",
+        "remark": "",
+        "sl": "Pogled",
+        "sr": "Приказ",
+        "sr-Latn": "Prikaz",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblViewOperatingDays": {
+        "da": "Vis driftsdage",
+        "e": "View Operating Days",
+        "remark": "",
+        "sl": "Pogled obratovalnih dni",
+        "sr": "Прикажи дане рада",
+        "sr-Latn": "Prikaži dane rada",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblViewStation": {
+        "da": "Vis station",
+        "e": "View Station",
+        "remark": "",
+        "sl": "Pogled službenega mesta",
+        "sr": "Поглед на станицу",
+        "sr-Latn": "Pogled na stanicu",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblWed": {
+        "da": "Ons",
+        "e": "Wed",
+        "remark": "'Wed' is short for 'Wednesday'",
+        "sl": "Sre",
+        "sr": "Сред.",
+        "sr-Latn": "Sred.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblWeekday": {
+        "da": "Ugedag",
+        "e": "Weekday",
+        "remark": "",
+        "sl": "Delovni dan",
+        "sr": "Дан у недељи",
+        "sr-Latn": "Dan u nedelji",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblWeekdaysShort": {
+        "da": "",
+        "e": "WD",
+        "remark": "",
+        "sl": "DD",
+        "sr-Latn": "",
+        "translatorComment": "short for weekdays"
+    },
+    "lblWeekend": {
+        "d": "Wochenende",
+        "da": "Weekend",
+        "e": "Weekend",
+        "remark": "",
+        "sl": "Vikend",
+        "sr": "Викенд",
+        "sr-Latn": "Vikend",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblWeekendsShort": {
+        "da": "",
+        "e": "WE",
+        "remark": "",
+        "sl": "VD",
+        "sr-Latn": "",
+        "translatorComment": "Short for weekends"
+    },
+    "lblWeight": {
+        "da": "Vægt (t)",
+        "e": "Weight (t)",
+        "remark": "",
+        "sl": "",
+        "sr": "Маса (t)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblWorkType": {
+        "da": "Arbejdstype",
+        "e": "Work Type",
+        "remark": "",
+        "sl": "",
+        "sr": "Тип радова",
+        "sr-Latn": "Vrsta radova",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblYellowFleet": {
+        "da": "Gul Flåde",
+        "e": "Yellow Fleet",
+        "remark": "",
+        "sl": "",
+        "sr": "Возни парк механизације за одржавање пруга",
+        "sr-Latn": "Vozni park mehanizacije za održavanje pruga",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblattachmentLinks": {
+        "da": "",
+        "e": "Attachment links",
+        "remark": "",
+        "sl": "Povezave do prilog",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "lblbrakingPercentage": {
+        "da": "Bremsningsprocent",
+        "e": "Braking Percentage",
+        "remark": "",
+        "sl": "Odstotek zaviranja",
+        "sr": "Проценат кочења",
+        "sr-Latn": "Procenat kočenja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "lblcopy": {
+        "da": "Kopi af ",
+        "e": "Copy of ",
+        "remark": "",
+        "sl": "Kopija",
+        "sr": "Копија чега: ",
+        "sr-Latn": "Kopija čega: ",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "meta": {
+        "appName": "ordering_client",
+        "context": "ordering_client",
+        "da": "",
+        "remark": "The 'meta' structure is for internal information regarding this file. The appName must be unique and should not change because it is used by the (TPS) translation process."
+    },
+    "msgApplyFilterToSeeTemplates": {
+        "da": "Anvend filter for at se skabeloner",
+        "e": "Apply filter to see templates",
+        "remark": "",
+        "sl": "Uporabi filter za prikaz predlog",
+        "sr": "Применити филтер да бисте видели шаблоне",
+        "sr-Latn": "Primeniti filter da biste videli šablone",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgAttachmentAlreadyAdded": {
+        "da": "",
+        "e": "Attachment is already added",
+        "remark": "",
+        "sl": "Priloga je že dodana",
+        "sr-Latn": "",
+        "translatorComment": "translated-by-Alkemist-2025\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "msgCancel": {
+        "da": "",
+        "e": "Are you sure you want to cancel this order?",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgCancelOrder": {
+        "da": "Er du sikker på, at du vil annullere denne ordre?",
+        "e": "Are you sure you want to cancel this order?",
+        "remark": "",
+        "sl": "Ali ste prepričani, da želite preklicati to naročilo?",
+        "sr": "Да ли сте сигурни да желите да откажете ову поруџбину?",
+        "sr-Latn": "Da li ste sigurni da želite da otkažete ovu porudžbinu?",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgComposeMessage": {
+        "da": "Skriv din meddelelse her ...",
+        "e": "Compose your message here...",
+        "remark": "",
+        "sl": "Sestavite svoje sporočilo tukaj...",
+        "sr": "Саставите своју поруку овде...",
+        "sr-Latn": "Sastavite svoju poruku ovde...",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgConditionalOptionIncompatible": {
+        "da": "Indstillingen Betinget tog er ikke kompatibel med de driftsdage, brugeren har valgt.",
+        "e": "Conditional Train option is not compatible with the user selected operating days.",
+        "remark": "",
+        "sl": "Možnost fakultativnega vlaka ni združljiva z dnevi vožnje, ki jih je izbral uporabnik.",
+        "sr": "Опција условног воза није компатибилна са данима вожње које је корисник изабрао.",
+        "sr-Latn": "Opcija uslovnog voza nije kompatibilna sa danima vožnje koje je korisnik izabrao.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgConfirmDefaultOperatingDaysUse": {
+        "da": "De valgte kørselsdage erstattes med projektets standardkørselsdage.",
+        "e": "Selected operating days will be replaced with project's default operating days.",
+        "remark": "",
+        "sl": "Izbrani dnevi vožnje bodo nadomeščeni s privzetimi dnevi vožnje projekta.",
+        "sr": "Изабрани радни дани биће замењени подразумеваним радним данима пројекта.",
+        "sr-Latn": "Izabrani radni dani biće zamenjeni podrazumevanim radnim danima projekta.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDateRange": {
+        "da": "Indtast et datointerval",
+        "e": "Enter a date range",
+        "remark": "",
+        "sl": "Vnesite datumsko obdobje",
+        "sr": "Унесите распон датума",
+        "sr-Latn": "Unesite raspon datuma",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDateRangeHint": {
+        "da": "DD/MM/ÅÅÅÅ – DD/MM/ÅÅÅÅ",
+        "e": "DD/MM/YYYY – DD/MM/YYYY",
+        "remark": "",
+        "sl": "DD/MM/YYYY – DD/MM/YYYY",
+        "sr": "ДД/ММ/ГГГГ – ДД/ММ/ГГГГ",
+        "sr-Latn": "DD/MM/GGGG – DD/MM/GGGG",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDayRangeEndAfterStart": {
+        "da": "Slutdato skal være efter startdato.",
+        "e": "End date must be after start date.",
+        "remark": "",
+        "sl": "",
+        "sr": "Датум завршетка мора бити након датума почетка.",
+        "sr-Latn": "Datum završetka mora biti nakon datuma početka.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDayRangeWithin": {
+        "da": "Datointervallet skal ligge inden for '{0}' og '{1}'.",
+        "e": "Date range must be within '{0}' and '{1}'.",
+        "remark": "",
+        "sl": "Datumsko obdobje mora biti med '{0}' in '{1}'.",
+        "sr": "Опсег датума мора бити унутар '{0}' и '{1}'.",
+        "sr-Latn": "Opseg datuma mora biti unutar '{0}' i '{1}'.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDelete": {
+        "da": "Er du sikker på, at du vil slette denne ordre?",
+        "e": "Are you sure you want to delete this order?",
+        "remark": "",
+        "sl": "Ali ste prepričani, da želite izbrisati to naročilo?",
+        "sr": "Да ли сте сигурни да желите да избришете ову поруџбину?",
+        "sr-Latn": "Da li ste sigurni da želite da izbrišete ovu porudžbinu?",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDeleteItem": {
+        "da": "Er du sikker på, at du vil slette denne ordrelinje?",
+        "e": "Are you sure you want to delete this order item?",
+        "remark": "",
+        "sl": "Ali ste prepričani, da želite izbrisati ta predmet naročila?",
+        "sr": "Да ли сте сигурни да желите да избришете ову ставку наруџбине?",
+        "sr-Latn": "Da li ste sigurni da želite da izbrišete ovu stavku narudžbine?",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgDeleteOdt": {
+        "da": "Er du sikker på, at du vil slette denne driftsdag?",
+        "e": "Are you sure you want to delete this operating day?",
+        "remark": "",
+        "sl": "Ali ste prepričani, da želite izbrisati ta dan vožnje?",
+        "sr": "Да ли сте сигурни да желите да избришете овај радни дан?",
+        "sr-Latn": "Da li ste sigurni da želite da izbrišete ovaj radni dan?",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgEmptySpareCapacityList": {
+        "da": "Ingen data om ledig kapacitet fundet",
+        "e": "No spare capacity data found",
+        "remark": "",
+        "sl": "Podatki o prostih kapacitetah niso bili najdeni.",
+        "sr": "Није пронађено никакво расположиво податке",
+        "sr-Latn": "Nije pronađeno nikakvo raspoloživo podatke",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorCancelOrder": {
+        "da": "",
+        "e": "Error occurred while cancelling the order",
+        "remark": "",
+        "sl": "Pri preklicu naročila je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorCancelTrainRun": {
+        "da": "",
+        "e": "Error occurred while cancelling the train run",
+        "remark": "",
+        "sl": "Pri preklicu vožnje vlaka je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorCancellingTrainRun": {
+        "da": "",
+        "e": "Error occurred while cancelling the train run",
+        "remark": "",
+        "sl": "Pri preklicu vožnje vlaka je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorConfirmOfferItem": {
+        "da": "",
+        "e": "Error occurred while confirming the offer item",
+        "remark": "",
+        "sl": "Pri potrjevanju predmeta ponudbe je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorCopyOrderItems": {
+        "da": "Der opstod en fejl under kopiering af ordrelinjer",
+        "e": "Error occurred while copying order items",
+        "remark": "",
+        "sl": "Pri kopiranju predmetov naročila je prišlo do napake.",
+        "sr": "Дошло је до грешке при копирању ставки наруџбине.",
+        "sr-Latn": "Došlo je do greške pri kopiranju stavki narudžbine.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorCreateDraftOrder": {
+        "da": "",
+        "e": "Error occurred while creating the draft order",
+        "remark": "",
+        "sl": "Pri ustvarjanju osnutka naročila je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorCreateOrderItem": {
+        "da": "",
+        "e": "Error occurred while creating train Run",
+        "remark": "",
+        "sl": "Pri ustvarjanju vožnje vlaka je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorDeleteDraftOrder": {
+        "da": "",
+        "e": "Error occurred while deleting the draft order",
+        "remark": "",
+        "sl": "Pri brisanju osnutka naročila je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorDeleteOrderItem": {
+        "da": "",
+        "e": "Error occurred while deleting the order item",
+        "remark": "",
+        "sl": "Pri brisanju predmeta naročila je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchConfig": {
+        "da": "",
+        "e": "Error occurred while fetching config data",
+        "remark": "",
+        "sl": "Pri pridobivanju konfiguracijskih podatkov je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchHolidays": {
+        "da": "",
+        "e": "Error occurred while fetching holidays",
+        "remark": "",
+        "sl": "Pri pridobivanju praznikov je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchOperators": {
+        "da": "",
+        "e": "Error occurred while fetching operators",
+        "remark": "",
+        "sl": "Pri pridobivanju prevoznikov je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchOrganizations": {
+        "da": "",
+        "e": "Error occurred while fetching organizations",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchRefCodes": {
+        "da": "",
+        "e": "Error occurred while fetching reference codes",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchRestrictionProjects": {
+        "da": "",
+        "e": "Error occurred while fetching restriction projects",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchRestrictionSubProjects": {
+        "da": "Der opstod en fejl under hentning af restriktionsdelprojekter",
+        "e": "Error occurred while fetching restriction sub-projects",
+        "remark": "",
+        "sl": "",
+        "sr": "Дошло је до грешке при преузимању подпројеката ограничења",
+        "sr-Latn": "Došlo je do greške prilikom preuzimanja podprojekata ograničenja",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorFetchStations": {
+        "da": "",
+        "e": "Error occurred while fetching stations",
+        "remark": "",
+        "sl": "Pri pridobivanju službenih mest je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchTractionUnits": {
+        "da": "",
+        "e": "Error occurred while fetching traction units",
+        "remark": "",
+        "sl": "Pri pridobivanju vlečnih vozil je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchTrainTypes": {
+        "da": "",
+        "e": "Error occurred while fetching train types",
+        "remark": "",
+        "sl": "Pri pridobivanju vrst vlakov je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorFetchTypeOfWorks": {
+        "da": "",
+        "e": "Error occurred while fetching types of works",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenCancelOrder": {
+        "da": "",
+        "e": "You do not have the permission to cancel an order.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za preklic naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenConfirmOffer": {
+        "da": "",
+        "e": "You do not have the permission to confirm an offer.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za potrditev ponudbe.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenCreateCancelTrainRun": {
+        "da": "",
+        "e": "You do not have the permission to cancel a train path.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za preklic vlakovne poti.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenCreateDraftOrder": {
+        "da": "",
+        "e": "You do not have the permission to create an order.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ustvarjanje naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenCreatePathModificationTrainRun": {
+        "da": "",
+        "e": "You do not have the permission to alter a train path.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za spremembo vlakovne poti.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenCreateTrainRun": {
+        "da": "",
+        "e": "You do not have the permission to create an order item.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za spreminjanje poti vlaka.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenDeleteOrder": {
+        "da": "",
+        "e": "You do not have the permission to delete an order.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za brisanje naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenDeleteOrderItem": {
+        "da": "",
+        "e": "You do not have the permission to delete an order item.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za brisanje predmeta naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenEditOrderDetails": {
+        "da": "",
+        "e": "You do not have the permission to edit an order.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za urejanje naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenEditOrderItem": {
+        "da": "",
+        "e": "You do not have the permission to edit an order item.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za urejanje predmeta naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetArchivedOrdersList": {
+        "da": "",
+        "e": "You do not have the permission to view the archive order list.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled seznama arhivskih naročil.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetCurrentOrdersList": {
+        "da": "",
+        "e": "You do not have the permission to view the current order list.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled trenutnega seznama naročil.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetMessages": {
+        "da": "",
+        "e": "You do not have the permission to view the messages.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled sporočil.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetOfferItemDetails": {
+        "da": "",
+        "e": "You do not have the permission to view the offer item.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled predmeta ponudbe.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetOrderDetails": {
+        "da": "",
+        "e": "You do not have the permission to view the order.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetOrderItemDetails": {
+        "da": "",
+        "e": "You do not have the permission to view the order item.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled predmeta naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetSpareCapacityList": {
+        "da": "",
+        "e": "Access denied: You do not have permission to view spare capacity list",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetTrainRun": {
+        "da": "",
+        "e": "You do not have the permission to access the train run.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za dostop do vožnje vlaka.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenGetTrainRunList": {
+        "da": "",
+        "e": "You do not have the permission to view the trains list.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za ogled seznama vlakov.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenLogin": {
+        "da": "",
+        "e": "You do not have the permission to login to the Ordering Web portal.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za prijavo v spletni portal za naročanje.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenRefuseOffer": {
+        "da": "",
+        "e": "You do not have the permission to refuse an offer.",
+        "remark": "",
+        "sl": "Nimate dovoljenja, za zavrnitev ponudbe.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenSendMessage": {
+        "da": "",
+        "e": "You do not have permission to send messages.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za pošiljanje sporočil.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorForbiddenSubmitOrder": {
+        "da": "",
+        "e": "You do not have the permission to submit an order.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za oddajo naročila.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetArchivedOrderList": {
+        "da": "",
+        "e": "Error occurred while getting archived orders list",
+        "remark": "",
+        "sl": "Pri pridobivanju seznama arhiviranih naročil je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetCurrentOrderList": {
+        "da": "",
+        "e": "Error occurred while getting current orders list",
+        "remark": "",
+        "sl": "Pri pridobivanju seznama trenutnih naročil je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetOfferItemDetails": {
+        "da": "",
+        "e": "Error occurred while getting offer item details",
+        "remark": "",
+        "sl": "Pri pridobivanju podrobnosti predmeta ponudbe je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetOrderItemDetails": {
+        "da": "",
+        "e": "Error occurred while getting order item details",
+        "remark": "",
+        "sl": "Pri pridobivanju podrobnosti predmeta ponudbe je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetOrderMessage": {
+        "da": "",
+        "e": "Error occurred while getting order message",
+        "remark": "",
+        "sl": "Pri pridobivanju sporočila o naročilu je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetSpareCapacity": {
+        "da": "",
+        "e": "Error loading spare capacity details",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetSpareCapacityList": {
+        "da": "",
+        "e": "Error loading spare capacity list",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetTrainRun": {
+        "da": "Der opstod en fejl under hentning af togforløbsprojektet",
+        "e": "Error occurred while getting train run project",
+        "remark": "",
+        "sl": "Pri pridobivanju projekta vožnje vlaka je prišlo do napake.",
+        "sr": "Дошло је до грешке при добијању пројекта покретања воза.",
+        "sr-Latn": "Došlo je do greške pri dobijanju projekta pokretanja voza.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorGetTrainRunList": {
+        "da": "",
+        "e": "Error occurred while getting train run list",
+        "remark": "",
+        "sl": "Pri pridobivanju seznama vlakov je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGetTrainRunNoProject": {
+        "da": "",
+        "e": "Error occurred No Project Selected",
+        "remark": "",
+        "sl": "Prišlo je do napake - izbran ni noben projekt",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorGettingOrderDetails": {
+        "da": "",
+        "e": "Error occurred while getting order details",
+        "remark": "",
+        "sl": "Pri pridobivanju podrobnosti naročila je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorLogin": {
+        "da": "Login mislykkedes",
+        "e": "Failed to login",
+        "remark": "",
+        "sl": "Prijava ni uspela",
+        "sr": "Неуспео је лог-ин",
+        "sr-Latn": "Neuspeo je log-in",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorLogout": {
+        "da": "Der opstod en fejl under udlugningen",
+        "e": "Error occurred while logging out",
+        "remark": "",
+        "sl": "Pri odjavi je prišlo do napake.",
+        "sr": "Дошло је до грешке приликом одјаве",
+        "sr-Latn": "Došlo je do greške prilikom odjave",
+        "translatorComment": "jte poedit translated, 2026-05-13\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "msgErrorMaxCharacterLimit": {
+        "da": "Maksimalt {0} tegn er tilladt.",
+        "e": "Maximum {0} characters allowed.",
+        "remark": "",
+        "sl": "Dovoljeno je največ {0} znakov.",
+        "sr": "Дозвољено је највише {0} карактера.",
+        "sr-Latn": "Dozvoljeno je najviše {0} karaktera.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorMissingLineOfWork": {
+        "da": "Arbejdsområde er påkrævet.",
+        "e": "Line of work is required.",
+        "remark": "",
+        "sl": "",
+        "sr": "Област рада је обавезна.",
+        "sr-Latn": "Vrsta radova je obavezna.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorMissingOperatingCompany": {
+        "da": "Operatør er påkrævet.",
+        "e": "Operating company is required.",
+        "remark": "",
+        "sl": "",
+        "sr": "Оперативно предузеће је обавезно.",
+        "sr-Latn": "Prevoznik je obavezan.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorMissingRestrictionName": {
+        "da": "Restriktionsnavn er påkrævet.",
+        "e": "Restriction name is required.",
+        "remark": "",
+        "sl": "",
+        "sr": "Назив ограничења је обавезан.",
+        "sr-Latn": "Naziv ograničenja je obavezan.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorMissingTractionUnitsStop1": {
+        "da": "",
+        "e": "Please select traction units in the first stop.",
+        "remark": "",
+        "sl": "Prosimo, izberite vlečna vozila na prvi postaji.",
+        "sr": "Молимо изаберите тракционе јединице на првој станици.",
+        "sr-Latn": "Molimo izaberite trakcione jedinice na prvoj stanici.",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "msgErrorMissingTrainTypeStop1": {
+        "da": "",
+        "e": "Please select a train type in the first stop.",
+        "remark": "",
+        "sl": "Izberite vrsto vlaka pri prvem službenem mestu.",
+        "sr": "Молимо изаберите тип воза на првој станици.",
+        "sr-Latn": "Molimo izaberite tip voza na prvoj stanici.",
+        "translatorComment": "jte poedit translated, 2026-05-13"
+    },
+    "msgErrorMissingWorkType": {
+        "da": "Arbejdstype er påkrævet.",
+        "e": "Work type is required.",
+        "remark": "",
+        "sl": "",
+        "sr": "Тип радова је обавезан.",
+        "sr-Latn": "Vrsta radova je obavezna.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorModelTrainNotFound": {
+        "da": "",
+        "e": "Traction unit combination is not possible",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorModifyingTrainRun": {
+        "da": "Der opstod en fejl under ændring af togvejen",
+        "e": "Error occurred while modifying the train path",
+        "remark": "",
+        "sl": "Pri spreminjanju poti vlaka je prišlo do napake.",
+        "sr": "Дошло је до грешке при измени путање воза.",
+        "sr-Latn": "Došlo je do greške pri izmeni putanje voza.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorOrderRejected": {
+        "da": "",
+        "e": "Train Run Cancellation Failed",
+        "remark": "",
+        "sl": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorProjectList": {
+        "da": "",
+        "e": "Failed to get projects list",
+        "remark": "",
+        "sl": "Seznama projektov ni mogoče pridobiti.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorRefuseOfferItem": {
+        "da": "",
+        "e": "Error occurred while refusing the offer item",
+        "remark": "",
+        "sl": "Pri zavrnitvi ponudbe je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorSendOrderMessage": {
+        "da": "",
+        "e": "Error occurred while sending order message",
+        "remark": "",
+        "sl": "Pri pošiljanju sporočila o naročilu je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorStatus0": {
+        "da": "",
+        "e": "Unauthorized access. Please log in again.",
+        "remark": "",
+        "sl": "Neavtoriziran dostop. Prosimo, da se ponovno prijavite.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorStatus401": {
+        "da": "Bruger ikke autoriseret. Log venligst ind igen.",
+        "e": "User unauthorized. Please log in again.",
+        "remark": "",
+        "sl": "Uporabnik ni pooblaščen. Prosimo, da se ponovno prijavite.",
+        "sr": "Корисник није овлашћен. Молимо вас да се поново пријавите.",
+        "sr-Latn": "Korisnik nije ovlašćen. Molimo vas da se ponovo prijavite.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorStatus403": {
+        "da": "Du har ikke tilladelse til at tilgå denne ressource.",
+        "e": "You do not have permission to access this resource.",
+        "remark": "",
+        "sl": "Nimate dovoljenja za dostop do tega vira.",
+        "sr": "Немате дозволу за приступ овом ресурсу.",
+        "sr-Latn": "Nemate dozvolu za pristup ovom resursu.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorStatus404": {
+        "da": "Den anmodede ressource blev ikke fundet.",
+        "e": "The requested resource was not found.",
+        "remark": "",
+        "sl": "Zahtevani vir ni bil najden.",
+        "sr": "Затражени ресурс није пронађен.",
+        "sr-Latn": "Zatraženi resurs nije pronađen.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorStatus500": {
+        "da": "Der opstod en fejl på serveren. Prøv igen senere.",
+        "e": "An error occurred on the server. Please try again later.",
+        "remark": "",
+        "sl": "Na strežniku je prišlo do napake. Poskusite znova kasneje.",
+        "sr": "На серверу се догодила грешка. Молимо покушајте поново касније.",
+        "sr-Latn": "Na serveru se dogodila greška. Molimo pokušajte ponovo kasnije.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorStatusDefault": {
+        "da": "Der opstod en uventet fejl.",
+        "e": "An unexpected error occurred.",
+        "remark": "",
+        "sl": "Prišlo je do nepričakovane napake.",
+        "sr": "Догодила се неочекивана грешка.",
+        "sr-Latn": "Dogodila se neočekivana greška.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorSubmitOrder": {
+        "da": "Ordren kunne ikke indsendes",
+        "e": "Failed to Submit Order",
+        "remark": "",
+        "sl": "Naročilo ni bilo oddano.",
+        "sr": "Неуспело слање наруџбине",
+        "sr-Latn": "Neuspelo slanje narudžbine",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorTrainRunCancellation": {
+        "da": "",
+        "e": "Failed to Cancel Train Run",
+        "remark": "",
+        "sl": "Preklic vožnje vlaka ni uspel.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgErrorUpdateOrder": {
+        "da": "Der opstod en fejl under opdatering af ordren",
+        "e": "Error occurred while updating order",
+        "remark": "",
+        "sl": "Pri posodabljanju naročila je prišlo do napake.",
+        "sr": "Дошло је до грешке при ажурирању наруџбине.",
+        "sr-Latn": "Došlo je do greške pri ažuriranju narudžbine.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgErrorUpdateOrderItem": {
+        "da": "",
+        "e": "Error occurred while updating order item",
+        "remark": "",
+        "sl": "Pri posodabljanju predmeta naročila je prišlo do napake.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgInvalidBrakingPercentage": {
+        "da": "Maksimal værdi: 999",
+        "e": "Max value: 999",
+        "remark": "",
+        "sl": "Največja vrednost: 999",
+        "sr": "Максимална вредност: 999",
+        "sr-Latn": "Maksimalna vrednost: 999",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgInvalidDate": {
+        "da": "Ugyldig dato.",
+        "e": "Invalid date.",
+        "remark": "",
+        "sl": "Neveljaven datum.",
+        "sr": "Hеважећи датум.",
+        "sr-Latn": "Hevažeći datum.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgInvalidTimeFormat": {
+        "da": "Ugyldigt tidsformat. Format {0}",
+        "e": "Invalid time format. Format {0}",
+        "remark": "",
+        "sl": "Neveljaven format časa. Format {0}",
+        "sr": "Неважећи формат времена. Формат {0}",
+        "sr-Latn": "Nevažeći format vremena. Format {0}",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgInvalidUrlFormat": {
+        "da": "Indtast en gyldig URL med protokol, dvs. https, http, ftp (f.eks. https://example.com)",
+        "e": "Please enter a valid URL with protocol i.e. https, http, ftp (e.g. https://example.com)",
+        "remark": "",
+        "sl": "",
+        "sr": "Молимо унесите важећи URL са протоколом, нпр. https, http, ftp (нпр. https://example.com)",
+        "sr-Latn": "Unesite važeći URL sa protokolom, npr. https, http, ftp (npr. https://example.com)",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgIrregularPattern": {
+        "da": "Uregelmæssig",
+        "e": "Irregular",
+        "remark": "",
+        "sl": "",
+        "sr": "Неправилан",
+        "sr-Latn": "Nepravilan",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgLoadingTemplates": {
+        "da": "Indlæser skabeloner...",
+        "e": "Loading templates...",
+        "remark": "",
+        "sl": "Nalaganje predlog...",
+        "sr": "Учитавање шаблона...",
+        "sr-Latn": "Učitavanje šablona...",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgMustBeNumeric": {
+        "da": "{0} skal være numerisk.",
+        "e": "{0} must be numeric.",
+        "remark": "",
+        "sl": "{0} mora biti številka.",
+        "sr": "{0} мора бити нумерички.",
+        "sr-Latn": "{0} mora biti numerički.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgNoData": {
+        "da": "",
+        "e": "No Data Available",
+        "remark": "",
+        "sl": "Ni podatkov",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgNoDataMatching": {
+        "da": "Ingen data matcher filteret",
+        "e": "No data matching the filter",
+        "remark": "",
+        "sl": "Ni podatkov, ki ustrezajo filtru",
+        "sr": "Нема података који одговарају филтеру",
+        "sr-Latn": "Nema podataka koji odgovaraju filteru",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgNoListData": {
+        "da": "Ingen data tilgængelige",
+        "e": "No data available",
+        "remark": "",
+        "sl": "Podatki niso na voljo",
+        "sr": "Нема доступних података",
+        "sr-Latn": "Nema dostupnih podataka",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgNoMessages": {
+        "da": "Der er i øjeblikket ingen meddelelser. Send en meddelelse for at starte en samtale",
+        "e": "Currently there are no messages. Send a message to start conversation",
+        "remark": "",
+        "sl": "Trenutno ni nobenih sporočil. Pošlji sporočilo, da začneš pogovor.",
+        "sr": "Тренутно нема порука. Пошаљи поруку да започнеш разговор.",
+        "sr-Latn": "Trenutno nema poruka. Pošalji poruku da započneš razgovor.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgNoTemplatesFound": {
+        "da": "Ingen skabeloner fundet",
+        "e": "No templates found",
+        "remark": "",
+        "sl": "Ni najdenih predlog",
+        "sr": "Није пронађен ниједан шаблон",
+        "sr-Latn": "Nije pronađen nijedan šablon",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgNotEmpty": {
+        "da": "{0} må ikke være tom.",
+        "e": "{0} must not be empty.",
+        "remark": "",
+        "sl": "{0} ne sme biti prazno.",
+        "sr": "{0} не сме празан.",
+        "sr-Latn": "{0} ne sme prazan.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgNotLongerChars": {
+        "da": "{0} må ikke være længere end {1} tegn.",
+        "e": "{0} must not be longer than {1} characters.",
+        "remark": "",
+        "sl": "{0} ne sme biti daljši od {1} znakov.",
+        "sr": "{0} не сме бити дужи од {1} знакова.",
+        "sr-Latn": "{0} ne sme biti duži od {1} znakova.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgOrderItemModuleNotAvailable": {
+        "da": "Denne ordrelinjetype er ikke tilgængelig. Kontakt din administrator.",
+        "e": "This order item type is not available. Please contact your administrator.",
+        "remark": "",
+        "sl": "",
+        "sr": "Овај тип ставке налога није доступан. Обратите се администратору.",
+        "sr-Latn": "Ova vrsta stavke naloga nije dostupna. Obratite se administratoru.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgReallyDelete": {
+        "da": "Er du sikker på, at du vil slette denne {0}?",
+        "e": "Are you sure you want to delete this {0} ?",
+        "remark": "",
+        "sl": "Ali ste prepričani, da želite izbrisati {0} ? ",
+        "sr": "Да ли сте сигурни да желите да избришете ово {0}?",
+        "sr-Latn": "Da li ste sigurni da želite da izbrišete ovo {0}?",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSearchPlaceHolder": {
+        "da": "F.eks. kladde",
+        "e": "Ex. Draft",
+        "remark": "",
+        "sl": "Primer osnutka",
+        "sr": "Прим. нацрт",
+        "sr-Latn": "Prim. nacrt",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSelectFromList": {
+        "da": "Vælg venligst en {0} fra listen.",
+        "e": "Please select a {0} from the list.",
+        "remark": "",
+        "sl": "Izberite {0} iz seznama.",
+        "sr": "Молимо изаберите {0} са листе.",
+        "sr-Latn": "Molimo izaberite {0} sa liste.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSpareCapacityNotAvailable": {
+        "da": "",
+        "e": "Spare capacity is not available",
+        "remark": "",
+        "sl": "Proste kapacitete niso na voljo.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSubmitOrder": {
+        "da": "",
+        "e": "Are you sure you want to submit this order?",
+        "remark": "",
+        "sl": "Ali ste prepričani, da želite oddati to naročilo?",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessCancelOrder": {
+        "da": "",
+        "e": "Order successfully cancelled",
+        "remark": "",
+        "sl": "Naročilo je bilo uspešno preklicano",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessCancelTrainRun": {
+        "da": "",
+        "e": "Order successfully created for Train Run Cancellation",
+        "remark": "",
+        "sl": "Naročilo za odpoved vožnje vlaka je bilo uspešno ustvarjeno.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessConfirmOfferItem": {
+        "da": "",
+        "e": "Offer item confirmed successfully",
+        "remark": "",
+        "sl": "Predmet ponudbe je bil uspešno potrjen.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessCopyOrderItems": {
+        "da": "Ordre kopieret",
+        "e": "Order copied successfully",
+        "remark": "",
+        "sl": "Naročilo je bilo uspešno kopirano.",
+        "sr": "Налог је успешно копиран",
+        "sr-Latn": "Nalog je uspešno kopiran",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSuccessCreateDraftOrder": {
+        "da": "Kladdeordre blev oprettet",
+        "e": "Draft Order created Successfully",
+        "remark": "",
+        "sl": "Osnutek naročila je bil uspešno ustvarjen.",
+        "sr": "Налог за нацрт је успешно креиран",
+        "sr-Latn": "Nalog za nacrt je uspešno kreiran",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSuccessCreateRestriction": {
+        "da": "",
+        "e": "Restriction successfully created",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessCreateTrainRun": {
+        "da": "",
+        "e": "Train Run successfully created",
+        "remark": "",
+        "sl": "Vožnja vlaka je bila uspešno ustvarjena.",
+        "sr": "Успешно креиран вожњи трајна",
+        "sr-Latn": "Uspešno kreiran vožnji trajna",
+        "translatorComment": "jte poedit translated, 2026-05-13\nTranslated by script sr_Cyrl2Latn_RS"
+    },
+    "msgSuccessDeleteDraftOrder": {
+        "da": "Kladdeordre blev slettet",
+        "e": "Draft Order successfully deleted",
+        "remark": "",
+        "sl": "Osnutek naročila je bil uspešno izbrisan.",
+        "sr": "Налог за брисање успешно извршен",
+        "sr-Latn": "Nalog za brisanje uspešno izvršen",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSuccessDeleteOrderItem": {
+        "da": "Ordrepost slettet",
+        "e": "Order Item successfully deleted",
+        "remark": "",
+        "sl": "Predmet naročila je bil uspešno izbrisan.",
+        "sr": "Ставка наруџбине успешно избрисана",
+        "sr-Latn": "Stavka narudžbine uspešno izbrisana",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSuccessRefuseOfferItem": {
+        "da": "",
+        "e": "Offer item refused successfully",
+        "remark": "",
+        "sl": "Predmet ponudbe je bil uspešno zavrnjen.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessSubmitOrder": {
+        "da": "",
+        "e": "Order Submitted Successfully",
+        "remark": "",
+        "sl": "Naročilo uspešno oddano.",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgSuccessTrainRunCancellation": {
+        "da": "Aflysning af togforløb gennemført",
+        "e": "Train Run Cancellation Successful",
+        "remark": "",
+        "sl": "Odpoved vožnje vlaka uspešna.",
+        "sr": "Успешно отказан возни ред",
+        "sr-Latn": "Uspešno otkazan vozni red",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSuccessUpdateOrder": {
+        "da": "Ordre opdateret",
+        "e": "Order Updated Successfully",
+        "remark": "",
+        "sl": "Naročilo uspešno posodobljeno.",
+        "sr": "Налог је успешно ажуриран",
+        "sr-Latn": "Nalog je uspešno ažuriran",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgSuccessUpdateOrderItem": {
+        "da": "Ordrepost opdateret",
+        "e": "Order Item successfully updated",
+        "remark": "",
+        "sl": "Predmet naročila uspešno posodobljen.",
+        "sr": "Ставка наруџбине успешно ажурирана",
+        "sr-Latn": "Stavka narudžbine uspešno ažurirana",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgTemplateNameAlreadyExists": {
+        "da": "Driftsdagsskabelonen kan ikke gemmes, da navnet allerede findes. Ret navnet, og prøv igen.",
+        "e": "Cannot save the Operating Day Template as the name already exists. Change the name and try again.",
+        "remark": "",
+        "sl": "Koledar vožnje vlaka ni mogoče shraniti, ker ime že obstaja. Spremenite ime in poskusite znova.",
+        "sr": "Не може се сачувати шаблон радног дана јер име већ постоји. Промените име и покушајте поново.",
+        "sr-Latn": "Ne može se sačuvati šablon radnog dana jer ime već postoji. Promenite ime i pokušajte ponovo.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgTemplateSavedNameError": {
+        "da": "",
+        "e": "Template name already exists",
+        "remark": "",
+        "sl": "Ime predloge že obstaja",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgTemplateSavedSuccessfully": {
+        "da": "Skabelonen blev gemt",
+        "e": "Template saved successfully",
+        "remark": "",
+        "sl": "Predloga uspešno shranjena",
+        "sr": "Шаблон је успешно сачуван",
+        "sr-Latn": "Šablon je uspešno sačuvan",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgTimeFormatInvalidHM": {
+        "da": "TT:MM",
+        "e": "HH:MM",
+        "remark": "",
+        "sl": "HH:MM",
+        "sr": "HH:MM",
+        "sr-Latn": "HH:MM",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgTimeFormatInvalidHMS": {
+        "da": "",
+        "e": "HH:MM:SS",
+        "remark": "",
+        "sl": "HH:MM:SS",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgTrainRunCancelledSuccessfully": {
+        "da": "",
+        "e": "Order successfully created for Train Run Cancellation",
+        "remark": "",
+        "sl": "Ned",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "msgTrainRunModifiedSuccessfully": {
+        "da": "Ordre oprettet for ændring af togforløb",
+        "e": "Order successfully created for Train Run Modification",
+        "remark": "",
+        "sl": "Naročilo za spremembo voznega reda vlaka je bilo uspešno ustvarjeno.",
+        "sr": "Налог је успешно креиран за модификацију Траин Рун",
+        "sr-Latn": "Nalog je uspešno kreiran za modifikaciju Train Run",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgUnsavedChanges": {
+        "da": "Du har ikke-gemte ændringer. Vil du virkelig forlade siden?",
+        "e": "You have unsaved changes. Do you really want to leave?",
+        "remark": "",
+        "sl": "Imate neshranjene spremembe. Ali res želite zapustiti stran?",
+        "sr": "Имате несачуване измене. Да ли заиста желите да изађете?",
+        "sr-Latn": "Imate nesačuvane izmene. Da li zaista želite da izađete?",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgUrlAlreadyAdded": {
+        "da": "URL'en er allerede tilføjet",
+        "e": "URL is already added",
+        "remark": "",
+        "sl": "URL je že dodan",
+        "sr": "URL је већ додат",
+        "sr-Latn": "URL je već dodat",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgValidDateFormatIs": {
+        "da": "Gyldigt format:",
+        "e": "Valid format:",
+        "remark": "",
+        "sl": "",
+        "sr": "Важећи формат:",
+        "sr-Latn": "Važeći format:",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "msgWrongSelectedDayForTrainCancellation": {
+        "da": "Den valgte dato indgår ikke i togets kørselsdage.",
+        "e": "Selected date is not a part of the running days of the train.",
+        "remark": "",
+        "sl": "Izbrani datum ni vključen v dneve vožnje vlaka.",
+        "sr": "Изабрани датум није део радних дана воза.",
+        "sr-Latn": "Izabrani datum nije deo radnih dana voza.",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "placeholderDestinationStation": {
+        "da": "Indtast bestemmelsesstation",
+        "e": "Enter destination station",
+        "remark": "",
+        "sl": "Vnesite ciljno službeno mesto",
+        "sr": "Унесите станицу одредишта",
+        "sr-Latn": "Unesite stanicu odredišta",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "placeholderOriginStation": {
+        "da": "Indtast udgangsstation",
+        "e": "Enter origin station",
+        "remark": "",
+        "sl": "Vnesite izhodiščno službeno mesto",
+        "sr": "Унесите станицу поласка",
+        "sr-Latn": "Unesite stanicu polaska",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "placeholderRouteNumber": {
+        "da": "Indtast rutenummer",
+        "e": "Enter route number",
+        "remark": "",
+        "sl": "Vnesite številko poti",
+        "sr": "Унесите број руте",
+        "sr-Latn": "Unesite broj rute",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "placeholderSearchAndSelect": {
+        "da": "Søg og vælg indstillinger ...",
+        "e": "Search and select options...",
+        "remark": "",
+        "sl": "Iskanje in izbira možnosti...",
+        "sr": "Претрага и избор опција...",
+        "sr-Latn": "Pretraga i izbor opcija...",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "placeholderSelectDate": {
+        "da": "",
+        "e": "Select date",
+        "remark": "",
+        "sl": "",
+        "sr": "",
+        "translatorComment": ""
+    },
+    "placeholderTypeToSearch": {
+        "da": "Skriv for at søge ...",
+        "e": "Type to search...",
+        "remark": "",
+        "sl": "Vnesite iskano...",
+        "sr": "Унесите текст за претрагу...",
+        "sr-Latn": "Unesite tekst za pretragu...",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "shortDay1": {
+        "da": "",
+        "e": "Mo",
+        "remark": "'Mo' is short for 'Monday'",
+        "sl": "Pon",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "shortDay2": {
+        "da": "",
+        "e": "Tu",
+        "remark": "'Tu' is short for 'Tuesday'",
+        "sl": "Tor",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "shortDay3": {
+        "da": "",
+        "e": "We",
+        "remark": "'We' is short for 'Wednesday'",
+        "sl": "Sre",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "shortDay4": {
+        "da": "",
+        "e": "Th",
+        "remark": "'Th' is short for 'Thursday'",
+        "sl": "Čet",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "shortDay5": {
+        "da": "",
+        "e": "Fr",
+        "remark": "'Fr' is short for 'Friday'",
+        "sl": "Pet",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "shortDay6": {
+        "da": "",
+        "e": "Sa",
+        "remark": "'Sa' is short for 'Saturday'",
+        "sl": "Sob",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "shortDay7": {
+        "da": "",
+        "e": "Su",
+        "remark": "'Su' is short for 'Sunday'",
+        "sl": "Ned",
+        "sr-Latn": "",
+        "translatorComment": ""
+    },
+    "txtCancellationSelectedFor": {
+        "da": "Aflysning valgt for",
+        "e": "Cancellation Selected for",
+        "remark": "",
+        "sl": "Odpoved izbrana za",
+        "sr": "Отказивање изабрано за",
+        "sr-Latn": "Otkazivanje izabrano za",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "txtFullCancellationOption": {
+        "da": "Aflys togforløb for tognummer {0}",
+        "e": "Cancel Train Run for Train Number {0}",
+        "remark": "",
+        "sl": "Preklic vožnje vlaka s številko {0}",
+        "sr": "Откажи вожњу воза за број воза {0}",
+        "sr-Latn": "Otkaži vožnju voza za broj voza {0}",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "txtPartialCancellationOption": {
+        "da": "Aflys togforløb for tognummer {0} i et antal dage",
+        "e": "Cancel Train Run for Train Number {0} for duration of days",
+        "remark": "",
+        "sl": "Preklic vožnje vlaka številka {0} za obdobje dni",
+        "sr": "Откажите полазак воза број {0} на период од [број дана]",
+        "sr-Latn": "Otkažite polazak voza broj {0} na period od [broj dana]",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "txtPathCancellationFor": {
+        "da": "Kanalannullering for {0}",
+        "e": "Path Cancellation for {0}",
+        "remark": "",
+        "sl": "Preklic poti za {0}",
+        "sr": "Отказивање путање за {0}",
+        "sr-Latn": "Otkazivanje putanje za {0}",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "txtPathModificationFor": {
+        "da": "Kanalændring for {0}",
+        "e": "Path Modification for {0}",
+        "remark": "",
+        "sl": "Sprememba poti za {0}",
+        "sr": "Модификација путање за {0}",
+        "sr-Latn": "Modifikacija putanje za {0}",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    },
+    "txtSingleCancellationOption": {
+        "da": "Aflys togforløb {0} for enkelt dag",
+        "e": "Cancel Train Run {0} for single day",
+        "remark": "",
+        "sl": "Prekliči vožnjo vlaka {0} za en dan",
+        "sr": "Откажи трку возова {0} за један дан",
+        "sr-Latn": "Otkaži trku vozova {0} za jedan dan",
+        "translatorComment": "TPS Upgrade to master September 2026"
+    }
+}

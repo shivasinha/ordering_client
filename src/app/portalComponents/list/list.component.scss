@@ -1,0 +1,29 @@
+@use 'colors';
+
+// Navigable rows: pointer cursor and hover effect
+.row-navigable {
+  cursor: pointer;
+
+  &:hover {
+    background-color: colors.$color-navigable-row;
+  }
+}
+
+// Non-navigable rows: default cursor and no hover effect
+.row-not-navigable {
+  cursor: default;
+}
+
+.row-red {
+  background-color: colors.$color-error;
+  color: colors.$white;
+}
+
+// Default styling for action columns
+// Prevents action buttons from wrapping to multiple rows on small screens
+.mat-column-actions,
+.mat-column-itemActions {
+  white-space: nowrap;
+  width: auto;
+  min-width: fit-content;
+}

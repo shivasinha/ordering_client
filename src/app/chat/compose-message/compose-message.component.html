@@ -1,0 +1,22 @@
+<div class="compose-message-section">
+  @if (replyToMesageId) {
+    <div class="reply-message">
+      {{ 'lblReplyMessage' | translate }} {{ replyToMesageId }}
+      <mat-icon clear-reply data-testid="chat.compose.clear-reply.button" (click)="chatService.clearReplyMessageId()">delete</mat-icon>
+    </div>
+  }
+
+  <mat-form-field class="full-width">
+    <mat-label data-testid="chat.compose.message.label">{{ 'lblMessage' | translate }}</mat-label>
+    <textarea
+      matInput
+      rows="4"
+      data-testid="chat.compose.message.input"
+      [(ngModel)]="message"
+      (input)="updateCharacterCount()"
+      [placeholder]="'msgComposeMessage' | translate"
+      [maxLength]="chatService.characterLimit"
+      class="restricted-textarea"
+    ></textarea>
+  </mat-form-field>
+</div>

@@ -1,0 +1,29 @@
+<h2 mat-dialog-title data-testid="operating-days.template-dialog.title.text">{{ 'lblLoadSavedOperatingDayTemplate' | translate }}</h2>
+<mat-dialog-content class="presaved-template-dialog-content">
+  <!-- Filter Component -->
+  <app-presaved-template-filter (filterApplied)="onFilterApplied($event)"> </app-presaved-template-filter>
+
+  <!-- List Component -->
+  <app-presaved-template-list
+    [templates]="templates()"
+    [selectedTemplate]="selectedTemplate()"
+    [hasSearched]="hasSearched()"
+    (templateSelected)="onTemplateSelected($event)"
+  >
+  </app-presaved-template-list>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button data-testid="operating-days.template-dialog.cancel.button" mat-button (click)="onCancel()">
+    {{ 'lblCancel' | translate }}
+  </button>
+  <button
+    data-testid="operating-days.template-dialog.select.button"
+    mat-button
+    color="primary"
+    (click)="onConfirm()"
+    [disabled]="!canApplyTemplate()"
+  >
+    {{ 'lblSelect' | translate }}
+  </button>
+</mat-dialog-actions>

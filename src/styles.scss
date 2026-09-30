@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'color_palette';
+@use 'typography';
+@use 'colors';
+@use 'scss/material-adjustments';
+
+@include mat.elevation-classes();
+@include mat.app-background();
+
+$ordering-theme-primary: mat.m2-define-palette(color_palette.$md-primary, 400);
+$ordering-theme-accent: mat.m2-define-palette(color_palette.$md-accent);
+$ordering-theme-warn: mat.m2-define-palette(color_palette.$md-warn);
+$ordering-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $ordering-theme-primary,
+      accent: $ordering-theme-accent,
+      warn: $ordering-theme-warn,
+    ),
+    typography: typography.$typography-configuration,
+  )
+);
+
+@include mat.all-component-themes($ordering-theme);
+
+html,
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.button-container button {
+  margin-left: 10px;
+}
+.content {
+  padding: 14px;
+}
+
+.table-container {
+  overflow: auto;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.state {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.state.AGREED {
+  background-color: colors.$light-green;
+  color: colors.$green;
+  border: 1px solid colors.$green;
+}
+
+.state.CANCELLED {
+  background-color: colors.$light-red;
+  color: colors.$red;
+  border: 1px solid colors.$red;
+}
+
+.state.DRAFT {
+  background-color: colors.$aqua;
+  color: colors.$aqua-dark;
+  border: 1px solid colors.$aqua-dark;
+}
+
+.state.OFFERED {
+  background-color: colors.$light-OFFERED;
+  color: colors.$light-OFFERED-dark;
+  border: 1px solid colors.$light-OFFERED-dark;
+}
+
+.state.REFUSED {
+  background-color: colors.$color-REFUSED;
+  color: colors.$color-REFUSED-dark;
+  border: 1px solid colors.$color-REFUSED-dark;
+}
+.state.REJECTED {
+  background-color: colors.$color-REFUSED;
+  color: colors.$color-REFUSED-dark;
+  border: 1px solid colors.$color-REFUSED-dark;
+}
+
+.state.SUBMITTED {
+  background-color: colors.$color-SUBMITTED;
+  color: colors.$color-SUBMITTED-dark;
+  border: 1px solid colors.$color-SUBMITTED-dark;
+}
+
+.state.PUBLISHED {
+  background-color: colors.$color-SUBMITTED;
+  color: colors.$color-SUBMITTED-dark;
+  border: 1px solid colors.$color-SUBMITTED-dark;
+}
+
+.dialog-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.highlight-match {
+  font-weight: 800;
+}
+
+.text-area-container {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.divider {
+  border-bottom: 1px solid;
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+  font-size: large;
+}

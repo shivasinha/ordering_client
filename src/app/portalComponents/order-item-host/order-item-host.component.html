@@ -1,0 +1,49 @@
+<div class="content">
+  @if (titleConfig(); as tc) {
+    <div [class]="tc.stateBadge ? 'titlerow-with-state' : ''">
+      <div class="titlerow title">{{ tc.title }}</div>
+      @if (tc.stateBadge) {
+        <span class="state" [ngClass]="$any(tc.stateBadge.state) | translatableEnum: tc.stateBadge.stateEnumName">
+          {{ $any(tc.stateBadge.state) | translatableEnum: tc.stateBadge.stateEnumName : true }}
+        </span>
+      }
+    </div>
+  }
+
+  <div class="host-content">
+    @for (slot of activeSlots(); track slot.contributorKey) {
+      @if (slot.isVisible) {
+        <div class="slot-container" [attr.data-layout]="slot.layout">
+          <app-slot-error-boundary>
+            <ng-container *ngComponentOutlet="slot.component; inputs: slot.resolvedInputs" />
+          </app-slot-error-boundary>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="button-container">
+    @for (btn of renderedButtons(); track btn.label; let i = $index) {
+      @if (btn.variant === 'stroked') {
+        <button
+          mat-stroked-button
+          [attr.data-testid]="'orders.item-host.action-' + i + '.button'"
+          [disabled]="btn.disabled ?? false"
+          (click)="btn.execute()"
+        >
+          {{ btn.label }}
+        </button>
+      } @else {
+        <button
+          mat-raised-button
+          [attr.data-testid]="'orders.item-host.action-' + i + '.button'"
+          [color]="btn.color"
+          [disabled]="btn.disabled ?? false"
+          (click)="btn.execute()"
+        >
+          {{ btn.label }}
+        </button>
+      }
+    }
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="chat">
+  @if (chatServiceResponse.length > 0) {
+    <div class="messages">
+      @for (message of chatServiceResponse; track $index) {
+        <app-chat-message
+          [id]="message.messageId"
+          [chatMessage]="message"
+          [ngClass]="isSentMessage(message) ? 'message sent' : 'message received'"
+        ></app-chat-message>
+      }
+    </div>
+    <div [id]="spacerBottomId"></div>
+  } @else {
+    <div class="no-messages">
+      <span>{{ 'msgNoMessages' | translate }}</span>
+    </div>
+  }
+</div>

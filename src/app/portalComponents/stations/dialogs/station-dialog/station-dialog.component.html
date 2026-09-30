@@ -1,0 +1,280 @@
+<h2 mat-dialog-title data-testid="stations.dialog.title.text">{{ dialogTitle }}</h2>
+
+<mat-dialog-content [formGroup]="dialogForm">
+  @if (!isDelete) {
+    <!--Station Id-->
+    <mat-form-field class="fb-item full-width">
+      <mat-label data-testid="stations.dialog.station-id.label">{{ 'lblStationID' | translate }}</mat-label>
+      <input
+        data-testid="stations.dialog.station-id.input"
+        matInput
+        type="text"
+        autocomplete="off"
+        formControlName="station"
+        [placeholder]="'lblTypeToAdd' | translate"
+        [matAutocomplete]="autoStation"
+        [readonly]="!isEditMode"
+      />
+      <mat-autocomplete #autoStation="matAutocomplete" [displayWith]="getDisplayValueForStation">
+        @for (station of filteredStationsSig(); track station.id) {
+          <mat-option [attr.data-testid]="'stations.dialog.station-option-' + station.id + '.option'" [value]="station">
+            <span [innerHTML]="(useUicCodes() ? station.uicCode : station.id) | highlightSearch: currentStationSearchQuery()"></span>
+            <span> - </span>
+            <span [innerHTML]="station.name | highlightSearch: currentStationSearchQuery()"></span>
+          </mat-option>
+        }
+      </mat-autocomplete>
+      @if (dialogForm.get('station')?.hasError('required')) {
+        <mat-error data-testid="stations.dialog.station-id.error">{{
+          tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblStationID'))
+        }}</mat-error>
+      }
+      @if (dialogForm.get('station')?.hasError('selectionRequired')) {
+        <mat-error data-testid="stations.dialog.station-id.error">{{
+          tr.translate('msgSelectFromList').replace('{0}', tr.translate('lblStationID'))
+        }}</mat-error>
+      }
+    </mat-form-field>
+
+    <div class="two-column">
+      <!--Arrival Time-->
+      <mat-form-field class="full-width">
+        <mat-label data-testid="stations.dialog.arrival.label">{{ 'lblArrival' | translate }}</mat-label>
+        <input
+          data-testid="stations.dialog.arrival.input"
+          matInput
+          type="text"
+          autocomplete="off"
+          formControlName="arrivalTime"
+          [specialCharacters]="[':']"
+          mask="Hh:m0"
+          [leadZeroDateTime]="true"
+          [showMaskTyped]="true"
+          [validation]="true"
+          [readonly]="!isEditMode"
+        />
+        @if (dialogForm.get('arrivalTime')?.hasError('required')) {
+          <mat-error data-testid="stations.dialog.arrival.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblArrival'))
+          }}</mat-error>
+        }
+        @if (dialogForm.get('arrivalTime')?.hasError('invalid')) {
+          <mat-error data-testid="stations.dialog.arrival.error-format">{{
+            tr.translate('msgInvalidTimeFormat').replace('{0}', tr.translate('msgTimeFormatInvalidHM'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+
+      <!--Departure Time-->
+      <mat-form-field class="full-width">
+        <mat-label data-testid="stations.dialog.departure.label">{{ 'lblDeparture' | translate }}</mat-label>
+        <input
+          data-testid="stations.dialog.departure.input"
+          matInput
+          type="text"
+          autocomplete="off"
+          formControlName="departureTime"
+          [specialCharacters]="[':']"
+          mask="Hh:m0"
+          [leadZeroDateTime]="true"
+          [showMaskTyped]="true"
+          [validation]="true"
+          [readonly]="!isEditMode"
+        />
+        @if (dialogForm.get('departureTime')?.hasError('required')) {
+          <mat-error data-testid="stations.dialog.departure.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblDeparture'))
+          }}</mat-error>
+        }
+        @if (dialogForm.get('departureTime')?.hasError('invalid')) {
+          <mat-error data-testid="stations.dialog.departure.error-format">{{
+            tr.translate('msgInvalidTimeFormat').replace('{0}', tr.translate('msgTimeFormatInvalidHM'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <!--Stop Type-->
+    <mat-form-field class="full-width" [class.readonly]="!isEditMode">
+      <mat-label data-testid="stations.dialog.stop-type.label">{{ 'lblStopType' | translate }}</mat-label>
+      <mat-select data-testid="stations.dialog.stop-type.select" formControlName="stopType">
+        @for (stopType of stopTypesSig(); track $index) {
+          <mat-option [attr.data-testid]="'stations.dialog.stop-type-option-' + stopType.id + '.option'" [value]="stopType.id">{{
+            stopType.display
+          }}</mat-option>
+        }
+      </mat-select>
+      @if (dialogForm.get('stopType')?.hasError('required')) {
+        <mat-error data-testid="stations.dialog.stop-type.error">{{
+          tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblStopType'))
+        }}</mat-error>
+      }
+    </mat-form-field>
+
+    <!--Station Track-->
+    <mat-form-field class="full-width" [class.readonly]="!isEditMode">
+      <mat-label data-testid="stations.dialog.track.label">{{ 'lblStationTrack' | translate }}</mat-label>
+      <mat-select data-testid="stations.dialog.track.select" formControlName="stationTrack">
+        @for (track of tracksListSig(); track $index) {
+          <mat-option [attr.data-testid]="'stations.dialog.track-option-' + track.id + '.option'" [value]="track.id">{{
+            track.id
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <!--Traction Unit-->
+    <app-multi-chip-autocomplete
+      data-testid="stations.dialog.traction-unit.field"
+      [config]="tractionUnitConfig()"
+      formControlName="tractionUnit"
+    >
+    </app-multi-chip-autocomplete>
+
+    <div class="two-column">
+      <!--Train Type-->
+      <mat-form-field class="full-width" [class.readonly]="!isEditMode">
+        <mat-label data-testid="stations.dialog.train-type.label">{{ 'lblTrainType' | translate }}</mat-label>
+        <mat-select data-testid="stations.dialog.train-type.select" formControlName="trainType">
+          @for (trainType of trainType; track $index) {
+            <mat-option [attr.data-testid]="'stations.dialog.train-type-option-' + trainType.id + '.option'" [value]="trainType.id">{{
+              trainType.id
+            }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <!--Train Length-->
+      <mat-form-field class="fb-item full-width" [class.user-influenced]="userInfluencedSig().trainLength">
+        <mat-label data-testid="stations.dialog.train-length.label">{{ 'lblTrainLength' | translate }}</mat-label>
+        <input
+          data-testid="stations.dialog.train-length.input"
+          matInput
+          type="number"
+          min="0"
+          formControlName="trainLength"
+          [placeholder]="'lblTypeToAdd' | translate"
+          [readonly]="!isEditMode"
+          (keypress)="validateIntegerValue($event)"
+          (paste)="validateIntegerPaste($event)"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="two-column">
+      <!--Train Weight-->
+      <mat-form-field class="full-width" [class.user-influenced]="userInfluencedSig().trainWeight">
+        <mat-label data-testid="stations.dialog.train-weight.label">{{ 'lblTrainWeight' | translate }}</mat-label>
+        <input
+          data-testid="stations.dialog.train-weight.input"
+          matInput
+          type="number"
+          min="0"
+          formControlName="trainWeight"
+          [placeholder]="'lblTypeToAdd' | translate"
+          [readonly]="!isEditMode"
+          (keypress)="validateIntegerValue($event)"
+          (paste)="validateIntegerPaste($event)"
+        />
+      </mat-form-field>
+
+      <!--Axle Load-->
+      <mat-form-field class="fb-item full-width" [class.user-influenced]="userInfluencedSig().axleLoad">
+        <mat-label data-testid="stations.dialog.axle-load.label">{{ 'lblAxleLoad' | translate }}</mat-label>
+        <input
+          data-testid="stations.dialog.axle-load.input"
+          matInput
+          type="number"
+          min="0"
+          formControlName="axleLoad"
+          [placeholder]="'lblTypeToAdd' | translate"
+          [readonly]="!isEditMode"
+          (keypress)="validateIntegerValue($event)"
+          (paste)="validateIntegerPaste($event)"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="two-column">
+      <!--Maximum Velocity-->
+      <mat-form-field class="full-width" [class.user-influenced]="userInfluencedSig().maximumVelocity">
+        <mat-label data-testid="stations.dialog.max-velocity.label">{{ 'lblMaximumVelocity' | translate }}</mat-label>
+        <input
+          data-testid="stations.dialog.max-velocity.input"
+          matInput
+          type="number"
+          min="0"
+          formControlName="maximumVelocity"
+          [placeholder]="'lblTypeToAdd' | translate"
+          [readonly]="!isEditMode"
+          (keypress)="validateIntegerValue($event)"
+          (paste)="validateIntegerPaste($event)"
+        />
+      </mat-form-field>
+
+      <!--Braking Percentage-->
+      @if (this.configDataService.configData?.showBrakingPercentage) {
+        <mat-form-field class="fb-item full-width" [class.user-influenced]="userInfluencedSig().brakingPercentage">
+          <mat-label for="brakingPercentage" data-testid="stations.dialog.braking-percentage.label">{{
+            'lblbrakingPercentage' | translate
+          }}</mat-label>
+          <input
+            data-testid="stations.dialog.braking-percentage.input"
+            matInput
+            type="number"
+            formControlName="brakingPercentage"
+            [placeholder]="'lblTypeToAdd' | translate"
+            max="999"
+            min="0"
+            step="1"
+            [readonly]="!isEditMode"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57;"
+            (paste)="validateIntegerPaste($event)"
+          />
+
+          @if (dialogForm.get('brakingPercentage')?.hasError('min') || dialogForm.get('brakingPercentage')?.hasError('max')) {
+            <mat-error data-testid="stations.dialog.braking-percentage.error">
+              {{ tr.translate('msgInvalidBrakingPercentage') }}
+            </mat-error>
+          }
+        </mat-form-field>
+      }
+    </div>
+  } @else {
+    <span data-testid="stations.dialog.delete-confirm.text">{{
+      tr.translate('msgReallyDelete').replace('{0}', tr.translate('lblStation'))
+    }}</span>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  @if (!isEditMode) {
+    <button data-testid="stations.dialog.exit.button" mat-raised-button color="primary" (click)="dialogRef.close()">
+      {{ tr.translate('lblExit') }}
+    </button>
+  } @else {
+    @if (canResetToModelTrainSig()) {
+      <button
+        data-testid="stations.dialog.reset-model-train.button"
+        mat-button
+        type="button"
+        (click)="resetToModelTrain()"
+        [matTooltip]="'lblResetToModelTrainTooltip' | translate"
+      >
+        {{ 'lblResetToModelTrain' | translate }}
+      </button>
+    }
+    <button data-testid="stations.dialog.cancel.button" mat-button mat-dialog-close>{{ 'lblCancel' | translate }}</button>
+    <!--[TODO] The isDelete for disabled is temporary quick solution for demo,
+    right way would be to handle delete pop-up via confirmDialogComponent -->
+    <button
+      data-testid="stations.dialog.confirm.button"
+      mat-flat-button
+      color="primary"
+      [disabled]="!canConfirmForm && !isDelete"
+      (click)="confirm()"
+    >
+      {{ actionName }}
+    </button>
+  }
+</mat-dialog-actions>

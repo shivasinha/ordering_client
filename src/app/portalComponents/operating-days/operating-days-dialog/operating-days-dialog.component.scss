@@ -1,0 +1,32 @@
+@use 'colors';
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+button {
+  min-width: 60px;
+}
+
+.selected {
+  background-color: colors.$green;
+  color: colors.$white;
+}
+
+.deselected {
+  background-color: colors.$red;
+  color: colors.$white;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+}

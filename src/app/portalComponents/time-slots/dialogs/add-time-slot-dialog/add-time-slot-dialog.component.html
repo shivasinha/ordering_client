@@ -1,0 +1,72 @@
+<h2 mat-dialog-title data-testid="time-slots.add-dialog.title.text">{{ 'lblAddTimeslot' | translate }}</h2>
+
+<mat-dialog-content [formGroup]="form">
+  <div class="date-range-row">
+    <app-custom-date-range-picker
+      class="full-width"
+      formControlName="dateRange"
+      [config]="dateRangePickerConfig()"
+    ></app-custom-date-range-picker>
+  </div>
+
+  <div class="time-row">
+    <mat-form-field class="full-width">
+      <mat-label data-testid="time-slots.add-dialog.from-time.label">{{ 'lblStartTimeEarliest' | translate }}</mat-label>
+      <input
+        matInput
+        type="text"
+        autocomplete="off"
+        data-testid="time-slots.add-dialog.from-time.input"
+        formControlName="fromTime"
+        [specialCharacters]="[':']"
+        mask="Hh:m0"
+        [dropSpecialCharacters]="false"
+        [leadZeroDateTime]="true"
+        [showMaskTyped]="true"
+        [validation]="true"
+      />
+      @if (form.get('fromTime')?.hasError('required') && form.get('fromTime')?.touched) {
+        <mat-error data-testid="time-slots.add-dialog.from-time.error">{{ requiredMessage('lblStartTimeEarliest') }}</mat-error>
+      }
+      @if (form.get('fromTime')?.hasError('timeFormat') && form.get('fromTime')?.touched) {
+        <mat-error data-testid="time-slots.add-dialog.from-time.error-format">{{ invalidTimeFormatMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label data-testid="time-slots.add-dialog.to-time.label">{{ 'lblEndTimeEarliest' | translate }}</mat-label>
+      <input
+        matInput
+        type="text"
+        autocomplete="off"
+        data-testid="time-slots.add-dialog.to-time.input"
+        formControlName="toTime"
+        [specialCharacters]="[':']"
+        mask="Hh:m0"
+        [dropSpecialCharacters]="false"
+        [leadZeroDateTime]="true"
+        [showMaskTyped]="true"
+        [validation]="true"
+      />
+      @if (form.get('toTime')?.hasError('required') && form.get('toTime')?.touched) {
+        <mat-error data-testid="time-slots.add-dialog.to-time.error">{{ requiredMessage('lblEndTimeEarliest') }}</mat-error>
+      }
+      @if (form.get('toTime')?.hasError('timeFormat') && form.get('toTime')?.touched) {
+        <mat-error data-testid="time-slots.add-dialog.to-time.error-format">{{ invalidTimeFormatMessage() }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div class="checkbox-row">
+    <mat-checkbox color="primary" data-testid="time-slots.add-dialog.separated.checkbox" formControlName="separated">{{
+      'lblSeparated' | translate
+    }}</mat-checkbox>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button data-testid="time-slots.add-dialog.cancel.button" mat-button (click)="onCancel()">{{ 'lblCancel' | translate }}</button>
+  <button data-testid="time-slots.add-dialog.add.button" mat-flat-button color="primary" [disabled]="form.invalid" (click)="onAdd()">
+    {{ (isEditMode() ? 'lblUpdate' : 'lblAdd') | translate }}
+  </button>
+</mat-dialog-actions>

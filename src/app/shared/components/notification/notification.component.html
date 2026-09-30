@@ -1,0 +1,14 @@
+<div class="notification-container">
+  @for (message of snackBarData; track $index; let i = $index) {
+    <div [ngClass]="message.panelClasses" class="snackbar-message" [attr.data-testid]="'shared.notification.message-' + i">
+      @if (message.icon) {
+        <mat-icon>{{ message.icon }}</mat-icon>
+      }
+      <span>{{ message.message }}</span>
+
+      <mat-icon [attr.data-testid]="'shared.notification.dismiss-' + i + '.button'" (click)="removeMessage(message.message)"
+        >cancel</mat-icon
+      >
+    </div>
+  }
+</div>

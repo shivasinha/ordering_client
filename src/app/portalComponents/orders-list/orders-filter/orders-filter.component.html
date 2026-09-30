@@ -1,0 +1,47 @@
+<form [formGroup]="filterForm">
+  <div class="full-width">
+    <mat-form-field class="full-width">
+      <mat-label data-testid="orders.filter.search.label">{{ 'lblSearch' | translate }}</mat-label>
+      <mat-icon matSuffix data-testid="orders.filter.search.icon">search</mat-icon>
+      <input
+        matInput
+        data-testid="orders.filter.search.input"
+        formControlName="searchString"
+        [placeholder]="'msgSearchPlaceHolder' | translate"
+      />
+    </mat-form-field>
+  </div>
+  <div class="filters">
+    <app-custom-date-range-picker formControlName="dateRange" data-testid="orders.filter.date-range"></app-custom-date-range-picker>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="orders.filter.date-range-type.label">{{ 'lblDate' | translate }}</mat-label>
+      <mat-select data-testid="orders.filter.date-range-type.select" formControlName="dateRangeType">
+        @for (dateFilter of dateFilters; track dateFilter.key) {
+          <mat-option [attr.data-testid]="'orders.filter.date-range-type-option-' + dateFilter.key + '.option'" [value]="dateFilter.key">{{
+            dateFilter.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="orders.filter.state.label">{{ 'lblState' | translate }}</mat-label>
+      <mat-select data-testid="orders.filter.state.select" formControlName="orderState">
+        @for (state of orderStates(); track state.key) {
+          <mat-option [attr.data-testid]="'orders.filter.state-option-' + state.key + '.option'" [value]="state.key">{{
+            state.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="orders.filter.type.label">{{ 'lblOrderType' | translate }}</mat-label>
+      <mat-select data-testid="orders.filter.type.select" formControlName="orderType">
+        @for (orderType of orderTypes(); track orderType.key) {
+          <mat-option [attr.data-testid]="'orders.filter.type-option-' + orderType.key + '.option'" [value]="orderType.key">{{
+            orderType.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

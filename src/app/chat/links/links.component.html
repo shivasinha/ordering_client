@@ -1,0 +1,55 @@
+@if (isEditable) {
+  <h1 mat-dialog-title data-testid="chat.links.title.text">{{ 'lblManageUrls' | translate }}</h1>
+} @else {
+  <h1 mat-dialog-title data-testid="chat.links.title.text">{{ 'lblUrls' | translate }}</h1>
+}
+
+<mat-dialog-content>
+  @if (isEditable) {
+    <mat-form-field class="full-width">
+      <mat-label data-testid="chat.links.new-url.label">{{ 'lblNewUrl' | translate }}</mat-label>
+      <input
+        matInput
+        data-testid="chat.links.new-url.input"
+        [ngModel]="newLink()"
+        (ngModelChange)="onNewLinkChange($event)"
+        [placeholder]="'lblAddUrl' | translate"
+        (blur)="onInputBlur()"
+      />
+    </mat-form-field>
+    @if (showValidationError() && isDuplicateLink()) {
+      <mat-error data-testid="chat.links.error-duplicate">{{ 'msgUrlAlreadyAdded' | translate }}</mat-error>
+    }
+    @if (showValidationError() && isInvalidUrlFormat()) {
+      <mat-error data-testid="chat.links.error-format">{{ 'msgInvalidUrlFormat' | translate }}</mat-error>
+    }
+    <div class="button-container">
+      <button data-testid="chat.links.add.button" mat-button color="primary" [disabled]="!isValidLink()" (click)="addLink()">
+        {{ 'lblAdd' | translate }}
+      </button>
+    </div>
+  }
+
+  <ul>
+    @for (link of addedLinks(); track $index) {
+      <li>
+        <div class="links">
+          <a class="link-text" [href]="link" target="_blank" [title]="link">{{ link }}</a>
+          @if (isEditable) {
+            <button mat-icon-button [attr.data-testid]="'chat.links.remove-' + $index + '.button'" (click)="removeLink($index)">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          }
+        </div>
+      </li>
+    }
+  </ul>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button data-testid="chat.links.close.button" mat-stroked-button mat-dialog-close color="primary">{{ 'lblClose' | translate }}</button>
+  @if (isEditable) {
+    <button data-testid="chat.links.done.button" mat-raised-button color="primary" (click)="closeDialog()" [disabled]="disableDone()">
+      {{ 'lblDone' | translate }}
+    </button>
+  }
+</mat-dialog-actions>

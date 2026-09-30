@@ -1,0 +1,18 @@
+@use 'colors';
+
+.compose-message-section {
+  display: grid;
+  align-content: space-between;
+  padding: 10px;
+  height: 100%;
+}
+
+.restricted-textarea {
+  max-height: 20vh;
+}
+
+.reply-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

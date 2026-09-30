@@ -1,0 +1,31 @@
+<mat-form-field [appearance]="appearance()" [class]="cssClass()">
+  <mat-label data-testid="shared.textarea.label">
+    {{ label() }}
+  </mat-label>
+  <textarea
+    #textareaElement
+    matInput
+    data-testid="textarea"
+    [formControl]="textAreaControl"
+    [rows]="rows()"
+    [maxlength]="maxLength()"
+    [readonly]="isReadonly()"
+    [placeholder]="placeholder()"
+    [class.resizable]="resizable()"
+    [style.min-height.px]="minHeight()"
+    [style.max-height.px]="maxHeight()"
+    (blur)="onBlur()"
+  ></textarea>
+
+  @if (customHint()) {
+    <mat-hint [align]="hintAlign()" data-testid="shared.textarea.hint">{{ customHint() }}</mat-hint>
+  }
+
+  @if (showCounter()) {
+    <mat-hint align="end" data-testid="shared.textarea.counter">{{ characterCount() }}/{{ maxLength() }}</mat-hint>
+  }
+
+  @if (textAreaControl.hasError('maxlength')) {
+    <mat-error data-testid="shared.textarea.error">{{ getMaxLengthError() }}</mat-error>
+  }
+</mat-form-field>

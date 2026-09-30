@@ -1,0 +1,110 @@
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="onSortChange($event)" class="mat-elevation-z8">
+    <!-- Dynamic Columns -->
+    @for (column of listConfig().columns; track column.field) {
+      <ng-container [matColumnDef]="column.field.toString()">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          [disabled]="column.sortable === false"
+          [style.width]="column.width"
+          [attr.data-testid]="'shared.list.header-' + column.field.toString()"
+        >
+          {{ column.header }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let item; let i = index"
+          [style.width]="column.width"
+          [attr.data-testid]="'shared.list.cell-' + column.field.toString() + '-' + i"
+        >
+          <!-- Custom template if provided -->
+          @if (column.cellTemplate) {
+            <ng-container *ngTemplateOutlet="column.cellTemplate; context: { $implicit: item }"></ng-container>
+          } @else if (column.icon) {
+            @if (column.iconPermission) {
+              <mat-icon
+                *appHasPermission="column.iconPermission"
+                [matTooltip]="column.tooltip ? column.tooltip(item) : ''"
+                [attr.data-testid]="'shared.list.row-' + i + '.icon'"
+                (click)="column.iconClick && column.iconClick(item, $event); $event.stopPropagation()"
+                class="icon-cell"
+              >
+                {{ column.icon(item) }}
+              </mat-icon>
+            } @else {
+              <mat-icon
+                [matTooltip]="column.tooltip ? column.tooltip(item) : ''"
+                [attr.data-testid]="'shared.list.row-' + i + '.icon'"
+                (click)="column.iconClick && column.iconClick(item, $event); $event.stopPropagation()"
+                class="icon-cell"
+              >
+                {{ column.icon(item) }}
+              </mat-icon>
+            }
+          } @else if (column.cssClass) {
+            <span [ngClass]="column.cssClass(item)">{{ item[column.field] }}</span>
+          } @else {
+            {{ item[column.field] }}
+          }
+        </td>
+      </ng-container>
+    }
+
+    <!-- Actions Column -->
+    @if (listConfig().actions?.length) {
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef data-testid="shared.list.header-actions">{{ 'lblActions' | translate }}</th>
+        <td mat-cell *matCellDef="let item; let i = index" [attr.data-testid]="'shared.list.cell-actions-' + i">
+          @for (action of listConfig().actions; track action.icon) {
+            @if (!action.visible || action.visible(item)) {
+              <button
+                mat-icon-button
+                [attr.data-testid]="'shared.list.row-' + i + '.action-' + action.icon + '.button'"
+                [matTooltip]="action.tooltip"
+                (click)="action.handler(item); $event.stopPropagation()"
+                [class]="action.cssClass"
+              >
+                <mat-icon>{{ action.icon }}</mat-icon>
+              </button>
+            }
+          }
+        </td>
+      </ng-container>
+    }
+
+    <!-- Header Row -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns()"></tr>
+
+    <!-- Data Rows - navigation delegated to container via onRowClick (goes through NavigationService) -->
+    <tr
+      mat-row
+      [attr.data-testid]="'shared.list.row-' + i"
+      *matRowDef="let row; let i = index; columns: displayedColumns()"
+      [class.clickable-row]="isRowClickable(row)"
+      [class.selected]="listConfig().isRowSelected ? listConfig().isRowSelected!(row) : false"
+      (click)="isRowClickable(row) ? onRowClick(row) : null"
+    ></tr>
+
+    <!-- No Data Row -->
+    <tr class="mat-row no-data-row" *matNoDataRow>
+      <td class="mat-cell" [attr.colspan]="displayedColumns().length" data-testid="shared.list.no-data.cell">
+        {{ listConfig().ui?.noDataMessage ?? ('msgNoListData' | translate) }}
+      </td>
+    </tr>
+  </table>
+
+  <!-- Paginator -->
+  @if (listConfig().paginationAndSorting?.show ?? true) {
+    <mat-paginator
+      data-testid="shared.list.paginator.paginator"
+      [length]="listConfig().paginationAndSorting?.totalCount ?? 0"
+      [pageSize]="listConfig().paginationAndSorting?.pageSize ?? 25"
+      [pageIndex]="listConfig().paginationAndSorting?.pageIndex ?? 0"
+      [pageSizeOptions]="listConfig().paginationAndSorting?.pageSizeOptions ?? [25, 50, 100, 200]"
+      (page)="onPageChange($event)"
+      showFirstLastButtons
+    ></mat-paginator>
+  }
+</div>

@@ -1,0 +1,25 @@
+.full-width {
+  width: 100%;
+}
+
+.readonly {
+  pointer-events: none;
+
+  mat-chip-row {
+    cursor: default;
+  }
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--mat-form-field-focused-label-text-color);
+}
+
+.clear-search-icon {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.54);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.87);
+  }
+}

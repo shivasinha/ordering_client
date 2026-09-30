@@ -1,0 +1,66 @@
+default:
+  image: tps-docker.repo.imscloud.de/ci/alpine-node-20
+  tags:
+    - krupy
+
+variables:
+  NODE_EXTRA_CA_CERTS: /usr/local/share/ca-certificates/HaConRootCA.crt
+  KRUPY_POD_RESOURCES: 'requests.cpu=100m'
+  KRUPY_VOLUMES: 'pvc/tps-yarn-local:/yarn'
+  GIT_SUBMODULE_STRATEGY: recursive
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_REF_PROTECTED
+
+stages:
+  - Prerequisites
+  - Test
+  - Build
+
+.push_cache:
+  variables:
+    KRUPY_ACTIONS: 'create_pipeline_volume,create_pipeline_snapshot'
+
+.pull_cache:
+  variables:
+    KRUPY_ACTIONS: 'mount_volume_snapshot'
+    GIT_STRATEGY: none
+
+Install Dependencies:
+  stage: Prerequisites
+  script:
+    - yarn --immutable
+  extends: .push_cache
+
+EsLint:
+  stage: Test
+  script:
+    - yarn lint:ci
+  extends: .pull_cache
+
+Unit Tests:
+  stage: Test
+  script:
+    - yarn test:ci
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/
+  extends: .pull_cache
+  artifacts:
+    when: always
+    paths:
+      - junit.xml
+    reports:
+      junit: junit.xml
+
+Build Release:
+  stage: Build
+  script:
+    - yarn build-release
+    - yarn build-test
+  artifacts:
+    paths:
+      - dist/release
+      - dist/test
+  extends: .pull_cache

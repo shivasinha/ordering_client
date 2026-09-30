@@ -1,0 +1,81 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/build
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Yarn
+.yarn/cache
+.yarn/install-state.gz
+
+#junit
+junit.xml
+
+# IDE - VSCode
+.vscode
+.history/*
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+.angulardoc.json
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+/documentation
+/src/assets/js/resturi-override.js
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Ignore custom environments
+# src/environments/*
+!src/environments/environment.prod.ts
+!src/environments/environment.ts
+!src/environments/menu.environment.ts
+!src/environments/icons.environment.ts
+
+# Ignore proxy setting
+proxy.conf.json
+
+# include core folder which is ignored in the root .gitignore
+!src/app/core
+
+# generated API code
+/src/app/api
+
+# files from tools that are just for the developer
+tools/missing-translations.csv
+
+# ignore build files of storybook
+/storybook-static
+
+# ignore compodoc generated doc
+documentation.json
+
+.nx/cache

@@ -1,0 +1,10 @@
+<!-- Filter Section -->
+<app-orders-filter
+  [initialFilters]="currentFilters()"
+  [orderStates]="orderStateOptions"
+  [orderTypes]="filterService.orderTypeFilterList()"
+  (filterChange)="onFilterChange($event)"
+></app-orders-filter>
+
+<!-- List Section -->
+<app-base-list [listConfig]="listConfig()" (pageChange)="onPageChange($event)" (sortChange)="onSortChange($event)"></app-base-list>

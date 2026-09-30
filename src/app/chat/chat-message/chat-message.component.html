@@ -1,0 +1,38 @@
+<section [id]="id">
+  <header class="message-header spacer-bottom">
+    <div class="sender">{{ chatMessage?.author + '(' + msgDate + ')' }}</div>
+    <div class="sub-line">
+      <div>{{ tr.translate('lblMessageId') + ': ' + chatMessage?.messageId }}</div>
+      @if (prevMessageId) {
+        <div>
+          <span>{{ tr.translate('lblRepliedTo') + ': ' }}</span>
+          <span class="clickable-text" data-testid="chat.message.prev-message.link" (click)="gotoPrevMessage()">{{ prevMessageId }}</span>
+          <span></span>
+        </div>
+      }
+    </div>
+  </header>
+  <article data-testid="chat.message.content.text" (click)="toggleSize()" class="message-content">
+    {{ chatMessage?.text ?? '' | abbreviate: noOfChars }}
+  </article>
+  <footer class="message-footer">
+    <button
+      data-testid="chat.message.urls.button"
+      mat-raised-button
+      color="primary"
+      (click)="openLinksDialog()"
+      [hidden]="noOfAttachments === 0"
+    >
+      {{ tr.translate('lblUrls') + ' (' + noOfAttachments + ')' }}<mat-icon>link</mat-icon>
+    </button>
+    <button
+      data-testid="chat.message.reply.button"
+      mat-raised-button
+      color="primary"
+      *appHasPermission="userPermissionsEnum.CAN_SEND_MESSAGE"
+      (click)="replyToMessage(chatMessage?.messageId)"
+    >
+      {{ 'lblReply' | translate }}
+    </button>
+  </footer>
+</section>

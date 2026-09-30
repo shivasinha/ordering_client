@@ -1,0 +1,49 @@
+<div class="filter-section">
+  <h3 data-testid="operating-days.template-filter.title.text">{{ 'lblFilter' | translate }}</h3>
+
+  <form [formGroup]="filterForm" class="filter-form">
+    <!-- First Row: Search and Date Range -->
+    <div class="filter-row-1">
+      <!-- Search Field -->
+      <mat-form-field class="search-field">
+        <mat-label data-testid="operating-days.template-filter.search.label">{{ 'lblSearchTemplates' | translate }}</mat-label>
+        <input
+          data-testid="operating-days.template-filter.search.input"
+          matInput
+          formControlName="searchString"
+          [placeholder]="'lblEnterSearchTerm' | translate"
+        />
+      </mat-form-field>
+
+      <!-- Date Range Field -->
+      <app-custom-date-range-picker
+        formControlName="dateRange"
+        data-testid="operating-days.template-filter.date-range"
+      ></app-custom-date-range-picker>
+    </div>
+
+    <!-- Second Row: Toggle and Apply Button (right aligned) -->
+    <div class="filter-row-2">
+      <!-- Apply Filter Actions -->
+      <div class="filter-actions">
+        <!-- Match Any Date Toggle -->
+        <mat-slide-toggle data-testid="operating-days.template-filter.match-any-date.toggle" color="primary" formControlName="matchAnyDate">
+          {{ 'lblMatchAnyDate' | translate }}
+        </mat-slide-toggle>
+
+        <div class="action-buttons">
+          <button
+            data-testid="operating-days.template-filter.apply.button"
+            mat-raised-button
+            color="primary"
+            type="button"
+            (click)="applyFilter()"
+            [disabled]="!canApplyFilter()"
+          >
+            {{ 'lblApply' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

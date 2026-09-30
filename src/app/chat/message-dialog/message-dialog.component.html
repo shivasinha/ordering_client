@@ -1,0 +1,65 @@
+<div
+  mat-dialog-title
+  data-testid="chat.message-dialog.title.text"
+  cdkDrag
+  cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragBoundary=".cdk-overlay-container"
+  cdkDragHandle
+>
+  <button data-testid="chat.message-dialog.refresh.button" (click)="loadMessages()" mat-icon-button>
+    <mat-icon>refresh</mat-icon>
+  </button>
+
+  {{ 'lblOrderMessages' | translate }}
+
+  <button data-testid="chat.message-dialog.close.button" mat-dialog-close mat-icon-button (click)="closeMessageDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div class="dialog-info">
+  <span>{{ 'lblOrderId' | translate }}: {{ order.externalId }}</span>
+  <span>{{ 'lblCreationDateTime' | translate }}: {{ order.creationDateTime | date }}</span>
+</div>
+
+<div class="dialog-content">
+  <as-split direction="vertical">
+    <as-split-area minSize="50" size="70">
+      @if (chatService.messagesList().length > 0) {
+        <app-chat-message-list [chatServiceResponse]="chatService.messagesList()"></app-chat-message-list>
+      }
+    </as-split-area>
+    <as-split-area class="compose-area" [scrollLeft]="false" [scrollTop]="false" minSize="30" size="30">
+      <app-compose-message *appHasPermission="userPermissionsEnum.CAN_SEND_MESSAGE" #composeMessageComponent></app-compose-message>
+    </as-split-area>
+  </as-split>
+</div>
+
+<mat-dialog-actions *appHasPermission="userPermissionsEnum.CAN_SEND_MESSAGE" class="dialog-actions">
+  <span class="character-count" [class.limit-reached]="chatService.characterCountSig() >= chatService.characterLimit">
+    {{ 'lblCharacters' | translate }}: {{ chatService.characterCountSig() }}/{{ chatService.characterLimit }}
+  </span>
+  <div class="action-buttons">
+    @if (links.length > 0) {
+      <a data-testid="chat.message-dialog.view-urls.link" (click)="openLinksDialog(false)" mat-button color="primary"
+        ><mat-icon>link</mat-icon> {{ 'lblUrlLinks' | translate }} ({{ links.length }})
+      </a>
+      <button data-testid="chat.message-dialog.edit-urls.button" mat-raised-button color="primary" (click)="openLinksDialog()">
+        {{ 'lblEditUrls' | translate }}
+      </button>
+    } @else {
+      <button data-testid="chat.message-dialog.attach-url.button" mat-raised-button color="primary" (click)="openLinksDialog()">
+        {{ 'lblAttachUrl' | translate }}
+      </button>
+    }
+    <button
+      data-testid="chat.message-dialog.send.button"
+      mat-raised-button
+      color="primary"
+      [disabled]="!isSendAllowed()"
+      (click)="sendMessage()"
+    >
+      {{ 'lblSend' | translate }}
+    </button>
+  </div>
+</mat-dialog-actions>

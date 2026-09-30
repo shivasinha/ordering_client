@@ -1,0 +1,37 @@
+{
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "lf",
+  "printWidth": 140,
+  "proseWrap": "preserve",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "importOrder": [
+    "^@angular/(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@TPS/services/rest/(.*)$",
+    "^@TPS/services/(.*)$",
+    "^@TPS/core/(.*)$",
+    "^@TPS/shared/(.*)$",
+    "^@TPS/table/(.*)$",
+    "^@TPS/util/(.*)$",
+    "^@TPS/data/(.*)$",
+    "^@TPS/config/(.*)$",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 200
+      }
+    }
+  ]
+}

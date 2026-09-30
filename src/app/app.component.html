@@ -1,0 +1,12 @@
+@if (loadingSpinnerService.showSpinnerSig()) {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+@if (isLoadingConfigSig()) {
+  <app-loading-spinner></app-loading-spinner>
+} @else if (clientAuthService.isLoggedIn && router.url !== '/login') {
+  <app-toolbar></app-toolbar>
+  <app-breadcrumb></app-breadcrumb>
+}
+
+<router-outlet></router-outlet>

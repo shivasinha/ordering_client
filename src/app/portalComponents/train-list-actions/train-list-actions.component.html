@@ -1,0 +1,101 @@
+<h1 mat-dialog-title data-testid="trains.actions.title.text">
+  {{ dialogTitle }}
+</h1>
+
+<mat-dialog-content>
+  <!-- Train Path Cancellation Section -->
+  @if (currentAction === TrainListActions.CANCEL_TRAIN_PATH) {
+    <mat-radio-group [(ngModel)]="selectedCancellationType" (change)="onCancellationTypeChange()" class="cancellation-options">
+      @if (!shouldHideFullCancellation()) {
+        <mat-radio-button data-testid="trains.actions.cancel-full.radio" [value]="CancellationType.FULL">
+          {{ tr.translate('txtFullCancellationOption').replace('{0}', trainNumber) }}
+        </mat-radio-button>
+      }
+
+      <div class="single-day-line">
+        <mat-radio-button data-testid="trains.actions.cancel-single.radio" [value]="CancellationType.SINGLE">
+          {{ tr.translate('txtSingleCancellationOption').replace('{0}', trainNumber) }}
+        </mat-radio-button>
+
+        @if (selectedCancellationType === CancellationType.SINGLE) {
+          <div class="date-container">
+            <mat-form-field appearance="outline" class="date-field-inline" [class.mat-form-field-invalid]="!isDateValid && selectedDate">
+              <mat-label data-testid="trains.actions.cancel-date.label">{{ 'lblSelectDate' | translate }}</mat-label>
+              <input
+                data-testid="trains.actions.cancel-date.input"
+                required
+                matInput
+                [matDatepicker]="picker"
+                [(ngModel)]="selectedDate"
+                (dateChange)="onDateChange()"
+                [placeholder]="'lblSelectDate' | translate"
+                [min]="minDate"
+                [max]="maxDate"
+                [class.error-input]="!isDateValid && selectedDate"
+                [attr.aria-invalid]="!isDateValid && selectedDate ? 'true' : 'false'"
+                [attr.aria-describedby]="dateError ? 'date-error' : null"
+              />
+              <mat-datepicker-toggle
+                data-testid="trains.actions.cancel-date-toggle.button"
+                matIconSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        }
+      </div>
+    </mat-radio-group>
+    @if (dateError) {
+      <div class="selected-date-error">
+        <p>
+          {{ dateError }}
+        </p>
+      </div>
+    }
+
+    <!-- Cancellation Reason Section -->
+    <div class="text-area-container">
+      <app-textarea
+        [config]="cancellationReasonConfig"
+        [formControl]="cancellationReasonControl"
+        data-testid="trains.actions.cancel-reason"
+      ></app-textarea>
+    </div>
+  }
+
+  @if (currentAction === TrainListActions.COPY_TRAIN_RUN) {
+    <app-order-form [formControl]="orderFormControl" [orderFormConfig]="orderFormConfig"> </app-order-form>
+    <div class="flex">
+      <mat-form-field class="train-number">
+        <mat-label data-testid="trains.actions.new-train-number.label">{{ 'lblNewTrainNumber' | translate }}</mat-label>
+        <input
+          matInput
+          data-testid="trains.actions.new-train-number.input"
+          [formControl]="newTrainNumberControl"
+          [placeholder]="'lblNewTrainNumber' | translate"
+        />
+        @if (newTrainNumberControl.hasError('required') && newTrainNumberControl.touched) {
+          <mat-error data-testid="trains.actions.new-train-number.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblTrainNumber'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+    </div>
+  }
+  @if (currentAction === TrainListActions.MODIFY_TRAIN_RUN) {
+    <app-order-form [formControl]="orderFormControl" [orderFormConfig]="orderFormConfig"> </app-order-form>
+  }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button data-testid="trains.actions.abort.button" mat-button (click)="onCancel()">{{ abortButtonText }}</button>
+  <button
+    data-testid="trains.actions.confirm.button"
+    mat-raised-button
+    color="primary"
+    [disabled]="!isConfirmEnabled"
+    (click)="onConfirm()"
+  >
+    {{ confirmButtonText }}
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,73 @@
+.content {
+  padding: 16px;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.table-container {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.section {
+  margin: 2em 0 2em 0;
+  font-size: larger;
+}
+.fb-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fb-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-col {
+  flex-basis: 33%;
+}
+
+.right-col {
+  flex-basis: 66%;
+}
+
+.fb-item {
+  padding-right: 1em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.button-container button {
+  margin-left: 10px;
+}
+
+.save-button-box {
+  text-align: right;
+  vertical-align: top;
+}
+
+.spacing-top {
+  margin-top: 1em;
+}

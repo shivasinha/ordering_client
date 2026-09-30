@@ -1,0 +1,99 @@
+<p class="divider" data-testid="trains.header-form.title.text">{{ 'lblTrainHeader' | translate }}</p>
+
+<div class="fb-row">
+  <div class="fb-col left-col">
+    <div class="fb-row">
+      <mat-form-field class="fb-item full-width">
+        <mat-label data-testid="trains.header-form.train-number.label">{{ 'lblTrainNumber' | translate }}</mat-label>
+        <input
+          data-testid="trains.header-form.train-number.input"
+          matInput
+          type="text"
+          autocomplete="off"
+          [formControl]="trainHeaderForm.controls.trainNo"
+          pattern="[0-9]*"
+          inputmode="numeric"
+          [maxlength]="MAX_TRAIN_NO_LENGTH"
+          [readonly]="isTrainNoReadonly()"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57;"
+        />
+        @if (trainHeaderForm.get('trainNo')?.hasError('required')) {
+          <mat-error data-testid="trains.header-form.train-number.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblTrainNumber'))
+          }}</mat-error>
+        } @else if (trainHeaderForm.get('trainNo')?.hasError('maxlength')) {
+          <mat-error data-testid="trains.header-form.train-number.error-maxlength">{{
+            tr.translate('msgNotLongerChars').replace('{0}', tr.translate('lblTrainNumber')).replace('{1}', MAX_TRAIN_NO_LENGTH.toString())
+          }}</mat-error>
+        } @else if (trainHeaderForm.get('trainNo')?.hasError('pattern')) {
+          <mat-error data-testid="trains.header-form.train-number.error-pattern">{{
+            tr.translate('msgMustBeNumeric').replace('{0}', tr.translate('lblTrainNumber'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="fb-col right-col">
+    <div class="fb-row">
+      <mat-form-field class="fb-item full-width">
+        <mat-label data-testid="trains.header-form.operating-company.label">{{ 'lblOperatingCompany' | translate }}</mat-label>
+        <input
+          data-testid="trains.header-form.operating-company.input"
+          matInput
+          type="text"
+          autocomplete="off"
+          [formControl]="trainHeaderForm.controls.operatingCompany"
+          [matAutocomplete]="operatorAuto"
+          [readonly]="isOperatingCompanyReadonly()"
+        />
+        <mat-autocomplete #operatorAuto="matAutocomplete" autoActiveFirstOption [displayWith]="getOperatorName">
+          @for (operator of filteredOperatorsSig(); track $index) {
+            <mat-option [attr.data-testid]="'trains.header-form.operator-option-' + $index + '.option'" [value]="operator">{{
+              operator.name
+            }}</mat-option>
+          }
+        </mat-autocomplete>
+        @if (trainHeaderForm.get('operatingCompany')?.hasError('required')) {
+          <mat-error data-testid="trains.header-form.operating-company.error">{{
+            tr.translate('msgNotEmpty').replace('{0}', tr.translate('lblOperatingCompany'))
+          }}</mat-error>
+        }
+        @if (trainHeaderForm.get('operatingCompany')?.hasError('matchRequired')) {
+          <mat-error data-testid="trains.header-form.operating-company.error-match">{{
+            tr.translate('msgSelectFromList').replace('{0}', tr.translate('lblOperatingCompany'))
+          }}</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="fb-row">
+      <mat-form-field class="fb-item full-width">
+        <mat-label data-testid="trains.header-form.remark.label">{{ remarkFieldConfig().label }}</mat-label>
+        <input
+          data-testid="trains.header-form.remark.input"
+          matInput
+          type="text"
+          autocomplete="off"
+          [formControl]="remarkFieldConfig().control"
+          [readonly]="isReadonly()"
+        />
+      </mat-form-field>
+    </div>
+
+    @if (showConditionalToggle() && configDataService.configData?.conditionalTrainsConfig?.enableConditionalTrains) {
+      <div class="fb-row">
+        <div class="fb-item full-width">
+          <mat-checkbox
+            data-testid="trains.header-form.conditional-train-run.checkbox"
+            color="primary"
+            [formControl]="trainHeaderForm.controls.isConditionalTrainRun"
+            (change)="onConditionalTrainRunChange()"
+          >
+            {{ 'lblConditionalTrainRun' | translate }}
+          </mat-checkbox>
+        </div>
+      </div>
+    }
+  </div>
+</div>

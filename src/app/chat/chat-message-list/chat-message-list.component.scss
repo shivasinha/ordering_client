@@ -1,0 +1,44 @@
+@use 'colors';
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: colors.$chat-list-bg-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.no-messages {
+  flex: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.sent {
+  color: colors.$chat-text-color-sent-message;
+  background-color: colors.$chat-bg-color-sent-message;
+  align-self: flex-end;
+}
+
+.message.received {
+  background-color: colors.$chat-bg-color-received-message;
+  align-self: flex-start;
+}

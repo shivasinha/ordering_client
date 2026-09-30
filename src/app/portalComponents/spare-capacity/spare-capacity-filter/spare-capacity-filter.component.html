@@ -1,0 +1,34 @@
+<form [formGroup]="filterForm">
+  <div class="filters">
+    <mat-form-field>
+      <mat-label data-testid="spare-capacity.filter.route-number.label">{{ 'lblRouteNumber' | translate }}</mat-label>
+      <input
+        data-testid="spare-capacity.filter.route-number.input"
+        matInput
+        formControlName="trainId"
+        type="string"
+        [placeholder]="'placeholderRouteNumber' | translate"
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+      />
+    </mat-form-field>
+    <app-custom-date-range-picker formControlName="dateRange" data-testid="spare-capacity.filter.date-range"></app-custom-date-range-picker>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="spare-capacity.filter.from-station.label">{{ 'lblOrigin' | translate }}</mat-label>
+      <input
+        data-testid="spare-capacity.filter.from-station.input"
+        matInput
+        formControlName="fromStation"
+        [placeholder]="'placeholderOriginStation' | translate"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="spare-capacity.filter.to-station.label">{{ 'lblDestination' | translate }}</mat-label>
+      <input
+        data-testid="spare-capacity.filter.to-station.input"
+        matInput
+        formControlName="toStation"
+        [placeholder]="'placeholderDestinationStation' | translate"
+      />
+    </mat-form-field>
+  </div>
+</form>

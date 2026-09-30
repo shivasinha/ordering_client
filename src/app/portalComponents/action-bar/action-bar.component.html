@@ -1,0 +1,23 @@
+<div class="action-bar">
+  <mat-tab-group data-testid="orders.list.main-tabs.tab-group" #tpsTabs (selectedTabChange)="tabClicked($event)" aria-label="Font Style">
+    @for (tab of tabs; track $index) {
+      <mat-tab [label]="tab.label ?? ''">
+        <ng-template mat-tab-label>
+          <span [attr.data-testid]="'orders.list.tab-' + tab.name">{{ tab.label ?? '' }}</span>
+        </ng-template>
+      </mat-tab>
+    }
+  </mat-tab-group>
+  <div>
+    <button
+      data-testid="orders.list.create.button"
+      mat-raised-button
+      *appHasPermission="userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER"
+      color="primary"
+      type="button"
+      (click)="newOrder()"
+    >
+      {{ 'lblNewOrder' | translate }}
+    </button>
+  </div>
+</div>

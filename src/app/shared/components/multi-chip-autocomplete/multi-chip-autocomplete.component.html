@@ -1,0 +1,55 @@
+<mat-form-field class="full-width" [class.readonly]="config().readonly">
+  <mat-label data-testid="shared.chip-autocomplete.label">{{ config().label }}</mat-label>
+
+  <mat-chip-grid #chipGrid aria-label="Selection">
+    @for (selectedValue of selectedValuesSig(); track $index; let i = $index) {
+      <mat-chip-row [removable]="!config().readonly" (removed)="remove(selectedValue)">
+        {{ getDisplayValue(selectedValue) }}
+        @if (!config().readonly) {
+          <mat-icon [attr.data-testid]="'shared.chip-autocomplete.remove-' + i + '.button'" matChipRemove>cancel</mat-icon>
+        }
+      </mat-chip-row>
+    }
+
+    <input
+      data-testid="shared.chip-autocomplete.search.input"
+      #chipInput
+      [formControl]="inputControl"
+      [matChipInputFor]="chipGrid"
+      [matAutocomplete]="auto"
+      [readonly]="config().readonly"
+      [placeholder]="
+        selectedValuesSig().length === 0
+          ? config().placeholder || ('placeholderSearchAndSelect' | translate)
+          : ('placeholderTypeToSearch' | translate)
+      "
+      autocomplete="off"
+    />
+  </mat-chip-grid>
+
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)" [displayWith]="getDisplayValue">
+    @if (filteredOptionsSig().length > 0) {
+      @for (option of filteredOptionsSig(); track option[config().valueProperty] + '_' + $index) {
+        <mat-option [attr.data-testid]="'shared.chip-autocomplete.option-' + $index + '.option'" [value]="option">
+          {{ getDisplayValue(option) }}
+        </mat-option>
+      }
+    } @else if (inputControl.value && inputControl.value.trim().length > 0) {
+      <mat-option disabled data-testid="shared.chip-autocomplete.no-results.option">
+        {{ 'hintTryDifferentSearchCriteria' | translate }}
+      </mat-option>
+    }
+  </mat-autocomplete>
+
+  @if (config().required) {
+    <mat-error data-testid="shared.chip-autocomplete.error">
+      {{ 'msgNotEmpty' | translate }}
+    </mat-error>
+  }
+
+  @if (!canAddMoreSelections()) {
+    <mat-hint data-testid="shared.chip-autocomplete.hint">
+      {{ tr.translate('hintMaxSelectionsReached').replace('{0}', (config().maxSelections ?? 10).toString()) }}
+    </mat-hint>
+  }
+</mat-form-field>

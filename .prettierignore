@@ -1,0 +1,5 @@
+build
+e2e
+node_modules
+dist
+src/app/data/generated

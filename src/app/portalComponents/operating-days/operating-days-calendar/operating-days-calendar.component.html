@@ -1,0 +1,31 @@
+<cdk-virtual-scroll-viewport
+  orientation="horizontal"
+  itemSize="200"
+  class="calendar-container"
+  data-testid="operating-days.calendar.container"
+>
+  <div *cdkVirtualFor="let monthToDisplay of calendarData().months; trackBy: trackByMonth" class="month">
+    <div class="month-header">{{ monthToDisplay.name }}</div>
+    <div class="weekdays">
+      @for (day of calendarData().allDaysNames; track day.label) {
+        <span>{{ day.label }}</span>
+      }
+    </div>
+    <div class="days">
+      @for (day of monthToDisplay.days; track day.id) {
+        <span
+          [attr.data-testid]="'operating-days.calendar.day-' + day.id"
+          [ngClass]="{
+            active: day.active,
+            inactive: !day.active,
+            'saved-selected-bitmap': day.isSelectedOrSavedBitmap,
+            'invalid-deselected-bitmap': day.isDeselectedOrInvalidSelection,
+            'new-bitmap': day.isNewBitMap,
+          }"
+        >
+          {{ day.displayText }}
+        </span>
+      }
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>

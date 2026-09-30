@@ -1,0 +1,93 @@
+<div class="list-section">
+  <h3 data-testid="operating-days.template-list.title.text">{{ 'lblResult' | translate }}: ({{ templates().length }})</h3>
+
+  @if (presavedTemplateService.isLoadingSignal()) {
+    <div class="loading-section">
+      <mat-spinner diameter="50"></mat-spinner>
+      <p>{{ 'msgLoadingTemplates' | translate }}</p>
+    </div>
+  } @else if (showEmptyMessage()) {
+    <div class="empty-results">
+      <mat-icon>search_off</mat-icon>
+      <p>{{ 'msgNoTemplatesFound' | translate }}</p>
+      <span>{{ 'hintTryDifferentSearchCriteria' | translate }}</span>
+    </div>
+  } @else if (showNoSearchMessage()) {
+    <div class="no-search-yet">
+      <mat-icon>filter_list</mat-icon>
+      <p>{{ 'msgApplyFilterToSeeTemplates' | translate }}</p>
+    </div>
+  } @else if (templates().length > 0) {
+    <div class="table-container">
+      <table mat-table [dataSource]="templates()" class="full-width">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef data-testid="operating-days.template-list.header-name">{{ 'lblName' | translate }}</th>
+          <td mat-cell *matCellDef="let template; let i = index" [attr.data-testid]="'operating-days.template-list.cell-name-' + i">
+            {{ template.name }}
+          </td>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef data-testid="operating-days.template-list.header-description">
+            {{ 'lblDescription' | translate }}
+          </th>
+          <td mat-cell *matCellDef="let template; let i = index" [attr.data-testid]="'operating-days.template-list.cell-description-' + i">
+            {{ template.description }}
+          </td>
+        </ng-container>
+
+        <!-- Begin Date Column -->
+        <ng-container matColumnDef="beginDate">
+          <th mat-header-cell *matHeaderCellDef data-testid="operating-days.template-list.header-beginDate">
+            {{ 'lblBeginDate' | translate }}
+          </th>
+          <td mat-cell *matCellDef="let template; let i = index" [attr.data-testid]="'operating-days.template-list.cell-beginDate-' + i">
+            {{ template.operatingDays.beginDate | date }}
+          </td>
+        </ng-container>
+
+        <!-- End Date Column -->
+        <ng-container matColumnDef="endDate">
+          <th mat-header-cell *matHeaderCellDef data-testid="operating-days.template-list.header-endDate">
+            {{ 'lblEndDate' | translate }}
+          </th>
+          <td mat-cell *matCellDef="let template; let i = index" [attr.data-testid]="'operating-days.template-list.cell-endDate-' + i">
+            {{ template.endDate | date }}
+          </td>
+        </ng-container>
+
+        <!-- Operating Days Column (like operating-days-list) -->
+        <ng-container matColumnDef="operatingDays">
+          <th mat-header-cell *matHeaderCellDef data-testid="operating-days.template-list.header-operatingDays">
+            {{ 'lblOperatingDays' | translate }}
+          </th>
+          <td
+            mat-cell
+            *matCellDef="let template; let i = index"
+            [attr.data-testid]="'operating-days.template-list.cell-operatingDays-' + i"
+          >
+            @let isSelectedDays = template.operatingDays.selectedDays?.length;
+            @let isDeselectedDays = template.operatingDays.deselectedDays?.length;
+            @if (isSelectedDays && isDeselectedDays) {
+              {{ template.operatingDays.selectedDays | dayNumbersToNames }}; {{ 'lblNotOn' | translate }}
+              {{ template.operatingDays.deselectedDays | dayNumbersToNames }}
+            } @else if (isSelectedDays) {
+              {{ template.operatingDays.selectedDays | dayNumbersToNames }}
+            }
+          </td>
+        </ng-container>
+        <!-- Table Headers and Rows -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+          mat-row
+          *matRowDef="let template; let i = index; columns: displayedColumns"
+          [attr.data-testid]="'operating-days.template-list.row-' + i"
+          [class.selected]="isTemplateSelected()(template)"
+          (click)="onTemplateRowClick(template)"
+        ></tr>
+      </table>
+    </div>
+  }
+</div>

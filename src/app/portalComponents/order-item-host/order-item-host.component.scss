@@ -1,0 +1,55 @@
+@use 'colors';
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.titlerow {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0 1em 0;
+}
+
+.titlerow-with-state {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0 1em 0;
+}
+
+.title {
+  color: colors.$main-title-text-color;
+  font-size: x-large;
+}
+
+.host-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-container {
+  &[data-layout='full'] {
+    width: 100%;
+  }
+
+  &[data-layout='half'] {
+    width: 50%;
+  }
+
+  &[data-layout='collapsible'] {
+    width: 100%;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+  gap: 10px;
+
+  button {
+    margin-left: 10px;
+  }
+}

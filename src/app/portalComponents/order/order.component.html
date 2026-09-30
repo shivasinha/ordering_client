@@ -1,0 +1,244 @@
+<div class="content">
+  <form [formGroup]="orderForm">
+    <mat-card-content>
+      <div class="form-row" [class]="orderData ? 'edit-mode' : 'creation-mode'">
+        <div class="primary-column">
+          <mat-form-field class="form-field">
+            <mat-label data-testid="orders.detail.subject.label">{{ 'lblSubject' | translate }}</mat-label>
+            <input
+              matInput
+              type="text"
+              id="subject"
+              data-testid="orders.detail.subject.input"
+              formControlName="subject"
+              name="subject"
+              required
+              [readonly]="isOrderFormReadonly"
+            />
+          </mat-form-field>
+          <app-textarea
+            [config]="descriptionConfig"
+            [formControl]="descriptionControl"
+            [readonly]="isOrderFormReadonly"
+            data-testid="orders.detail.description"
+          ></app-textarea>
+        </div>
+        <div class="secondary-column">
+          <mat-form-field class="form-field">
+            <mat-label data-testid="orders.detail.type.label">{{ 'lblOrderType' | translate }}</mat-label>
+            <mat-select data-testid="orders.detail.type.select" formControlName="orderType" required>
+              @for (orderType of filterService.filteredOrderTypes(); track orderType) {
+                <mat-option [attr.data-testid]="'orders.detail.order-type-option-' + orderType.key + '.option'" [value]="orderType.key">{{
+                  orderType.value
+                }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        @if (orderData) {
+          <div class="tertiary-column">
+            <div
+              class="state"
+              data-testid="orders.detail.state.text"
+              [ngClass]="orderData.state | translatableEnum: EnumNameList.OrderState"
+            >
+              {{ orderData.state | translatableEnum: EnumNameList.OrderState : true }}
+            </div>
+          </div>
+        }
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="button-container">
+      <button data-testid="orders.detail.cancel.button" mat-stroked-button type="button" (click)="onCancel()">
+        {{ 'lblCancel' | translate }}
+      </button>
+      <button
+        *appHasPermission="userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER"
+        data-testid="orders.detail.save.button"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onSubmit()"
+        [disabled]="orderForm.invalid || !isUnsavedChanges()"
+      >
+        {{ 'lblSave' | translate }}
+      </button>
+    </mat-card-actions>
+  </form>
+</div>
+
+@if (showRejectionReason) {
+  <div class="content">
+    <mat-card class="rejection-reason-card">
+      <mat-card-header>
+        <mat-icon class="warning-icon">warning</mat-icon>
+        <mat-card-title data-testid="orders.detail.rejection-reason.text">{{ 'lblRejectionReason' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="rejection-reason-text">{{ orderData?.rejectionReason }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+}
+
+@if (orderData) {
+  <div class="content">
+    <div class="header">
+      <h2 data-testid="orders.detail.requests.title">{{ 'lblRequests' | translate }}</h2>
+      <div class="add-order-item">
+        @if (availableModules().length === 1) {
+          <button
+            data-testid="orders.detail.add-train-run.button"
+            mat-raised-button
+            *appHasPermission="[userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER_ITEM, userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER]"
+            color="primary"
+            (click)="navigateToAddOrderItem(availableModules()[0].moduleId)"
+            [disabled]="!canEditOrderDetails"
+          >
+            {{ 'lblAddTrainRun' | translate }}
+          </button>
+        }
+        @if (availableModules().length > 1) {
+          <button
+            data-testid="orders.detail.add-item.button"
+            mat-raised-button
+            *appHasPermission="[userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER_ITEM, userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER]"
+            color="primary"
+            [matMenuTriggerFor]="addMenu"
+            [disabled]="!canEditOrderDetails"
+          >
+            {{ 'lblAddOrderItem' | translate }}
+          </button>
+          <mat-menu #addMenu>
+            @for (mod of availableModules(); track mod.moduleId) {
+              <button
+                mat-menu-item
+                [attr.data-testid]="'orders.detail.add-module-' + mod.moduleId + '.button'"
+                (click)="navigateToAddOrderItem(mod.moduleId)"
+              >
+                <mat-icon>{{ mod.icon }}</mat-icon>
+                {{ $any(mod.labelKey) | translate }}
+              </button>
+            }
+          </mat-menu>
+        }
+      </div>
+    </div>
+
+    <div class="itemsTabs">
+      <mat-tab-group
+        data-testid="orders.detail.items-tabs.tab-group"
+        #itemsTabs
+        (selectedTabChange)="tabClicked($event)"
+        aria-label="Font Style"
+        [(selectedIndex)]="selectedTabIndex"
+      >
+        @for (tab of tabs; track $index) {
+          <mat-tab [label]="tab.label ?? ''">
+            <ng-template mat-tab-label>
+              <span [attr.data-testid]="'orders.detail.items-tab-' + tab.name">{{ tab.label ?? '' }}</span>
+            </ng-template>
+          </mat-tab>
+        }
+      </mat-tab-group>
+    </div>
+    <app-list
+      [data]="itemsDataSource()"
+      [columns]="itemsColumns"
+      [listType]="listType"
+      [enableRouting]="true"
+      [itemsId]="externalItemId"
+      (refreshOrderData)="getOrderDetails(orderData.externalId)"
+    >
+    </app-list>
+
+    <div class="actions">
+      <div class="action-buttons">
+        @let isCancelableState = orderActionsService.orderCancelableStates.includes(orderData.state);
+        @let isDeleteableState = orderActionsService.orderDeletableStates.includes(orderData.state);
+        @let isSendState = orderActionsService.orderSendStates.includes(orderData.state);
+        @let canSendOrder = isSendState && orderData.orderItems && orderData.orderItems.length > 0;
+        @let _displayOfferRefuseButton = displayOfferActionButton();
+        @let _displayOfferConfirmButton = isConfirmOfferButtonVisible;
+        <button
+          data-testid="orders.detail.cancel-order.button"
+          mat-raised-button
+          color="primary"
+          *appHasPermission="userPermissionsEnum.CAN_SUBMIT_OR_CANCEL_ORDER"
+          [hidden]="!isCancelableState || orderActionsService.isIMViewingRUOrder"
+          (click)="cancelOrder()"
+        >
+          {{ 'lblCancelOrder' | translate }}
+        </button>
+        <button
+          data-testid="orders.detail.delete-order.button"
+          mat-raised-button
+          color="primary"
+          *appHasPermission="userPermissionsEnum.CAN_DELETE_ORDER"
+          [hidden]="!isDeleteableState || orderActionsService.isIMViewingRUOrder"
+          (click)="deleteOrder()"
+        >
+          {{ 'lblDeleteOrder' | translate }}
+        </button>
+        <button
+          data-testid="orders.detail.send-order.button"
+          mat-raised-button
+          color="primary"
+          [disabled]="orderForm.invalid || isUnsavedChanges()"
+          *appHasPermission="userPermissionsEnum.CAN_SUBMIT_OR_CANCEL_ORDER"
+          [hidden]="!canSendOrder || orderActionsService.isIMViewingRUOrder"
+          (click)="onSendOrder()"
+        >
+          {{ 'lblSendOrder' | translate }}
+        </button>
+        <button
+          data-testid="orders.detail.refuse-offer.button"
+          mat-raised-button
+          color="warn"
+          *appHasPermission="userPermissionsEnum.CAN_CONFIRM_OR_REFUSE_OFFER"
+          [hidden]="!_displayOfferRefuseButton || orderActionsService.isIMViewingRUOrder"
+          (click)="refuseOffer()"
+        >
+          {{ 'lblRefuseOffer' | translate }}
+        </button>
+        <button
+          data-testid="orders.detail.confirm-offer.button"
+          mat-raised-button
+          color="primary"
+          *appHasPermission="userPermissionsEnum.CAN_CONFIRM_OR_REFUSE_OFFER"
+          [hidden]="!_displayOfferConfirmButton || orderActionsService.isIMViewingRUOrder"
+          (click)="confirmOffer()"
+        >
+          {{ 'lblConfirmOffer' | translate }}
+        </button>
+      </div>
+      <div class="action-buttons">
+        <button
+          data-testid="orders.detail.messages.button"
+          mat-raised-button
+          color="primary"
+          *appHasPermission="userPermissionsEnum.CAN_VIEW_MESSAGE"
+          (click)="openMessageDialog()"
+        >
+          <mat-icon>
+            {{ getMatIcon(orderData.messageState) }}
+          </mat-icon>
+          {{ getLabel(orderData.messageState) }}
+        </button>
+        @if (!isCancellationOrderItem) {
+          <button
+            data-testid="orders.detail.copy-order.button"
+            [disabled]="orderForm.invalid || isUnsavedChanges()"
+            mat-raised-button
+            *appHasPermission="[userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER_ITEM, userPermissionsEnum.CAN_CREATE_OR_EDIT_ORDER]"
+            color="primary"
+            (click)="copyOrder()"
+          >
+            {{ 'lblCopyOrder' | translate }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+}

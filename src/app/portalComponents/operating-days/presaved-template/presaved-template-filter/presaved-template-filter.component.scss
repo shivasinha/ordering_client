@@ -1,0 +1,81 @@
+@use 'colors';
+
+.filter-section {
+  padding: 20px 24px;
+  background-color: colors.$color-section-bg;
+  border-bottom: 1px solid colors.$color-section-border;
+
+  h3 {
+    margin: 0 0 16px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: colors.$gray;
+  }
+
+  .filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    // First row: Search and Date Range side by side
+    .filter-row-1 {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+
+      .search-field {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .date-range-field {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+
+        .search-field,
+        .date-range-field {
+          min-width: 100%;
+        }
+      }
+    }
+
+    // Second row: Toggle and buttons (right aligned)
+    .filter-row-2 {
+      display: flex;
+      justify-content: flex-end;
+
+      .filter-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        mat-slide-toggle {
+          margin-right: 8px;
+        }
+
+        .action-buttons {
+          display: flex;
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        justify-content: stretch;
+
+        .filter-actions {
+          flex-direction: column;
+          align-items: stretch;
+          width: 100%;
+
+          .action-buttons {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}

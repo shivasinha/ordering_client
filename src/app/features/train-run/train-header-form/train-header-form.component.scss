@@ -1,0 +1,25 @@
+.fb-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fb-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-col {
+  flex-basis: 33%;
+}
+
+.right-col {
+  flex-basis: 66%;
+}
+
+.fb-item {
+  padding-right: 1em;
+}
+
+.full-width {
+  width: 100%;
+}

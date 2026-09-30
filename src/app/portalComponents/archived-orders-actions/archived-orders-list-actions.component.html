@@ -1,0 +1,97 @@
+<h2 mat-dialog-title data-testid="orders.archived-actions.title.text">{{ data.message }}</h2>
+<mat-dialog-content>
+  @if (data.action === ArchivedOrderActions.MODIFY_TRAIN_RUN) {
+    <form [formGroup]="orderForm">
+      <app-order-form formControlName="orderData" [orderFormConfig]="orderFormConfig"> </app-order-form>
+    </form>
+  }
+  @if (data.action === ArchivedOrderActions.CANCEL_TRAIN_RUN) {
+    <form [formGroup]="cancellationForm">
+      <mat-radio-group color="primary" formControlName="cancellationType" class="cancellation-options">
+        <mat-radio-button
+          data-testid="orders.archived-actions.cancel-full.radio"
+          [value]="CancellationType.FULL"
+          class="cancellation-option"
+        >
+          {{ tr.translate('txtFullCancellationOption').replace('{0}', data.trainRunData?.trainNumber ?? '') }}
+        </mat-radio-button>
+        <mat-radio-button
+          data-testid="orders.archived-actions.cancel-partial.radio"
+          [value]="CancellationType.PARTIAL"
+          class="cancellation-option"
+        >
+          <div class="duration-option-container">
+            <div class="radio-content-row">
+              {{ tr.translate('txtPartialCancellationOption').replace('{0}', data.trainRunData?.trainNumber ?? '') }}
+              @if (cancellationForm.get('cancellationType')?.value === CancellationType.PARTIAL) {
+                <button
+                  data-testid="orders.archived-actions.select-days.button"
+                  type="button"
+                  mat-raised-button
+                  color="primary"
+                  class="select-duration-btn"
+                  (click)="openOperatingDaysDialog()"
+                >
+                  {{ 'lblSelectDays' | translate }}
+                </button>
+              }
+            </div>
+          </div>
+        </mat-radio-button>
+      </mat-radio-group>
+
+      @if (cancellationForm.get('cancellationType')?.value === CancellationType.PARTIAL && selectedOperatingDays.length > 0) {
+        @let operatingDaysInfo = getSelectedOperatingDaysInfo();
+        @if (operatingDaysInfo) {
+          <div class="selected-duration-info">
+            <p>
+              {{ 'txtCancellationSelectedFor' | translate }} {{ operatingDaysInfo.beginDate }}-{{ operatingDaysInfo.endDate }}
+              {{ operatingDaysInfo.selectedDays | dayNumbersToNames }}
+              @if (operatingDaysInfo.deselectedDays.length > 0) {
+                ; {{ 'lblNotOn' | translate }} {{ operatingDaysInfo.deselectedDays | dayNumbersToNames }}
+              }
+            </p>
+          </div>
+        }
+      }
+
+      <div class="text-area-container">
+        <app-textarea
+          [config]="cancellationReasonConfig"
+          [formControl]="cancellationReasonControl"
+          data-testid="orders.archived-actions.cancel-reason"
+        ></app-textarea>
+      </div>
+    </form>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  @if (data.action === ArchivedOrderActions.CANCEL_TRAIN_RUN) {
+    <button data-testid="orders.archived-actions.abort.button" mat-button [mat-dialog-close]>
+      {{ 'lblAbortCancellation' | translate }}
+    </button>
+    <button
+      data-testid="orders.archived-actions.save.button"
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]
+      (click)="handleSave()"
+      [disabled]="isSaveDisabled()"
+    >
+      {{ 'lblCancel' | translate }} {{ 'lblTrainRun' | translate }}
+    </button>
+  } @else {
+    <button data-testid="orders.archived-actions.abort.button" mat-button [mat-dialog-close]>{{ 'lblCancel' | translate }}</button>
+    <button
+      data-testid="orders.archived-actions.save.button"
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]
+      (click)="handleSave()"
+      [disabled]="isSaveDisabled()"
+    >
+      {{ 'lblSave' | translate }}
+    </button>
+  }
+</mat-dialog-actions>

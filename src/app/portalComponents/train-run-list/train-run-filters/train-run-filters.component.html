@@ -1,0 +1,57 @@
+<form [formGroup]="filterForm">
+  <div class="full-width">
+    <mat-form-field class="full-width">
+      <mat-label data-testid="trains.filter.search.label">{{ 'lblSearch' | translate }}</mat-label>
+      <mat-icon matSuffix data-testid="trains.filter.search.icon">search</mat-icon>
+      <input
+        matInput
+        data-testid="trains.filter.search.input"
+        formControlName="searchString"
+        [placeholder]="'msgSearchPlaceHolder' | translate"
+      />
+    </mat-form-field>
+  </div>
+  <div class="filters">
+    <app-custom-date-range-picker formControlName="dateRange" data-testid="trains.filter.date-range"></app-custom-date-range-picker>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="trains.filter.date-range-type.label">{{ 'lblDate' | translate }}</mat-label>
+      <mat-select data-testid="trains.filter.date-range-type.select" formControlName="dateRangeType">
+        @for (dateFilter of dateFilters; track dateFilter.key) {
+          <mat-option [attr.data-testid]="'trains.filter.date-range-type-option-' + dateFilter.key + '.option'" [value]="dateFilter.key">{{
+            dateFilter.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="trains.filter.state.label">{{ 'lblState' | translate }}</mat-label>
+      <mat-select data-testid="trains.filter.state.select" formControlName="trainState">
+        @for (stateOption of trainStateOptions; track stateOption.key) {
+          <mat-option [attr.data-testid]="'trains.filter.state-option-' + stateOption.key + '.option'" [value]="stateOption.key">{{
+            stateOption.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="trains.filter.source.label">{{ 'lblSource' | translate }}</mat-label>
+      <mat-select data-testid="trains.filter.source.select" formControlName="trainSource">
+        @for (sourceOption of trainSourceOptions(); track sourceOption.key) {
+          <mat-option [attr.data-testid]="'trains.filter.source-option-' + sourceOption.key + '.option'" [value]="sourceOption.key">{{
+            sourceOption.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label data-testid="trains.filter.project.label">{{ 'lblProjects' | translate }}</mat-label>
+      <mat-select data-testid="trains.filter.project.select" formControlName="projectList">
+        @for (project of projectOptions; track project.key) {
+          <mat-option [attr.data-testid]="'trains.filter.project-option-' + project.key + '.option'" [value]="project.key">{{
+            project.value
+          }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

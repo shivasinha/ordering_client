@@ -1,0 +1,72 @@
+<mat-form-field>
+  <mat-label data-testid="shared.date-range.label">{{ 'msgDateRange' | translate }}</mat-label>
+  <mat-date-range-input
+    appDateRangeValidityFixer
+    [formGroup]="dateRange"
+    [rangePicker]="picker"
+    [min]="config()?.minDate"
+    [max]="config()?.maxDate"
+  >
+    <input
+      matStartDate
+      formControlName="beginDate"
+      appRestrictYearLength
+      data-testid="date-start.input"
+      [readonly]="config()?.isReadonly"
+      [placeholder]="'lblFromDate' | translate"
+      (input)="validateDateInput($event, DateRangeField.BEGIN_DATE)"
+      (blur)="markAsTouched()"
+    />
+    <input
+      matEndDate
+      formControlName="endDate"
+      appRestrictYearLength
+      data-testid="date-end.input"
+      [readonly]="config()?.isReadonly"
+      [placeholder]="'lblToDate' | translate"
+      (input)="validateDateInput($event, DateRangeField.END_DATE)"
+      (blur)="markAsTouched()"
+    />
+  </mat-date-range-input>
+  <mat-datepicker-toggle
+    data-testid="date-toggle.button"
+    matIconSuffix
+    [for]="picker"
+    [disabled]="config()?.isReadonly || dateRange.disabled"
+  ></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+  @if (
+    !config()?.isReadonly &&
+    !dateRange.disabled &&
+    (dateRange.get(DateRangeField.BEGIN_DATE)?.value || dateRange.get(DateRangeField.END_DATE)?.value)
+  ) {
+    <button data-testid="date-clear.button" mat-icon-button matSuffix (click)="clearDateRange($event)">
+      <mat-icon>clear</mat-icon>
+    </button>
+  }
+  @if (dateRange.hasError('dateRangeInvalid')) {
+    <mat-error data-testid="shared.date-range.error-invalid">{{ 'msgDayRangeEndAfterStart' | translate }}</mat-error>
+  } @else if (dateRange.hasError('dateRangeOutOfBounds')) {
+    <mat-error data-testid="shared.date-range.error-out-of-bounds">{{
+      tr.translate('msgDayRangeWithin').replace('{0}', minDateFormated).replace('{1}', maxDateFormated)
+    }}</mat-error>
+  } @else if (
+    dateRange.get(DateRangeField.BEGIN_DATE)?.hasError('matDatepickerMin') ||
+    dateRange.get(DateRangeField.BEGIN_DATE)?.hasError('matDatepickerMax') ||
+    dateRange.get(DateRangeField.END_DATE)?.hasError('matDatepickerMin') ||
+    dateRange.get(DateRangeField.END_DATE)?.hasError('matDatepickerMax')
+  ) {
+    <mat-error data-testid="shared.date-range.error-bounds">{{ 'msgDateRangeHint' | translate }}</mat-error>
+  } @else if (
+    dateRange.get(DateRangeField.BEGIN_DATE)?.hasError('invalidDateInput') ||
+    dateRange.get(DateRangeField.END_DATE)?.hasError('invalidDateInput')
+  ) {
+    <mat-error data-testid="shared.date-range.error-format"
+      >{{ 'msgInvalidDate' | translate }} {{ 'msgValidDateFormatIs' | translate }} ({{ localeDateFormat }})</mat-error
+    >
+  } @else if (
+    dateRange.get(DateRangeField.BEGIN_DATE)?.hasError('required') || dateRange.get(DateRangeField.END_DATE)?.hasError('required')
+  ) {
+    <mat-error data-testid="shared.date-range.error-required">{{ 'lblDateRangeRequired' | translate }}</mat-error>
+  }
+</mat-form-field>

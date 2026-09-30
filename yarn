@@ -1,0 +1,4 @@
+#!/bin/sh
+
+basedir=`dirname "$0"`
+node "$basedir/.yarn/releases/yarn-4.10.3.cjs" "$@"

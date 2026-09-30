@@ -1,0 +1,79 @@
+@use 'colors';
+
+.calendar-container {
+  height: 320px;
+  width: 100%;
+
+  /* Override CDK virtual scroll viewport default styles */
+  ::ng-deep .cdk-virtual-scroll-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.month {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+  height: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 10px 10px 0;
+  overflow: hidden;
+}
+
+.month-header {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.days span {
+  padding: 5px;
+  border-radius: 4px;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    font-weight 0.3s;
+}
+
+.days span.active {
+  font-weight: bold;
+  color: colors.$black;
+}
+
+.days span.inactive {
+  color: colors.$gray;
+}
+
+.days span.saved-selected-bitmap {
+  background-color: colors.$color-saved-ODT;
+}
+
+.days span.new-bitmap {
+  background-color: colors.$color-new-ODT;
+}
+
+.days span.invalid-deselected-bitmap {
+  background-color: colors.$color-invalid-ODT;
+}
+
+/* Ensure invalid deselection takes priority over saved selected bitmap */
+.days span.saved-selected-bitmap.invalid-deselected-bitmap {
+  background-color: colors.$color-invalid-ODT;
+}
+
+.skeleton-loader {
+  text-align: center;
+  font-style: italic;
+  color: colors.$gray;
+}
